@@ -5,7 +5,7 @@ func _ready():
 	print("JETZT ECHT!")
 
 
-# kahisd
+# kahisd sdftgh
 
 signal addCoin
 
