@@ -1,0 +1,82 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets /Font/Hilfetext_Schrift.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scripts/Button_EndGame.gd" type="Script" id=2]
+[ext_resource path="res://scripts/SpielStarten.gd" type="Script" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0352941, 0.968627, 0.92549, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 234.0
+margin_top = 233.0
+margin_right = 789.0
+margin_bottom = 366.0
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_right = 555.0
+margin_bottom = 35.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/CenterContainer"]
+margin_left = 50.0
+margin_right = 505.0
+margin_bottom = 35.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.917647, 0.0117647, 0.996078, 1 )
+text = "Das Spiel mit dem Feuer "
+
+[node name="CenterContainer2" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+modulate = Color( 0.968627, 0, 1, 1 )
+margin_top = 39.0
+margin_right = 555.0
+margin_bottom = 80.0
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer2"]
+margin_right = 555.0
+margin_bottom = 41.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color_disabled = Color( 0.027451, 1, 0.203922, 1 )
+text = "Stürz Dich in das Abenteuer "
+script = ExtResource( 3 )
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxContainer"]
+modulate = Color( 0, 0, 0, 1 )
+margin_top = 84.0
+margin_right = 555.0
+margin_bottom = 88.0
+
+[node name="CenterContainer3" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+modulate = Color( 0.945098, 0, 1, 1 )
+margin_top = 92.0
+margin_right = 555.0
+margin_bottom = 133.0
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/CenterContainer3"]
+margin_left = 199.0
+margin_right = 355.0
+margin_bottom = 41.0
+custom_fonts/font = ExtResource( 1 )
+text = "Beenden"
+script = ExtResource( 2 )
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer2/Button" to="CenterContainer/VBoxContainer/CenterContainer2/Button" method="_on_Button_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/CenterContainer3/Button" to="CenterContainer/VBoxContainer/CenterContainer3/Button" method="_on_Button_pressed"]

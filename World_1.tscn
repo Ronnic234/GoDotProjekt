@@ -1,0 +1,1362 @@
+[gd_scene load_steps=108 format=2]
+
+[ext_resource path="res://Tileset_Collision.tres" type="TileSet" id=1]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_003.png" type="Texture" id=2]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_015.png" type="Texture" id=3]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_001.png" type="Texture" id=4]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_007.png" type="Texture" id=5]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_008.png" type="Texture" id=6]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_017.png" type="Texture" id=7]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_004.png" type="Texture" id=8]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_005.png" type="Texture" id=9]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_001.png" type="Texture" id=10]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_007.png" type="Texture" id=11]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_008.png" type="Texture" id=12]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_011.png" type="Texture" id=13]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_002.png" type="Texture" id=14]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_005.png" type="Texture" id=15]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_006.png" type="Texture" id=16]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_009.png" type="Texture" id=17]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_010.png" type="Texture" id=18]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_014.png" type="Texture" id=19]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_006.png" type="Texture" id=20]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_012.png" type="Texture" id=21]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_002.png" type="Texture" id=22]
+[ext_resource path="res://Assets /Background /1.png" type="Texture" id=23]
+[ext_resource path="res://Assets /Background /2.png" type="Texture" id=24]
+[ext_resource path="res://Assets /Background /4.png" type="Texture" id=25]
+[ext_resource path="res://Assets /Background /3.png" type="Texture" id=26]
+[ext_resource path="res://Assets /Background /cloud 2.png" type="Texture" id=27]
+[ext_resource path="res://Assets /Background /Kaktus.png" type="Texture" id=28]
+[ext_resource path="res://Assets /Background /sun.png" type="Texture" id=29]
+[ext_resource path="res://Assets /Background /birds.png" type="Texture" id=30]
+[ext_resource path="res://scripts/World_1.gd" type="Script" id=31]
+[ext_resource path="res://scripts/Player.gd" type="Script" id=32]
+[ext_resource path="res://Assets /Platform /tile28.png" type="Texture" id=33]
+[ext_resource path="res://MovingBride.gd" type="Script" id=34]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_004.png" type="Texture" id=35]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_009.png" type="Texture" id=36]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_000.png" type="Texture" id=37]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_011.png" type="Texture" id=38]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_013.png" type="Texture" id=39]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_003.png" type="Texture" id=40]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_016.png" type="Texture" id=41]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_010.png" type="Texture" id=42]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_000.png" type="Texture" id=43]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Jump Loop_000.png" type="Texture" id=44]
+[ext_resource path="res://Assets /World /marker_statue3.png" type="Texture" id=45]
+[ext_resource path="res://Assets /World /Lion_Bas_Relief.png" type="Texture" id=46]
+[ext_resource path="res://Assets /World /mushrum6.png" type="Texture" id=47]
+[ext_resource path="res://Assets /World /mushrum4.png" type="Texture" id=48]
+[ext_resource path="res://Assets /World /mushrum3.png" type="Texture" id=49]
+[ext_resource path="res://Assets /World /torch3_3.png" type="Texture" id=50]
+[ext_resource path="res://Assets /World /Chair.png" type="Texture" id=51]
+[ext_resource path="res://Assets /World /Decor_Helment.png" type="Texture" id=52]
+[ext_resource path="res://Assets /World /Bottle.png" type="Texture" id=53]
+[ext_resource path="res://Assets /World /Bucket.png" type="Texture" id=54]
+[ext_resource path="res://Assets /World /Decor_Statue.png" type="Texture" id=55]
+[ext_resource path="res://Assets /World /Grass_01.png" type="Texture" id=56]
+[ext_resource path="res://Assets /World /Decor_Cart.png" type="Texture" id=57]
+[ext_resource path="res://Assets /World /Grass_02.png" type="Texture" id=58]
+[ext_resource path="res://Assets /World /Decor_Cuirass.png" type="Texture" id=59]
+[ext_resource path="res://Assets /World /Sign_02.png" type="Texture" id=60]
+[ext_resource path="res://Assets /World /Decor_Sword.png" type="Texture" id=61]
+[ext_resource path="res://Assets /World /Wooden_Barrel.png" type="Texture" id=62]
+[ext_resource path="res://Assets /World /lava_drop1_1.png" type="Texture" id=63]
+[ext_resource path="res://Assets /World /Rock_06.png" type="Texture" id=64]
+[ext_resource path="res://Assets /World /Decor_Plant.png" type="Texture" id=65]
+[ext_resource path="res://Assets /World /Street_Lantern.png" type="Texture" id=66]
+[ext_resource path="res://Assets /World /Basket.png" type="Texture" id=67]
+[ext_resource path="res://Assets /World /Little_Wreckage.png" type="Texture" id=68]
+[ext_resource path="res://Assets /World /Decor_Ruins_01.png" type="Texture" id=69]
+[ext_resource path="res://Assets /World /Decor_Roof_01.png" type="Texture" id=70]
+[ext_resource path="res://Assets /World /Wide_Door_04.png" type="Texture" id=71]
+[ext_resource path="res://Assets /World /Decor_Potions_01.png" type="Texture" id=72]
+[ext_resource path="res://Assets /Collectable Objects/Bonus.png" type="Texture" id=73]
+[ext_resource path="res://Assets /Font/Transpass-Black.ttf" type="DynamicFontData" id=74]
+[ext_resource path="res://scripts/Fragezeichen Text.gd" type="Script" id=75]
+[ext_resource path="res://scripts/Schlüssel_Text.gd" type="Script" id=76]
+[ext_resource path="res://Assets /Collectable Objects/Key_02.png" type="Texture" id=77]
+[ext_resource path="res://scripts/Schlüssel.gd" type="Script" id=78]
+[ext_resource path="res://MainInterface.tscn" type="PackedScene" id=79]
+[ext_resource path="res://Assets /Collectable Objects/Chest_02_Locked.png" type="Texture" id=80]
+[ext_resource path="res://scripts/Portal.gd" type="Script" id=81]
+[ext_resource path="res://Assets /Collectable Objects/12.png" type="Texture" id=82]
+[ext_resource path="res://Coins.tscn" type="PackedScene" id=83]
+[ext_resource path="res://Assets /World /Schild.png" type="Texture" id=84]
+[ext_resource path="res://Assets /World /Pillar_02.png" type="Texture" id=85]
+[ext_resource path="res://Assets /World /Sign_04.png" type="Texture" id=86]
+[ext_resource path="res://Assets /World /torch3_2.png" type="Texture" id=87]
+[ext_resource path="res://Assets /World /Decor_Chest.png" type="Texture" id=88]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 56, 56 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 56, 40 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 35
+font_data = ExtResource( 74 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 35
+font_data = ExtResource( 74 )
+
+[sub_resource type="GDScript" id=5]
+script/source = "extends ColorRect
+# 
+func _ready():
+	self.hide()
+	
+	 
+"
+
+[sub_resource type="DynamicFont" id=6]
+size = 35
+font_data = ExtResource( 74 )
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 44 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 43 ), ExtResource( 4 ), ExtResource( 14 ), ExtResource( 40 ), ExtResource( 35 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 38 ), ExtResource( 21 ), ExtResource( 39 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 41 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 37 ), ExtResource( 10 ), ExtResource( 22 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 20 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 36 ), ExtResource( 42 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "Run",
+"speed": 12.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 64, 72 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 5520, 432 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 56, 16 )
+
+[sub_resource type="Animation" id=11]
+length = 8.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -736, 800 ), Vector2( 0, 808 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+length = 8.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4432, 1248 ), Vector2( 5328, -88 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2216, -304 ), Vector2( 3912, -168 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+length = 8.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1096, -80 ), Vector2( -1840, -864 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+length = 8.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -2664, -544 ), Vector2( -2920, -48 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+length = 8.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1824, 152 ), Vector2( -952, 864 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+length = 8.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1576, 1432 ), Vector2( 776, 1080 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3632, 1432 ), Vector2( 3576, 872 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4032, 728 ), Vector2( 3992, 1416 ) ]
+}
+
+[node name="World_1" type="Node2D"]
+script = ExtResource( 31 )
+
+[node name="WorldTileMap" type="TileMap" parent="."]
+position = Vector2( 8, 24 )
+tile_set = ExtResource( 1 )
+cell_quadrant_size = 14
+format = 1
+tile_data = PoolIntArray( -786471, 10, 0, -786469, 8, 0, -786467, 8, 0, -786465, 9, 0, -655349, 10, 0, -655348, 8, 0, -393198, 8, 0, -393197, 9, 0, -262177, 12, 0, -262118, 10, 0, -262117, 8, 0, -262116, 8, 0, -262115, 8, 0, -262114, 8, 0, -262113, 9, 0, -131104, 12, 0, -65548, 10, 0, -65546, 8, 0, -65544, 8, 0, -65542, 9, 0, -131004, 10, 0, -131002, 8, 0, -131000, 8, 0, -130998, 9, 0, -42, 10, 0, -40, 8, 0, -38, 8, 0, -37, 8, 0, -35, 8, 0, -34, 8, 0, -32, 9, 0, 2, 10, 0, 4, 8, 0, 6, 9, 0, 1048578, 10, 0, 1048580, 8, 0, 1048581, 8, 0, 1048583, 8, 0, 1048585, 9, 0, 1310764, 10, 0, 1310766, 8, 0, 1310768, 9, 0, 1572892, 10, 0, 1572894, 8, 0, 1572895, 8, 0, 1572896, 8, 0, 1572897, 8, 0, 1572898, 8, 0, 1572899, 8, 0, 1572900, 8, 0, 1572901, 9, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="sky" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 1268, 753 )
+scale = Vector2( 5.64583, 4.30926 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Berge_GanzHinten" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.95, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Berge_GanzHinten"]
+position = Vector2( -1170.03, 1425.47 )
+rotation = 0.00131245
+scale = Vector2( 3.10958, 3.07744 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/Berge_GanzHinten"]
+position = Vector2( 4244.66, 1435.99 )
+rotation = 0.00131245
+scale = Vector2( 2.53376, 3.0736 )
+texture = ExtResource( 24 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Berge_Vorne" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.85, 1 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Berge_Vorne"]
+position = Vector2( -1384, 1492 )
+scale = Vector2( 2.9, 2.94074 )
+texture = ExtResource( 26 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/Berge_Vorne"]
+position = Vector2( 4032, 1488 )
+scale = Vector2( 2.75208, 2.91852 )
+texture = ExtResource( 26 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Berge_Mitte" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.9, 1 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Berge_Mitte"]
+position = Vector2( -1420, 1581.5 )
+scale = Vector2( 2.84583, 2.74537 )
+texture = ExtResource( 25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/Berge_Mitte"]
+position = Vector2( 4008, 1576 )
+scale = Vector2( 2.8125, 2.77778 )
+texture = ExtResource( 25 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Wolken_Hinten" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.9, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Wolken_Hinten"]
+position = Vector2( -1525.67, -271.587 )
+rotation = 0.00559269
+scale = Vector2( 2.74675, 3.23231 )
+texture = ExtResource( 27 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/Wolken_Hinten"]
+position = Vector2( 3898.07, -294.485 )
+rotation = 0.00559269
+scale = Vector2( 2.9093, 3.03851 )
+texture = ExtResource( 27 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sonne" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Sonne"]
+position = Vector2( 931.877, -872.523 )
+rotation = -0.00571444
+scale = Vector2( 2.62561, 2.53858 )
+texture = ExtResource( 29 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Kaktus" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.9, 1 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Kaktus"]
+position = Vector2( -460, 1088 )
+scale = Vector2( 1.14583, 0.962963 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Vögel" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.9, 1 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Vögel"]
+position = Vector2( -1172, 228 )
+scale = Vector2( 3.0625, 2.67407 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="ParallaxBackground/Vögel"]
+position = Vector2( 3324.38, -67.8035 )
+rotation = 5.30041e-05
+scale = Vector2( 3.36928, 3.37121 )
+texture = ExtResource( 30 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Weltelemente Vordergrund" type="YSort" parent="."]
+position = Vector2( -96, 176 )
+
+[node name="mushrum10" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( -2128, -232 )
+scale = Vector2( 0.875, 0.875 )
+texture = ExtResource( 47 )
+
+[node name="mushrum8" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( -2160, -232 )
+scale = Vector2( 2, 1.875 )
+texture = ExtResource( 49 )
+
+[node name="Lion_Bas_Relief" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 440, -88 )
+texture = ExtResource( 46 )
+
+[node name="marker_statue3" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 568, -200 )
+scale = Vector2( 1.625, 1.625 )
+texture = ExtResource( 45 )
+
+[node name="mushrum3" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 304, -171 )
+scale = Vector2( 2, 2.3125 )
+texture = ExtResource( 49 )
+
+[node name="mushrum4" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 268, -178 )
+scale = Vector2( 1.75, 1.875 )
+texture = ExtResource( 48 )
+
+[node name="mushrum6" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 344, -180 )
+scale = Vector2( 1, 1.125 )
+texture = ExtResource( 47 )
+
+[node name="torch3_3" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 4904, -344 )
+scale = Vector2( 2.4375, 2.20313 )
+texture = ExtResource( 50 )
+
+[node name="Chair" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 536, 808 )
+texture = ExtResource( 51 )
+
+[node name="Bottle" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 504, 776 )
+scale = Vector2( 0.4375, 0.468751 )
+texture = ExtResource( 53 )
+
+[node name="Decor_Helment" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 552, 776 )
+scale = Vector2( 0.6875, 0.6875 )
+texture = ExtResource( 52 )
+
+[node name="Bucket" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 624, 842 )
+scale = Vector2( 0.5, 0.53125 )
+texture = ExtResource( 54 )
+
+[node name="Decor_Statue" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 2464, 1256 )
+texture = ExtResource( 55 )
+
+[node name="Grass_02" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 2296, 1368 )
+scale = Vector2( 1, 0.625 )
+texture = ExtResource( 58 )
+
+[node name="Grass_03" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 2064, 1368 )
+scale = Vector2( 1, 0.562501 )
+texture = ExtResource( 58 )
+
+[node name="Grass_04" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 2180, 1370 )
+scale = Vector2( 1.1875, 0.562499 )
+texture = ExtResource( 58 )
+
+[node name="Grass_01" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 1964, 1360 )
+scale = Vector2( 0.9375, 0.75 )
+texture = ExtResource( 56 )
+
+[node name="Sign_02" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 3256, 1064 )
+texture = ExtResource( 60 )
+
+[node name="Wooden_Barrel" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 3024, 1088 )
+scale = Vector2( 0.625, 0.687499 )
+texture = ExtResource( 62 )
+
+[node name="Decor_Sword" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 2176, -448 )
+scale = Vector2( 0.5625, 0.6875 )
+texture = ExtResource( 61 )
+
+[node name="Decor_Cuirass" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 2128, -440 )
+scale = Vector2( 0.5625, 0.625 )
+texture = ExtResource( 59 )
+
+[node name="Street_Lantern" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 1328, -704 )
+scale = Vector2( 0.566667, 0.716667 )
+texture = ExtResource( 66 )
+
+[node name="Basket" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 876, -852 )
+scale = Vector2( 0.9375, 0.9375 )
+texture = ExtResource( 67 )
+
+[node name="Decor_Ruins_01" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( -2136, -1216 )
+texture = ExtResource( 69 )
+
+[node name="Decor_Roof_01" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( -408, -448 )
+scale = Vector2( 2.275, 2.2 )
+texture = ExtResource( 70 )
+
+[node name="Wide_Door_04" type="Sprite" parent="Weltelemente Vordergrund/Decor_Roof_01"]
+position = Vector2( 1.52588e-05, 29.0909 )
+rotation = -0.000986278
+scale = Vector2( 0.388792, 0.378269 )
+texture = ExtResource( 71 )
+
+[node name="mushrum5" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( -632, -296 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 48 )
+
+[node name="mushrum7" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( -584, -304 )
+texture = ExtResource( 47 )
+
+[node name="mushrum9" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( -2192, -240 )
+scale = Vector2( 1.875, 1.75 )
+texture = ExtResource( 48 )
+
+[node name="Decor_Ruins_02" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 4647, -472 )
+scale = Vector2( 0.7625, 0.8 )
+texture = ExtResource( 69 )
+
+[node name="torch3_2" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 392, 800 )
+scale = Vector2( 2.04688, 2.21875 )
+texture = ExtResource( 87 )
+
+[node name="mushrum11" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 3088, 1096 )
+texture = ExtResource( 47 )
+
+[node name="mushrum12" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 2976, 1120 )
+scale = Vector2( 1.5, 1.75 )
+texture = ExtResource( 48 )
+
+[node name="Portal" type="Sprite" parent="."]
+position = Vector2( -2464, -184 )
+scale = Vector2( 2.21875, 2.25 )
+texture = ExtResource( 82 )
+script = ExtResource( 81 )
+
+[node name="CollectableObjects" type="YSort" parent="."]
+
+[node name="Fragezeichen" type="Area2D" parent="CollectableObjects"]
+position = Vector2( 352, -176 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Bonus" type="Sprite" parent="CollectableObjects/Fragezeichen"]
+texture = ExtResource( 73 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableObjects/Fragezeichen"]
+shape = SubResource( 1 )
+
+[node name="Schatztruhe" type="Area2D" parent="CollectableObjects"]
+position = Vector2( -2464, -96 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Schatztruhe_Sprite" type="Sprite" parent="CollectableObjects/Schatztruhe"]
+texture = ExtResource( 80 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableObjects/Schatztruhe"]
+position = Vector2( -8, 16 )
+shape = SubResource( 2 )
+
+[node name="Schlüssel" type="Area2D" parent="CollectableObjects"]
+position = Vector2( 4688, -168 )
+script = ExtResource( 78 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Bonus" type="Sprite" parent="CollectableObjects/Schlüssel"]
+texture = ExtResource( 77 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableObjects/Schlüssel"]
+shape = SubResource( 1 )
+
+[node name="Texte" type="YSort" parent="."]
+
+[node name="Fragezeichen Text" type="ColorRect" parent="Texte"]
+margin_left = 112.0
+margin_top = -560.0
+margin_right = 600.0
+margin_bottom = -248.0
+color = Color( 0.560784, 0.639216, 0.113725, 1 )
+script = ExtResource( 75 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Texte/Fragezeichen Text"]
+margin_left = 8.0
+margin_right = 480.0
+margin_bottom = 328.0
+custom_fonts/font = SubResource( 3 )
+text = "Der Eisgolem wurde von einem fiesen Zauberer teleportiert. Finde den Schlüssel der Truhe und alle 6 verzauberten Sterne, um das Portal in seine Eisheitmat zu öffnen! "
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Schlüssel_Text" type="ColorRect" parent="Texte"]
+margin_left = 4520.0
+margin_top = -472.0
+margin_right = 4968.0
+margin_bottom = -272.0
+color = Color( 0.635294, 0.639216, 0.164706, 1 )
+script = ExtResource( 76 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Texte/Schlüssel_Text"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 448.0
+margin_bottom = 256.0
+custom_fonts/font = SubResource( 4 )
+text = "Super! Ein weiterer Schritt zur Truhe! Finde jetzt noch die restlichen Sterne.
+Beeil Dich!"
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Spiel_vorbei" type="ColorRect" parent="Texte"]
+margin_left = -2640.0
+margin_top = -504.0
+margin_right = -2256.0
+margin_bottom = -400.0
+color = Color( 0.635294, 0.639216, 0.164706, 1 )
+script = SubResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Texte/Spiel_vorbei"]
+margin_left = 8.0
+margin_right = 424.0
+margin_bottom = 184.0
+custom_fonts/font = SubResource( 6 )
+text = "Klasse! Der Weg in die Eiswelt ist gefunden! "
+autowrap = true
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Coins" parent="." instance=ExtResource( 83 )]
+position = Vector2( 1552, 896 )
+scale = Vector2( 2, 2 )
+
+[node name="Coins2" parent="." instance=ExtResource( 83 )]
+position = Vector2( 832, -664 )
+scale = Vector2( 2, 2 )
+
+[node name="Coins3" parent="." instance=ExtResource( 83 )]
+position = Vector2( 1888, -272 )
+scale = Vector2( 2, 2 )
+
+[node name="Coins4" parent="." instance=ExtResource( 83 )]
+position = Vector2( -504, -472 )
+scale = Vector2( 2, 2 )
+
+[node name="Coins5" parent="." instance=ExtResource( 83 )]
+position = Vector2( -1760, -216 )
+scale = Vector2( 2, 2 )
+
+[node name="Coins6" parent="." instance=ExtResource( 83 )]
+position = Vector2( -2176, -888 )
+scale = Vector2( 2, 2 )
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 264, -304 )
+script = ExtResource( 32 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
+position = Vector2( -64, -8 )
+scale = Vector2( 0.302222, 0.263333 )
+frames = SubResource( 7 )
+animation = "Idle"
+frame = 10
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( -64, 0 )
+shape = SubResource( 8 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2( 240, 32 )
+current = true
+zoom = Vector2( 2.5, 2.5 )
+limit_left = -1215752192
+limit_bottom = 17839
+limit_smoothed = true
+smoothing_enabled = true
+
+[node name="MainInterface" parent="Player/Camera2D" instance=ExtResource( 79 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = -208.0
+margin_bottom = -208.0
+
+[node name="Weltelemente Hintergrund" type="YSort" parent="."]
+
+[node name="Lion_Bas_Relief2" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 554, 707 )
+scale = Vector2( 0.84375, 0.921875 )
+texture = ExtResource( 46 )
+
+[node name="Decor_Cart" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 2000, 1432 )
+texture = ExtResource( 57 )
+
+[node name="Decor_Plant" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 1744, -208 )
+texture = ExtResource( 65 )
+
+[node name="Decor_Plant2" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 1840, -208 )
+texture = ExtResource( 65 )
+
+[node name="Grass_02" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 1936, -256 )
+scale = Vector2( 0.875, 0.875 )
+texture = ExtResource( 58 )
+
+[node name="Grass_01" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 1232, -392 )
+scale = Vector2( 1.125, 1 )
+texture = ExtResource( 56 )
+
+[node name="Decor_Plant3" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 856, -560 )
+scale = Vector2( 0.8125, 1.125 )
+texture = ExtResource( 65 )
+
+[node name="Little_Wreckage" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( -2064, -192 )
+scale = Vector2( 2.42187, 2.54687 )
+texture = ExtResource( 68 )
+
+[node name="Decor_Plant4" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( -2424, -768 )
+texture = ExtResource( 65 )
+
+[node name="Decor_Plant5" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( -2304, -768 )
+texture = ExtResource( 65 )
+
+[node name="Bucket" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( -2176, -840 )
+scale = Vector2( 0.593751, 0.59375 )
+texture = ExtResource( 54 )
+
+[node name="Decor_Plant6" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( -696, -48 )
+texture = ExtResource( 65 )
+
+[node name="Decor_Plant7" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 208, 80 )
+scale = Vector2( 1.0625, 1 )
+texture = ExtResource( 65 )
+
+[node name="Decor_Plant8" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( -2264, 16 )
+texture = ExtResource( 65 )
+
+[node name="Decor_Plant9" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( -2136, 16 )
+texture = ExtResource( 65 )
+
+[node name="Decor_Plant10" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( -2008, 16 )
+texture = ExtResource( 65 )
+
+[node name="Schild" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 568, 704 )
+scale = Vector2( 1.4, 1.3 )
+texture = ExtResource( 84 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Pillar_02" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 664, 888 )
+texture = ExtResource( 85 )
+
+[node name="Grass_03" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 296, 1032 )
+scale = Vector2( 0.59375, 0.624999 )
+texture = ExtResource( 56 )
+
+[node name="Grass_05" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 3032, 1304 )
+scale = Vector2( 1, 1.125 )
+texture = ExtResource( 58 )
+
+[node name="Grass_06" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 3112, 1304 )
+scale = Vector2( 0.9375, 1.0625 )
+texture = ExtResource( 56 )
+
+[node name="Grass_07" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 2936, 1304 )
+texture = ExtResource( 56 )
+
+[node name="Decor_Plant11" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 4460, -48 )
+scale = Vector2( 1.0625, 1.125 )
+texture = ExtResource( 65 )
+
+[node name="Decor_Plant12" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 4588, -48 )
+scale = Vector2( 1.0625, 1.125 )
+texture = ExtResource( 65 )
+
+[node name="Decor_Plant13" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 4720, -48 )
+scale = Vector2( 1, 1.125 )
+texture = ExtResource( 65 )
+
+[node name="Decor_Plant14" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 1192, -292 )
+scale = Vector2( 1, 1.0625 )
+texture = ExtResource( 65 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 1256, 2896 )
+shape = SubResource( 9 )
+
+[node name="MovingPlatforms" type="YSort" parent="."]
+
+[node name="MovingBride1" type="KinematicBody2D" parent="MovingPlatforms"]
+position = Vector2( -704, 792 )
+motion/sync_to_physics = true
+script = ExtResource( 34 )
+
+[node name="Sprite" type="Sprite" parent="MovingPlatforms/MovingBride1"]
+position = Vector2( 24, 9.53674e-07 )
+scale = Vector2( 1.75, 1.25 )
+texture = ExtResource( 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/MovingBride1"]
+position = Vector2( 24, 0 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/MovingBride1"]
+"anims/Movement " = SubResource( 11 )
+
+[node name="lava_drop1_1" type="Sprite" parent="MovingPlatforms/MovingBride1"]
+position = Vector2( 24, 48 )
+scale = Vector2( 2.21875, 1.1875 )
+texture = ExtResource( 63 )
+
+[node name="Sign_04" type="Sprite" parent="MovingPlatforms/MovingBride1"]
+position = Vector2( 56, -56 )
+scale = Vector2( 0.5, 0.5625 )
+texture = ExtResource( 86 )
+
+[node name="Decor_Sword" type="Sprite" parent="MovingPlatforms/MovingBride1"]
+position = Vector2( -16, -48 )
+scale = Vector2( 0.5, 0.4375 )
+texture = ExtResource( 61 )
+
+[node name="Rock_06" type="Sprite" parent="MovingPlatforms/MovingBride1"]
+position = Vector2( -16, -8 )
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 64 )
+
+[node name="Rock_07" type="Sprite" parent="MovingPlatforms/MovingBride1"]
+position = Vector2( 0, -8 )
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 64 )
+
+[node name="Rock_08" type="Sprite" parent="MovingPlatforms/MovingBride1"]
+position = Vector2( 16, -8 )
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 64 )
+
+[node name="Rock_09" type="Sprite" parent="MovingPlatforms/MovingBride1"]
+position = Vector2( 32, -8 )
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 64 )
+
+[node name="Rock_10" type="Sprite" parent="MovingPlatforms/MovingBride1"]
+position = Vector2( 48, -8 )
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 64 )
+
+[node name="Rock_11" type="Sprite" parent="MovingPlatforms/MovingBride1"]
+position = Vector2( 64, -8 )
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 64 )
+
+[node name="Moving Bride 3" type="KinematicBody2D" parent="MovingPlatforms"]
+position = Vector2( 5328, -88 )
+motion/sync_to_physics = true
+script = ExtResource( 34 )
+
+[node name="Sprite" type="Sprite" parent="MovingPlatforms/Moving Bride 3"]
+position = Vector2( 24, 9.53674e-07 )
+scale = Vector2( 1.75, 1.25 )
+texture = ExtResource( 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving Bride 3"]
+position = Vector2( 24, 0 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving Bride 3"]
+"anims/Movement " = SubResource( 12 )
+
+[node name="Decor_Chest" type="Sprite" parent="MovingPlatforms/Moving Bride 3"]
+position = Vector2( 40, -77 )
+scale = Vector2( 0.375, 0.460938 )
+texture = ExtResource( 88 )
+
+[node name="Grass_02" type="Sprite" parent="MovingPlatforms/Moving Bride 3"]
+position = Vector2( 25.9999, -30 )
+scale = Vector2( 0.968749, 0.6875 )
+texture = ExtResource( 58 )
+
+[node name="lava_drop1_1" type="Sprite" parent="MovingPlatforms/Moving Bride 3"]
+position = Vector2( 24, 52 )
+scale = Vector2( 2.26562, 1.4375 )
+texture = ExtResource( 63 )
+
+[node name="Rock_06" type="Sprite" parent="MovingPlatforms/Moving Bride 3"]
+position = Vector2( -16, -8 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 64 )
+
+[node name="Rock_07" type="Sprite" parent="MovingPlatforms/Moving Bride 3"]
+position = Vector2( 0, -8 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 64 )
+
+[node name="Rock_08" type="Sprite" parent="MovingPlatforms/Moving Bride 3"]
+position = Vector2( 16, -8 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 64 )
+
+[node name="Rock_09" type="Sprite" parent="MovingPlatforms/Moving Bride 3"]
+position = Vector2( 32, -8 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 64 )
+
+[node name="Rock_10" type="Sprite" parent="MovingPlatforms/Moving Bride 3"]
+position = Vector2( 48, -8 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 64 )
+
+[node name="Rock_12" type="Sprite" parent="MovingPlatforms/Moving Bride 3"]
+position = Vector2( 64, -8 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 64 )
+
+[node name="Moving Bride 8" type="KinematicBody2D" parent="MovingPlatforms"]
+position = Vector2( 3912, -168 )
+motion/sync_to_physics = true
+script = ExtResource( 34 )
+
+[node name="Sprite" type="Sprite" parent="MovingPlatforms/Moving Bride 8"]
+position = Vector2( 24, 9.53674e-07 )
+scale = Vector2( 1.75, 1.25 )
+texture = ExtResource( 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving Bride 8"]
+position = Vector2( 24, 0 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving Bride 8"]
+"anims/Movement " = SubResource( 13 )
+
+[node name="Chair" type="Sprite" parent="MovingPlatforms/Moving Bride 8"]
+position = Vector2( 28.0001, -64 )
+scale = Vector2( 0.812502, 0.6875 )
+texture = ExtResource( 51 )
+
+[node name="Decor_Plant" type="Sprite" parent="MovingPlatforms/Moving Bride 8"]
+position = Vector2( 24, 0 )
+scale = Vector2( 0.578125, 0.5625 )
+texture = ExtResource( 65 )
+
+[node name="Decor_Potions_01" type="Sprite" parent="MovingPlatforms/Moving Bride 8"]
+position = Vector2( 32, -96 )
+scale = Vector2( 0.4375, 0.4375 )
+texture = ExtResource( 72 )
+
+[node name="Moving Bride 4" type="KinematicBody2D" parent="MovingPlatforms"]
+position = Vector2( -1840, -864 )
+motion/sync_to_physics = true
+script = ExtResource( 34 )
+
+[node name="Sprite" type="Sprite" parent="MovingPlatforms/Moving Bride 4"]
+position = Vector2( 24, 9.53674e-07 )
+scale = Vector2( 1.75, 1.25 )
+texture = ExtResource( 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving Bride 4"]
+position = Vector2( 24, -8 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving Bride 4"]
+"anims/Movement " = SubResource( 14 )
+
+[node name="lava_drop1_1" type="Sprite" parent="MovingPlatforms/Moving Bride 4"]
+position = Vector2( 24, 48 )
+scale = Vector2( 2.0625, 1.125 )
+texture = ExtResource( 63 )
+
+[node name="Rock_06" type="Sprite" parent="MovingPlatforms/Moving Bride 4"]
+position = Vector2( -16, -8 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 64 )
+
+[node name="Rock_07" type="Sprite" parent="MovingPlatforms/Moving Bride 4"]
+position = Vector2( 0, -8 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 64 )
+
+[node name="Rock_08" type="Sprite" parent="MovingPlatforms/Moving Bride 4"]
+position = Vector2( 16, -8 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 64 )
+
+[node name="Rock_09" type="Sprite" parent="MovingPlatforms/Moving Bride 4"]
+position = Vector2( 32, -8 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 64 )
+
+[node name="Rock_10" type="Sprite" parent="MovingPlatforms/Moving Bride 4"]
+position = Vector2( 48, -8 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 64 )
+
+[node name="Rock_11" type="Sprite" parent="MovingPlatforms/Moving Bride 4"]
+position = Vector2( 64, -8 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 64 )
+
+[node name="Moving Bride 5" type="KinematicBody2D" parent="MovingPlatforms"]
+position = Vector2( -2787.31, -305.094 )
+motion/sync_to_physics = true
+script = ExtResource( 34 )
+
+[node name="Sprite" type="Sprite" parent="MovingPlatforms/Moving Bride 5"]
+position = Vector2( 24, 9.53674e-07 )
+scale = Vector2( 1.75, 1.25 )
+texture = ExtResource( 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving Bride 5"]
+position = Vector2( 24, 0 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving Bride 5"]
+"anims/Movement " = SubResource( 15 )
+
+[node name="lava_drop1_1" type="Sprite" parent="MovingPlatforms/Moving Bride 5"]
+position = Vector2( 23.3099, 55.094 )
+scale = Vector2( 2.1875, 1.40625 )
+texture = ExtResource( 63 )
+
+[node name="Rock_06" type="Sprite" parent="MovingPlatforms/Moving Bride 5"]
+position = Vector2( -20.6899, -6.90601 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 64 )
+
+[node name="Rock_07" type="Sprite" parent="MovingPlatforms/Moving Bride 5"]
+position = Vector2( -4.68994, -6.90601 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 64 )
+
+[node name="Rock_08" type="Sprite" parent="MovingPlatforms/Moving Bride 5"]
+position = Vector2( 11.3101, -6.90601 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 64 )
+
+[node name="Rock_09" type="Sprite" parent="MovingPlatforms/Moving Bride 5"]
+position = Vector2( 27.3101, -6.90601 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 64 )
+
+[node name="Rock_10" type="Sprite" parent="MovingPlatforms/Moving Bride 5"]
+position = Vector2( 43.3101, -6.90601 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 64 )
+
+[node name="Rock_11" type="Sprite" parent="MovingPlatforms/Moving Bride 5"]
+position = Vector2( 59.3101, -6.90601 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 64 )
+
+[node name="Moving Bride 6" type="KinematicBody2D" parent="MovingPlatforms"]
+position = Vector2( -1824, 152 )
+motion/sync_to_physics = true
+script = ExtResource( 34 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="MovingPlatforms/Moving Bride 6"]
+position = Vector2( 24, 9.53674e-07 )
+scale = Vector2( 1.75, 1.25 )
+texture = ExtResource( 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving Bride 6"]
+position = Vector2( 24, 0 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving Bride 6"]
+"anims/Movement " = SubResource( 16 )
+
+[node name="lava_drop1_1" type="Sprite" parent="MovingPlatforms/Moving Bride 6"]
+position = Vector2( 24, 50 )
+scale = Vector2( 2.1875, 1.21875 )
+texture = ExtResource( 63 )
+
+[node name="Rock_06" type="Sprite" parent="MovingPlatforms/Moving Bride 6"]
+position = Vector2( -16, -8 )
+scale = Vector2( 0.75, 0.625 )
+texture = ExtResource( 64 )
+
+[node name="Rock_07" type="Sprite" parent="MovingPlatforms/Moving Bride 6"]
+position = Vector2( 0, -8 )
+scale = Vector2( 0.75, 0.625 )
+texture = ExtResource( 64 )
+
+[node name="Rock_08" type="Sprite" parent="MovingPlatforms/Moving Bride 6"]
+position = Vector2( 16, -8 )
+scale = Vector2( 0.75, 0.625 )
+texture = ExtResource( 64 )
+
+[node name="Rock_09" type="Sprite" parent="MovingPlatforms/Moving Bride 6"]
+position = Vector2( 32, -8 )
+scale = Vector2( 0.75, 0.625 )
+texture = ExtResource( 64 )
+
+[node name="Rock_10" type="Sprite" parent="MovingPlatforms/Moving Bride 6"]
+position = Vector2( 48, -8 )
+scale = Vector2( 0.75, 0.625 )
+texture = ExtResource( 64 )
+
+[node name="Rock_11" type="Sprite" parent="MovingPlatforms/Moving Bride 6"]
+position = Vector2( 64, -8 )
+scale = Vector2( 0.75, 0.625 )
+texture = ExtResource( 64 )
+
+[node name="Moving Bride 7" type="KinematicBody2D" parent="MovingPlatforms"]
+position = Vector2( 776, 1064 )
+motion/sync_to_physics = true
+script = ExtResource( 34 )
+
+[node name="Sprite" type="Sprite" parent="MovingPlatforms/Moving Bride 7"]
+position = Vector2( 24, 9.53674e-07 )
+scale = Vector2( 1.75, 1.25 )
+texture = ExtResource( 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving Bride 7"]
+position = Vector2( 24, 0 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving Bride 7"]
+"anims/Movement " = SubResource( 17 )
+
+[node name="Rock_06" type="Sprite" parent="MovingPlatforms/Moving Bride 7"]
+position = Vector2( 64, -32 )
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 64 )
+
+[node name="Rock_07" type="Sprite" parent="MovingPlatforms/Moving Bride 7"]
+position = Vector2( 40, -32 )
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 64 )
+
+[node name="Bottle" type="Sprite" parent="MovingPlatforms/Moving Bride 7"]
+position = Vector2( 64, -64 )
+scale = Vector2( 0.359375, 0.335937 )
+texture = ExtResource( 53 )
+
+[node name="Grass_01" type="Sprite" parent="MovingPlatforms/Moving Bride 7"]
+position = Vector2( 0, -34 )
+scale = Vector2( 0.5, 0.437499 )
+texture = ExtResource( 56 )
+
+[node name="Moving Bride 9" type="KinematicBody2D" parent="MovingPlatforms"]
+position = Vector2( 3574, 872 )
+motion/sync_to_physics = true
+script = ExtResource( 34 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="MovingPlatforms/Moving Bride 9"]
+position = Vector2( 24, 9.53674e-07 )
+scale = Vector2( 1.75, 1.25 )
+texture = ExtResource( 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving Bride 9"]
+position = Vector2( 24, 0 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving Bride 9"]
+"anims/Movement " = SubResource( 18 )
+
+[node name="mushrum3" type="Sprite" parent="MovingPlatforms/Moving Bride 9"]
+position = Vector2( -16, -40 )
+scale = Vector2( 1.75, 2.25 )
+texture = ExtResource( 49 )
+
+[node name="Grass_01" type="Sprite" parent="MovingPlatforms/Moving Bride 9"]
+position = Vector2( 34, -40 )
+scale = Vector2( 0.78125, 0.6875 )
+texture = ExtResource( 56 )
+
+[node name="Moving Bride 10" type="KinematicBody2D" parent="MovingPlatforms"]
+position = Vector2( 3992, 1384 )
+motion/sync_to_physics = true
+script = ExtResource( 34 )
+
+[node name="Sprite" type="Sprite" parent="MovingPlatforms/Moving Bride 10"]
+position = Vector2( 24, 9.53674e-07 )
+scale = Vector2( 1.75, 1.25 )
+texture = ExtResource( 33 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving Bride 10"]
+position = Vector2( 24, 0 )
+shape = SubResource( 10 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving Bride 10"]
+"anims/Movement " = SubResource( 19 )
+
+[node name="lava_drop1_1" type="Sprite" parent="MovingPlatforms/Moving Bride 10"]
+position = Vector2( 25.9996, 50.0001 )
+scale = Vector2( 2.09375, 1.21875 )
+texture = ExtResource( 63 )
+
+[node name="Rock_06" type="Sprite" parent="MovingPlatforms/Moving Bride 10"]
+position = Vector2( -16, -8 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 64 )
+
+[node name="Rock_07" type="Sprite" parent="MovingPlatforms/Moving Bride 10"]
+position = Vector2( 0, -8 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 64 )
+
+[node name="Rock_08" type="Sprite" parent="MovingPlatforms/Moving Bride 10"]
+position = Vector2( 16, -8 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 64 )
+
+[node name="Rock_09" type="Sprite" parent="MovingPlatforms/Moving Bride 10"]
+position = Vector2( 32, -8 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 64 )
+
+[node name="Rock_10" type="Sprite" parent="MovingPlatforms/Moving Bride 10"]
+position = Vector2( 48, -8 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 64 )
+
+[node name="Rock_11" type="Sprite" parent="MovingPlatforms/Moving Bride 10"]
+position = Vector2( 64, -8 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 64 )
+
+[connection signal="body_entered" from="CollectableObjects/Fragezeichen" to="Texte/Fragezeichen Text" method="_on_Fragezeichen_body_entered"]
+[connection signal="body_exited" from="CollectableObjects/Fragezeichen" to="Texte/Fragezeichen Text" method="_on_Fragezeichen_body_exited"]
+[connection signal="body_entered" from="CollectableObjects/Schatztruhe" to="." method="_on_Schatztruhe_body_entered"]
+[connection signal="body_entered" from="CollectableObjects/Schlüssel" to="CollectableObjects/Schlüssel" method="_on_Schlssel_body_entered"]
+[connection signal="body_entered" from="CollectableObjects/Schlüssel" to="Player" method="_on_Schlssel_body_entered"]
+[connection signal="body_entered" from="CollectableObjects/Schlüssel" to="Texte/Schlüssel_Text" method="_on_Schlssel_body_entered"]
+[connection signal="addCoin" from="Coins" to="Player" method="_on_Coins_addCoin"]
+[connection signal="addCoin" from="Coins2" to="Player" method="_on_Coins_addCoin"]
+[connection signal="addCoin" from="Coins3" to="Player" method="_on_Coins_addCoin"]
+[connection signal="addCoin" from="Coins4" to="Player" method="_on_Coins_addCoin"]
+[connection signal="addCoin" from="Coins5" to="Player" method="_on_Coins_addCoin"]
+[connection signal="addCoin" from="Coins6" to="Player" method="_on_Coins_addCoin"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
