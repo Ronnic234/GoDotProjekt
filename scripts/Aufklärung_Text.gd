@@ -1,6 +1,7 @@
 extends ColorRect
 
 # Der Text zur Aufklärung soll versteckt sein, wenn der Spieler kein Konkat mit dem Feld hat 
+# Von Fabian als Test
 func _ready():
 	self.hide()
 
