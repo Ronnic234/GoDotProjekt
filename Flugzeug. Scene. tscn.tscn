@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Flugzeug.tscn" type="PackedScene" id=1]
+
+[node name="Flugzeug" type="Spatial"]
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.999795, -0.0202444, 0, 0.0202444, 0.999795, 0, 0, 0, 1, 1.43212, 0.376142, -19.6082 )
+
+[node name="Camera" type="Camera" parent="."]

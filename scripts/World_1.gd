@@ -18,5 +18,7 @@ func _on_Schatztruhe_body_entered(body):
 #Wenn der Spieler den Schlüssel eingesammelt hat, zeigt sich das Portal und der Text der Schatztruhe erscheint ebenfalls 
 
 		yield(get_tree().create_timer(1),"timeout")
-		get_tree().change_scene("res://World_2.tscn")
+		get_tree().change_scene("World_2.gd")
+		
+		
 #Nach einer Sekunde, wird man dann in World 2 weitergeleitet, wo der Player neu spawnt
