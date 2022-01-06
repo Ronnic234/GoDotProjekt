@@ -19,6 +19,6 @@ func _on_Schatztruhe_body_entered(body):
 
 		yield(get_tree().create_timer(1),"timeout")
 		get_tree().change_scene("World_2.gd")
-		
+		 
 		
 #Nach einer Sekunde, wird man dann in World 2 weitergeleitet, wo der Player neu spawnt
