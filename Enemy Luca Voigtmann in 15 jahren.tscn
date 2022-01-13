@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Assets /Character/Golem/3_3-PIRATE_IDLE_001.png" type="Texture" id=1]
 [ext_resource path="res://Assets /Character/Golem/3_3-PIRATE_IDLE_006.png" type="Texture" id=2]
@@ -6,13 +6,6 @@
 [ext_resource path="res://Assets /Character/Golem/3_3-PIRATE_IDLE_004.png" type="Texture" id=4]
 [ext_resource path="res://Assets /Character/Golem/3_3-PIRATE_IDLE_002.png" type="Texture" id=5]
 [ext_resource path="res://Assets /Character/Golem/3_3-PIRATE_IDLE_003.png" type="Texture" id=6]
-[ext_resource path="res://Assets /Character/Golem/3_3-PIRATE_JUMP_000.png" type="Texture" id=7]
-[ext_resource path="res://Assets /Character/Golem/3_3-PIRATE_JUMP_001.png" type="Texture" id=8]
-[ext_resource path="res://Assets /Character/Golem/3_3-PIRATE_JUMP_002.png" type="Texture" id=9]
-[ext_resource path="res://Assets /Character/Golem/3_3-PIRATE_JUMP_003.png" type="Texture" id=10]
-[ext_resource path="res://Assets /Character/Golem/3_3-PIRATE_JUMP_004.png" type="Texture" id=11]
-[ext_resource path="res://Assets /Character/Golem/3_3-PIRATE_JUMP_005.png" type="Texture" id=12]
-[ext_resource path="res://Assets /Character/Golem/3_3-PIRATE_JUMP_006.png" type="Texture" id=13]
 [ext_resource path="res://Assets /Character/Golem/3_3-PIRATE_RUN_000.png" type="Texture" id=14]
 [ext_resource path="res://Assets /Character/Golem/3_3-PIRATE_RUN_001.png" type="Texture" id=15]
 [ext_resource path="res://Assets /Character/Golem/3_3-PIRATE_RUN_002.png" type="Texture" id=16]
@@ -24,22 +17,28 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 21 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"frames": [ ExtResource( 21 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 4 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 3 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "default",
-"speed": 5.0
+"speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 116.177, 138.636 )
 
 [node name="Enemy Luca Voigtmann in 15 jahren" type="KinematicBody2D"]
+position = Vector2( 102.217, -33.8323 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.719849, 0 )
 scale = Vector2( 0.331402, 0.331402 )
 frames = SubResource( 1 )
+frame = 6
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( -61.2807, 31.3348 )
+position = Vector2( -48, 32 )
 shape = SubResource( 2 )

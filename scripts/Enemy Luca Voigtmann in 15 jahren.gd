@@ -2,7 +2,9 @@ extends KinematicBody2D
 
 
 const UP = Vector2(0,-1)
-const SPEED = 1000
+const SPEED = 100
+
+
 
 
 var motion = Vector2.ZERO
@@ -25,4 +27,21 @@ func _physics_process(delta):
 			direction = left 
 			
 			
+
+signal Enemygetroffen 
+
+func _on_Area2D_Player_body_entered(body):
+	if(body.is_in_group("player")):
+		print("Spieler hat getroffen!")
+		emit_signal("Enemygetroffen")
+		queue_free()
+
+
+
+
+
+func _on_Area_2D_Enemy_body_entered(body):
+	if(body.is_in_group("player")):
+		print("Enemy hat getroffen!")
+	
 

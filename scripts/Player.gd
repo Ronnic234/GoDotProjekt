@@ -6,7 +6,7 @@ const UP = Vector2(0, -1)
 const GRAVITY = 30
 const JUMP_HEIGHT = -1000
 
-var coins = 0
+var points = 0
 
 
 # Bewegungsrichtung des Spielers 
@@ -60,7 +60,17 @@ func _on_Schatztruhe_body_entered(body):
 
 #Wenn der Spieler eine Münze berührt, geht der Coins Counter um 1 hoch 
 func _on_Coins_addCoin():
-	coins += 1
-	print(coins)
+	points += 1
+	print(points)
 	
-	$Camera2D/MainInterface/Label.set_text(str(coins))
+	$Camera2D/MainInterface/Label.set_text(str(points))
+
+
+func _on_Enemy_Luca_Voigtmann_in_15_jahren_Enemygetroffen():
+	points += 1
+	print(points)
+
+
+func _on_Enemy_LV_JR_Enemygetroffen():
+	points += 1
+	print(points)

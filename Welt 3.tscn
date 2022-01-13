@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_009.png" type="Texture" id=1]
 [ext_resource path="res://MainInterface.tscn" type="PackedScene" id=2]
@@ -36,9 +36,15 @@
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_004.png" type="Texture" id=34]
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_003.png" type="Texture" id=35]
 [ext_resource path="res://scripts/Enemy Luca Voigtmann in 15 jahren.gd" type="Script" id=36]
+[ext_resource path="res://Assets /Background /regenwald 6.png" type="Texture" id=37]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
+"frames": [ ExtResource( 26 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 1.0
+}, {
 "frames": [ ExtResource( 9 ), ExtResource( 4 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 7 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "Run",
@@ -48,18 +54,13 @@ animations = [ {
 "loop": true,
 "name": "Idle",
 "speed": 12.0
-}, {
-"frames": [ ExtResource( 26 ) ],
-"loop": true,
-"name": "Jump",
-"speed": 1.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 64, 72 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 111.637, 134.782 )
+extents = Vector2( 143.054, 134.782 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 111.637, 30.0789 )
@@ -69,10 +70,23 @@ extents = Vector2( 111.637, 30.0789 )
 [node name="Platform 3" type="TileMap" parent="."]
 tile_set = ExtResource( 22 )
 format = 1
-tile_data = PoolIntArray( -10, 4, 0, -8, 4, 0, -7, 4, 0, -65531, 4, 0, -65529, 4, 0, -65527, 4, 0, 65520, 2, 0, 65521, 4, 0, 65523, 4, 0, 65525, 4, 0, 65526, 4, 0, 65527, 4, 0, 65528, 4, 0, 65529, 4, 0, 65530, 4, 0, 65531, 4, 0, 65533, 4, 0, 65534, 4, 0, 65535, 4, 0, 0, 4, 0, 1, 4, 0, 3, 4, 0, 4, 4, 0, 6, 4, 0, 8, 4, 0, 10, 4, 0, 11, 4, 0, 13, 4, 0, 14, 3, 0, 393215, 2, 0, 327680, 4, 0, 327682, 4, 0, 327683, 4, 0, 327684, 3, 0 )
+tile_data = PoolIntArray( -524294, 1, 0, -589818, 1, 0, -458758, 2, 0, -458757, 4, 0, -458756, 4, 0, -458755, 4, 0, -458754, 4, 0, -458753, 4, 0, -524288, 4, 0, -524287, 4, 0, -524286, 4, 0, -524285, 4, 0, -524284, 4, 0, -524283, 3, 0, 65534, 2, 0, 0, 4, 0, 2, 4, 0, 3, 4, 0, 5, 3, 0 )
 
-[node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( -360.163, -157.335 )
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Platform 3"]
+
+[node name="regenwald 6" type="Sprite" parent="Platform 3/ParallaxBackground"]
+position = Vector2( 108.247, -56.374 )
+scale = Vector2( 2.5272, 1.93617 )
+texture = ExtResource( 37 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Platform 3/ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="Platform 3/ParallaxBackground"]
+
+[node name="Player" type="KinematicBody2D" parent="." groups=[
+"player",
+]]
+position = Vector2( -46.6455, -161.067 )
 script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
@@ -83,7 +97,7 @@ position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 5
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -106,18 +120,65 @@ margin_top = -208.0
 margin_bottom = -208.0
 
 [node name="Enemy Luca Voigtmann in 15 jahren" parent="." instance=ExtResource( 23 )]
-position = Vector2( 187.311, -80.5634 )
+position = Vector2( 247.042, -587.715 )
 scale = Vector2( 0.440001, 0.440001 )
 script = ExtResource( 36 )
 
 [node name="Area 2D Enemy" type="Area2D" parent="Enemy Luca Voigtmann in 15 jahren"]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy Luca Voigtmann in 15 jahren/Area 2D Enemy"]
-position = Vector2( -65.4397, 29.4478 )
+position = Vector2( -38.4328, 40.6711 )
 shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Area2D_Player" type="Area2D" parent="Enemy Luca Voigtmann in 15 jahren"]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy Luca Voigtmann in 15 jahren/Area2D_Player"]
-position = Vector2( -63.8037, -109.611 )
+position = Vector2( -64.4376, -131.524 )
 shape = SubResource( 4 )
+
+[node name="Enemy_LV JR" parent="." instance=ExtResource( 23 )]
+position = Vector2( 82.4292, -589.883 )
+scale = Vector2( 0.440001, 0.440001 )
+script = ExtResource( 36 )
+
+[node name="Area 2D Enemy" type="Area2D" parent="Enemy_LV JR"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy_LV JR/Area 2D Enemy"]
+position = Vector2( -57.1216, 39.2229 )
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Area2D_Player" type="Area2D" parent="Enemy_LV JR"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy_LV JR/Area2D_Player"]
+position = Vector2( -64.4376, -131.524 )
+shape = SubResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[connection signal="Enemygetroffen" from="Enemy Luca Voigtmann in 15 jahren" to="Player" method="_on_Enemy_Luca_Voigtmann_in_15_jahren_Enemygetroffen"]
+[connection signal="body_entered" from="Enemy Luca Voigtmann in 15 jahren/Area 2D Enemy" to="Enemy Luca Voigtmann in 15 jahren" method="_on_Area_2D_Enemy_body_entered"]
+[connection signal="tree_entered" from="Enemy Luca Voigtmann in 15 jahren/Area 2D Enemy/CollisionShape2D" to="Player" method="_on_CollisionShape2D_tree_entered"]
+[connection signal="body_entered" from="Enemy Luca Voigtmann in 15 jahren/Area2D_Player" to="Enemy Luca Voigtmann in 15 jahren" method="_on_Area2D_Player_body_entered"]
+[connection signal="Enemygetroffen" from="Enemy_LV JR" to="Player" method="_on_Enemy_LV_JR_Enemygetroffen"]
+[connection signal="body_entered" from="Enemy_LV JR/Area 2D Enemy" to="Enemy_LV JR" method="_on_Area_2D_Enemy_body_entered"]
+[connection signal="tree_entered" from="Enemy_LV JR/Area 2D Enemy/CollisionShape2D" to="Player" method="_on_CollisionShape2D_tree_entered"]
+[connection signal="body_entered" from="Enemy_LV JR/Area2D_Player" to="Enemy_LV JR" method="_on_Area2D_Player_body_entered"]
