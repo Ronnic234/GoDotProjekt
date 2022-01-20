@@ -16,7 +16,10 @@ func _on_Aufklrung_body_entered(body):
 # Nach Verlassen des Feldes wird eine Sekunde gewartet, bis die Szene in das MainMenu wechselt. 
 func _on_Aufklrung_body_exited(body):
 	self.hide()
-func _on_Area2D_body_exited(body):
 	yield(get_tree().create_timer(1),"timeout")
-	get_tree().change_scene("res://World_1.tscn")
+	print("LVL WECHSELN!")
+	get_tree().change_scene_to(load("res://Welt3.tscn"))
+	
+func _on_Area2D_body_exited(body):
+	pass
 		

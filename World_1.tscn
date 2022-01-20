@@ -66,7 +66,7 @@
 [ext_resource path="res://Assets /World /Rock_06.png" type="Texture" id=64]
 [ext_resource path="res://Assets /World /Decor_Plant.png" type="Texture" id=65]
 [ext_resource path="res://Assets /World /Street_Lantern.png" type="Texture" id=66]
-[ext_resource path="res://Assets /World /Basket.png" type="Texture" id=67]
+[ext_resource path="res://Assets /Basket.png" type="Texture" id=67]
 [ext_resource path="res://Assets /World /Little_Wreckage.png" type="Texture" id=68]
 [ext_resource path="res://Assets /World /Decor_Ruins_01.png" type="Texture" id=69]
 [ext_resource path="res://Assets /World /Decor_Roof_01.png" type="Texture" id=70]
@@ -123,15 +123,15 @@ animations = [ {
 "name": "Run",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 43 ), ExtResource( 4 ), ExtResource( 14 ), ExtResource( 40 ), ExtResource( 35 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 38 ), ExtResource( 21 ), ExtResource( 39 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 41 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 44 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 1.0
+}, {
+"frames": [ ExtResource( 43 ), ExtResource( 4 ), ExtResource( 14 ), ExtResource( 40 ), ExtResource( 35 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 38 ), ExtResource( 21 ), ExtResource( 39 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 41 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 12.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=8]
@@ -759,7 +759,7 @@ position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 7 )
 animation = "Idle"
-frame = 4
+frame = 13
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -1350,9 +1350,9 @@ texture = ExtResource( 64 )
 [connection signal="body_entered" from="CollectableObjects/Fragezeichen" to="Texte/Fragezeichen Text" method="_on_Fragezeichen_body_entered"]
 [connection signal="body_exited" from="CollectableObjects/Fragezeichen" to="Texte/Fragezeichen Text" method="_on_Fragezeichen_body_exited"]
 [connection signal="body_entered" from="CollectableObjects/Schatztruhe" to="." method="_on_Schatztruhe_body_entered"]
-[connection signal="body_entered" from="CollectableObjects/Schlüssel" to="CollectableObjects/Schlüssel" method="_on_Schlssel_body_entered"]
 [connection signal="body_entered" from="CollectableObjects/Schlüssel" to="Player" method="_on_Schlssel_body_entered"]
 [connection signal="body_entered" from="CollectableObjects/Schlüssel" to="Texte/Schlüssel_Text" method="_on_Schlssel_body_entered"]
+[connection signal="body_entered" from="CollectableObjects/Schlüssel" to="CollectableObjects/Schlüssel" method="_on_Schlssel_body_entered"]
 [connection signal="addCoin" from="Coins" to="Player" method="_on_Coins_addCoin"]
 [connection signal="addCoin" from="Coins2" to="Player" method="_on_Coins_addCoin"]
 [connection signal="addCoin" from="Coins3" to="Player" method="_on_Coins_addCoin"]

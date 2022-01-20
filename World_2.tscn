@@ -1,4 +1,4 @@
-[gd_scene load_steps=76 format=2]
+[gd_scene load_steps=91 format=2]
 
 [ext_resource path="res://Assets /Background /background_glacial_mountains.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Player Szene_2.gd" type="Script" id=2]
@@ -61,6 +61,15 @@
 [ext_resource path="res://Assets /World /Well.png" type="Texture" id=59]
 [ext_resource path="res://Assets /World /Grass_02.png" type="Texture" id=60]
 [ext_resource path="res://Assets /World /Rock_06.png" type="Texture" id=61]
+[ext_resource path="res://Assets /World /Bucket.png" type="Texture" id=62]
+[ext_resource path="res://scripts/Enemy Luca Voigtmann in 15 jahren.gd" type="Script" id=63]
+[ext_resource path="res://Enemy Luca Voigtmann in 15 jahren.tscn" type="PackedScene" id=64]
+[ext_resource path="res://Assets /World /torch3_3.png" type="Texture" id=65]
+[ext_resource path="res://Assets /World /Bottle.png" type="Texture" id=66]
+[ext_resource path="res://Assets /World /mushrum4.png" type="Texture" id=67]
+[ext_resource path="res://Assets /World /Grass_01.png" type="Texture" id=68]
+[ext_resource path="res://Assets /Platform /18.png" type="Texture" id=69]
+[ext_resource path="res://Bewegende Plattform.gd" type="Script" id=70]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 160, 128, 32, 128, 32, 0, 160, 0 )
@@ -82,6 +91,12 @@ points = PoolVector2Array( 256, 160, 0, 160, 0, 32, 256, 32 )
 
 [sub_resource type="ConvexPolygonShape2D" id=7]
 points = PoolVector2Array( 128, 160, 0, 160, 0, 32, 128, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
+
+[sub_resource type="ConvexPolygonShape2D" id=16]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 
 [sub_resource type="TileSet" id=8]
 0/name = "Ground_04.png 0"
@@ -231,6 +246,48 @@ points = PoolVector2Array( 128, 160, 0, 160, 0, 32, 128, 32 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 6/z_index = 0
+7/name = "Bucket.png 7"
+7/texture = ExtResource( 62 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 0, 0, 128, 128 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape = SubResource( 15 )
+7/shape_one_way = false
+7/shape_one_way_margin = 1.0
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 15 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+7/z_index = 0
+8/name = "torch3_3.png 8"
+8/texture = ExtResource( 65 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 32, 32, 64, 64 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape = SubResource( 16 )
+8/shape_one_way = false
+8/shape_one_way_margin = 1.0
+8/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 16 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+8/z_index = 0
 
 [sub_resource type="GDScript" id=9]
 
@@ -265,13 +322,39 @@ extents = Vector2( 48, 64 )
 [sub_resource type="RectangleShape2D" id=14]
 extents = Vector2( 2136, 208 )
 
+[sub_resource type="RectangleShape2D" id=17]
+extents = Vector2( 143.054, 134.782 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 111.637, 30.0789 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 49.6949, 9.3179 )
+
+[sub_resource type="Animation" id=20]
+resource_name = "Movement "
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 933.428, -267.998 ), Vector2( 1710.87, -270.598 ) ]
+}
+
 [node name="World_2" type="Node2D"]
 script = ExtResource( 51 )
 
 [node name="World2_TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 8 )
 format = 1
-tile_data = PoolIntArray( 327661, 4, 0, 327662, 5, 0, 327665, 5, 0, 327668, 5, 0, 327671, 5, 0, 327674, 5, 0, 327677, 5, 0, 262144, 6, 0 )
+tile_data = PoolIntArray( -131064, 8, 0, -131047, 7, 0, -65528, 4, 0, -65527, 5, 0, -65526, 5, 0, -65525, 5, 0, -65522, 5, 0, -65519, 5, 0, -65517, 5, 0, -65515, 5, 0, -65514, 5, 0, -65511, 6, 0, 327661, 4, 0, 327662, 5, 0, 327665, 5, 0, 327668, 5, 0, 327671, 5, 0, 327674, 5, 0, 327677, 5, 0, 262144, 6, 0, 524297, 4, 0, 524298, 5, 0, 524301, 5, 0, 524304, 6, 0 )
 
 [node name="CollectableObjects" type="YSort" parent="World2_TileMap"]
 position = Vector2( 0, -16 )
@@ -290,10 +373,10 @@ shape = SubResource( 10 )
 [node name="Texte" type="YSort" parent="World2_TileMap/CollectableObjects"]
 
 [node name="Aufklärung_Text" type="ColorRect" parent="World2_TileMap/CollectableObjects/Texte"]
-margin_left = -210.305
-margin_top = -146.06
-margin_right = 221.695
-margin_bottom = 37.9398
+margin_left = -210.0
+margin_top = -228.0
+margin_right = 302.0
+margin_bottom = 38.0
 color = Color( 0.666667, 0.054902, 0.701961, 1 )
 script = ExtResource( 39 )
 __meta__ = {
@@ -301,19 +384,48 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="World2_TileMap/CollectableObjects/Texte/Aufklärung_Text"]
-margin_left = 19.1187
-margin_top = 6.08601
-margin_right = 427.119
-margin_bottom = 190.086
+margin_left = 19.0
+margin_top = 14.0
+margin_right = 484.0
+margin_bottom = 304.0
 custom_fonts/font = SubResource( 11 )
-text = "Glückwunsch! 
-Der Eisgolem ist heil und sicher in seiner
-Eisheitmat angekommen! "
+text = "Die heiligen Sterne wurden von bösen Piraten gestohlen! Begib Dich mit dem Eisgolem in das Abenteuer, seine Sterne wiederzuholen und die Piraten zu bekämpfen. "
 autowrap = true
 clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Grass_02" type="Sprite" parent="World2_TileMap/CollectableObjects"]
+position = Vector2( 786.812, 453.897 )
+scale = Vector2( 0.843391, 0.835783 )
+texture = ExtResource( 60 )
+
+[node name="Grass_03" type="Sprite" parent="World2_TileMap/CollectableObjects"]
+position = Vector2( 845.788, 448.479 )
+texture = ExtResource( 60 )
+
+[node name="Grass_01" type="Sprite" parent="World2_TileMap"]
+position = Vector2( 677.519, 585.526 )
+texture = ExtResource( 68 )
+
+[node name="mushrum4" type="Sprite" parent="World2_TileMap/Grass_01"]
+position = Vector2( -66.2239, 4.0434 )
+scale = Vector2( 1.4009, 1.60135 )
+texture = ExtResource( 67 )
+
+[node name="Grass_02" type="Sprite" parent="World2_TileMap"]
+position = Vector2( 763.92, 584.329 )
+texture = ExtResource( 60 )
+
+[node name="Grass_03" type="Sprite" parent="World2_TileMap"]
+position = Vector2( 829.317, 584.716 )
+scale = Vector2( 1.01542, 0.976871 )
+texture = ExtResource( 60 )
+
+[node name="Grass_04" type="Sprite" parent="World2_TileMap"]
+position = Vector2( 905.849, 582.497 )
+texture = ExtResource( 60 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -435,8 +547,13 @@ position = Vector2( -286, 180 )
 scale = Vector2( 0.575, 0.483333 )
 texture = ExtResource( 59 )
 
+[node name="Furnace2" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 1151.79, -182.407 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 52 )
+
 [node name="Player Szene_2" type="KinematicBody2D" parent="."]
-position = Vector2( -496, 56 )
+position = Vector2( 965.003, 471.809 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -545,7 +662,66 @@ texture = ExtResource( 60 )
 position = Vector2( -440, 1136 )
 shape = SubResource( 14 )
 
-[connection signal="body_entered" from="World2_TileMap/CollectableObjects/Aufklärung" to="World2_TileMap/CollectableObjects/Texte/Aufklärung_Text" method="_on_Aufklrung_body_entered"]
+[node name="Enemy Luca Voigtmann in 15 jahren" parent="." instance=ExtResource( 64 )]
+position = Vector2( 688.147, -119.041 )
+scale = Vector2( 0.440001, 0.440001 )
+script = ExtResource( 63 )
+
+[node name="Area 2D Enemy" type="Area2D" parent="Enemy Luca Voigtmann in 15 jahren"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy Luca Voigtmann in 15 jahren/Area 2D Enemy"]
+position = Vector2( -38.4328, 40.6711 )
+shape = SubResource( 17 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Area2D_Player" type="Area2D" parent="Enemy Luca Voigtmann in 15 jahren"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy Luca Voigtmann in 15 jahren/Area2D_Player"]
+position = Vector2( -64.4376, -131.524 )
+shape = SubResource( 18 )
+
+[node name="Wooden_Barrel" type="Sprite" parent="."]
+position = Vector2( 928.808, -67.2656 )
+scale = Vector2( 0.733938, 0.746608 )
+texture = ExtResource( 48 )
+
+[node name="Bottle" type="Sprite" parent="."]
+position = Vector2( 1369.1, -75.3741 )
+scale = Vector2( 0.898643, 0.898643 )
+texture = ExtResource( 66 )
+
+[node name="Bewegende Plattform" type="KinematicBody2D" parent="."]
+position = Vector2( 1332.96, -269.334 )
+motion/sync_to_physics = true
+script = ExtResource( 70 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Bewegende Plattform"]
+position = Vector2( 427.966, 833.922 )
+scale = Vector2( 0.277923, 0.298507 )
+texture = ExtResource( 69 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bewegende Plattform"]
+position = Vector2( 427.909, 833.112 )
+scale = Vector2( 1.39995, 2.88882 )
+shape = SubResource( 19 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Bewegende Plattform"]
+"anims/Movement " = SubResource( 20 )
+
 [connection signal="body_entered" from="World2_TileMap/CollectableObjects/Aufklärung" to="Player Szene_2" method="_on_Aufklrung_body_entered"]
+[connection signal="body_entered" from="World2_TileMap/CollectableObjects/Aufklärung" to="World2_TileMap/CollectableObjects/Texte/Aufklärung_Text" method="_on_Aufklrung_body_entered"]
 [connection signal="body_exited" from="World2_TileMap/CollectableObjects/Aufklärung" to="World2_TileMap/CollectableObjects/Texte/Aufklärung_Text" method="_on_Aufklrung_body_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Enemy Luca Voigtmann in 15 jahren/Area 2D Enemy" to="Enemy Luca Voigtmann in 15 jahren" method="_on_Area_2D_Enemy_body_entered"]
+[connection signal="body_entered" from="Enemy Luca Voigtmann in 15 jahren/Area2D_Player" to="Enemy Luca Voigtmann in 15 jahren" method="_on_Area2D_Player_body_entered"]
