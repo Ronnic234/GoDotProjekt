@@ -1,4 +1,4 @@
-[gd_scene load_steps=100 format=2]
+[gd_scene load_steps=108 format=2]
 
 [ext_resource path="res://Assets /Background /background_glacial_mountains.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Player Szene_2.gd" type="Script" id=2]
@@ -66,7 +66,7 @@
 [ext_resource path="res://Enemy Luca Voigtmann in 15 jahren.tscn" type="PackedScene" id=64]
 [ext_resource path="res://Assets /World /torch3_3.png" type="Texture" id=65]
 [ext_resource path="res://Assets /World /Bottle.png" type="Texture" id=66]
-[ext_resource path="res://Assets /World /mushrum4.png" type="Texture" id=67]
+[ext_resource path="res://Assets /World /building_1.png" type="Texture" id=67]
 [ext_resource path="res://Assets /World /Grass_01.png" type="Texture" id=68]
 [ext_resource path="res://Assets /Platform /18.png" type="Texture" id=69]
 [ext_resource path="res://Moving_Bridge.gd" type="Script" id=70]
@@ -75,6 +75,12 @@
 [ext_resource path="res://Assets /Platform /Pad_3_4.png" type="Texture" id=73]
 [ext_resource path="res://Assets /World /building_2.png" type="Texture" id=74]
 [ext_resource path="res://Assets /World /Decor_Statue.png" type="Texture" id=75]
+[ext_resource path="res://Assets /World /tree_11.png" type="Texture" id=76]
+[ext_resource path="res://Assets /World /building_4.png" type="Texture" id=77]
+[ext_resource path="res://Assets /World /decor_7.png" type="Texture" id=78]
+[ext_resource path="res://Assets /World /decor_8.png" type="Texture" id=79]
+[ext_resource path="res://Assets /World /mushrum4.png" type="Texture" id=80]
+[ext_resource path="res://Assets /World /mushrum6.png" type="Texture" id=81]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 160, 128, 32, 128, 32, 0, 160, 0 )
@@ -103,10 +109,10 @@ points = PoolVector2Array( 0, 0, 128, 0, 128, 128, 0, 128 )
 [sub_resource type="ConvexPolygonShape2D" id=9]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=22]
+[sub_resource type="ConvexPolygonShape2D" id=10]
 points = PoolVector2Array( 416, 256, 0, 256, 0, 0, 416, 0 )
 
-[sub_resource type="TileSet" id=10]
+[sub_resource type="TileSet" id=11]
 0/name = "Ground_04.png 0"
 0/texture = ExtResource( 34 )
 0/tex_offset = Vector2( 0, 0 )
@@ -306,28 +312,28 @@ points = PoolVector2Array( 416, 256, 0, 256, 0, 0, 416, 0 )
 9/navigation_offset = Vector2( 0, 0 )
 9/shape_offset = Vector2( 0, 0 )
 9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-9/shape = SubResource( 22 )
+9/shape = SubResource( 10 )
 9/shape_one_way = false
 9/shape_one_way_margin = 1.0
 9/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 22 ),
+"shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 9/z_index = 0
 
-[sub_resource type="GDScript" id=11]
+[sub_resource type="GDScript" id=12]
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 56, 56 )
 
-[sub_resource type="DynamicFont" id=13]
+[sub_resource type="DynamicFont" id=14]
 size = 30
 font_data = ExtResource( 40 )
 
-[sub_resource type="SpriteFrames" id=14]
+[sub_resource type="SpriteFrames" id=15]
 animations = [ {
 "frames": [ ExtResource( 10 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 28 ), ExtResource( 7 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 25 ), ExtResource( 4 ), ExtResource( 17 ) ],
 "loop": true,
@@ -345,23 +351,22 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=15]
+[sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 48, 64 )
 
-[sub_resource type="RectangleShape2D" id=16]
+[sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 3899.5, 208 )
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 143.054, 134.782 )
 
-[sub_resource type="RectangleShape2D" id=18]
+[sub_resource type="RectangleShape2D" id=19]
 extents = Vector2( 111.637, 30.0789 )
 
-[sub_resource type="RectangleShape2D" id=19]
+[sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 82.1339, 50.0563 )
 
-[sub_resource type="Animation" id=20]
-resource_name = "Movement "
+[sub_resource type="Animation" id=21]
 length = 4.0
 loop = true
 tracks/0/type = "value"
@@ -377,8 +382,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1295.69, 292.114 ), Vector2( 1988.21, -362.768 ) ]
 }
 
-[sub_resource type="Animation" id=21]
-resource_name = "Movement "
+[sub_resource type="Animation" id=22]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -428,13 +432,47 @@ tracks/0/keys = {
 "values": [ Vector2( -3913.78, 507.692 ), Vector2( -3843.41, -271.312 ) ]
 }
 
+[sub_resource type="Animation" id=25]
+resource_name = "Movement "
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2313.4, -370.742 ), Vector2( 2349.32, 221.994 ) ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "Movement "
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2854.6, 220.417 ), Vector2( 2854.6, -368.51 ) ]
+}
+
 [node name="World_2" type="Node2D"]
 script = ExtResource( 51 )
 
 [node name="World2_TileMap" type="TileMap" parent="."]
-tile_set = SubResource( 10 )
+tile_set = SubResource( 11 )
 format = 1
-tile_data = PoolIntArray( -131064, 8, 0, -131047, 7, 0, -65528, 4, 0, -65527, 5, 0, -65526, 5, 0, -65525, 5, 0, -65522, 5, 0, -65519, 5, 0, -65517, 5, 0, -65515, 5, 0, -65514, 5, 0, -65511, 6, 0, 65490, 4, 0, 65491, 5, 0, 65494, 6, 0, 130999, 4, 0, 131000, 5, 0, 131003, 5, 0, 131006, 5, 0, 131009, 6, 0, 327661, 4, 0, 327662, 5, 0, 327665, 5, 0, 327668, 5, 0, 327671, 5, 0, 327674, 5, 0, 327677, 5, 0, 262144, 6, 0, 524297, 4, 0, 524298, 5, 0, 524301, 5, 0, 524304, 6, 0, 786397, 4, 0, 786398, 5, 0, 786401, 5, 0, 786403, 5, 0, 786406, 5, 0, 786409, 6, 0 )
+tile_data = PoolIntArray( -131064, 8, 0, -131047, 7, 0, -65528, 4, 0, -65527, 5, 0, -65526, 5, 0, -65525, 5, 0, -65522, 5, 0, -65519, 5, 0, -65517, 5, 0, -65515, 5, 0, -65514, 5, 0, -65511, 6, 0, 65490, 4, 0, 65491, 5, 0, 65494, 6, 0, 53, 4, 0, 54, 5, 0, 57, 5, 0, 60, 5, 0, 63, 5, 0, 66, 5, 0, 69, 6, 0, 130999, 4, 0, 131000, 5, 0, 131003, 5, 0, 131006, 5, 0, 131009, 6, 0, 327661, 4, 0, 327662, 5, 0, 327665, 5, 0, 327668, 5, 0, 327671, 5, 0, 327674, 5, 0, 327677, 5, 0, 262144, 6, 0, 524297, 4, 0, 524298, 5, 0, 524301, 5, 0, 524304, 6, 0, 786397, 4, 0, 786398, 5, 0, 786401, 5, 0, 786403, 5, 0, 786406, 5, 0, 786409, 6, 0 )
 
 [node name="CollectableObjects" type="YSort" parent="World2_TileMap"]
 position = Vector2( 0, -16 )
@@ -442,13 +480,13 @@ scale = Vector2( 1.25532, 1.31453 )
 
 [node name="Aufklärung" type="Area2D" parent="World2_TileMap/CollectableObjects"]
 position = Vector2( -25.4916, 115.631 )
-script = SubResource( 11 )
+script = SubResource( 12 )
 
 [node name="Bonus" type="Sprite" parent="World2_TileMap/CollectableObjects/Aufklärung"]
 texture = ExtResource( 41 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World2_TileMap/CollectableObjects/Aufklärung"]
-shape = SubResource( 12 )
+shape = SubResource( 13 )
 
 [node name="Texte" type="YSort" parent="World2_TileMap/CollectableObjects"]
 
@@ -468,44 +506,13 @@ margin_left = 19.0
 margin_top = 14.0
 margin_right = 484.0
 margin_bottom = 304.0
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 14 )
 text = "Die heiligen Sterne wurden von bösen Piraten gestohlen! Begib Dich mit dem Eisgolem in das Abenteuer, seine Sterne wiederzuholen und die Piraten zu bekämpfen. "
 autowrap = true
 clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Grass_02" type="Sprite" parent="World2_TileMap/CollectableObjects"]
-position = Vector2( 786.812, 453.897 )
-scale = Vector2( 0.843391, 0.835783 )
-texture = ExtResource( 60 )
-
-[node name="Grass_03" type="Sprite" parent="World2_TileMap/CollectableObjects"]
-position = Vector2( 845.788, 448.479 )
-texture = ExtResource( 60 )
-
-[node name="Grass_01" type="Sprite" parent="World2_TileMap"]
-position = Vector2( 677.519, 585.526 )
-texture = ExtResource( 68 )
-
-[node name="mushrum4" type="Sprite" parent="World2_TileMap/Grass_01"]
-position = Vector2( -66.2239, 4.0434 )
-scale = Vector2( 1.4009, 1.60135 )
-texture = ExtResource( 67 )
-
-[node name="Grass_02" type="Sprite" parent="World2_TileMap"]
-position = Vector2( 763.92, 584.329 )
-texture = ExtResource( 60 )
-
-[node name="Grass_03" type="Sprite" parent="World2_TileMap"]
-position = Vector2( 829.317, 584.716 )
-scale = Vector2( 1.01542, 0.976871 )
-texture = ExtResource( 60 )
-
-[node name="Grass_04" type="Sprite" parent="World2_TileMap"]
-position = Vector2( 905.849, 582.497 )
-texture = ExtResource( 60 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -657,8 +664,28 @@ position = Vector2( -4145.62, -2.14011 )
 scale = Vector2( 0.675254, 0.747379 )
 texture = ExtResource( 74 )
 
+[node name="building_4" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( -1512.99, 571.623 )
+scale = Vector2( 0.982926, 0.671601 )
+texture = ExtResource( 77 )
+
+[node name="building_1" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 957.496, 414.767 )
+scale = Vector2( 0.56276, 0.599316 )
+texture = ExtResource( 67 )
+
+[node name="building_5" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 3615.27, -151.685 )
+scale = Vector2( 1.13264, 0.762765 )
+texture = ExtResource( 77 )
+
+[node name="building_3" type="Sprite" parent="Weltelemente Hintergrund"]
+position = Vector2( 4252.41, -144.962 )
+scale = Vector2( 0.835068, 0.789003 )
+texture = ExtResource( 67 )
+
 [node name="Player Szene_2" type="KinematicBody2D" parent="."]
-position = Vector2( -3910.92, 5.91901 )
+position = Vector2( 4311.65, 36.1346 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -667,15 +694,15 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player Szene_2"]
 position = Vector2( -144, -32 )
 scale = Vector2( 0.245556, 0.245556 )
-frames = SubResource( 14 )
+frames = SubResource( 15 )
 animation = "Jump"
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player Szene_2"]
-position = Vector2( -160, -32 )
-shape = SubResource( 15 )
+position = Vector2( -151.43, -36.285 )
+shape = SubResource( 16 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -802,11 +829,64 @@ position = Vector2( -4588.7, 85.1458 )
 scale = Vector2( 0.765579, 0.747549 )
 texture = ExtResource( 57 )
 
+[node name="Grass_01" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( -1799.27, 773.587 )
+texture = ExtResource( 68 )
+
+[node name="tree_11" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( -2172.02, 604.705 )
+texture = ExtResource( 76 )
+
+[node name="decor_7" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 755.709, 550.954 )
+scale = Vector2( 0.808947, 0.878825 )
+texture = ExtResource( 78 )
+
+[node name="tree_11" type="Sprite" parent="Weltelemente Vordergrund/decor_7"]
+position = Vector2( -157.015, -135.809 )
+texture = ExtResource( 76 )
+
+[node name="decor_8" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 3907.55, 2.36516 )
+scale = Vector2( 0.669787, 0.774222 )
+texture = ExtResource( 79 )
+
+[node name="Bucket" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 3782.1, 42.9264 )
+scale = Vector2( 0.593683, 0.604765 )
+texture = ExtResource( 62 )
+
+[node name="Decor_Plant3" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 3642.37, 134.892 )
+texture = ExtResource( 42 )
+
+[node name="Decor_Plant" type="Sprite" parent="Weltelemente Vordergrund/Decor_Plant3"]
+position = Vector2( -102.552, -4.36389 )
+texture = ExtResource( 42 )
+
+[node name="Decor_Plant2" type="Sprite" parent="Weltelemente Vordergrund/Decor_Plant3"]
+position = Vector2( -189.83, -4.36389 )
+texture = ExtResource( 42 )
+
+[node name="mushrum4" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 3495.75, 60.7058 )
+scale = Vector2( 1.95461, 1.68186 )
+texture = ExtResource( 80 )
+
+[node name="mushrum6" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 3594.37, 60.7059 )
+texture = ExtResource( 81 )
+
+[node name="Decor_Helment2" type="Sprite" parent="Weltelemente Vordergrund"]
+position = Vector2( 3713.29, 58.5238 )
+scale = Vector2( 0.710208, 0.693163 )
+texture = ExtResource( 46 )
+
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -514.486, 1713.26 )
-shape = SubResource( 16 )
+shape = SubResource( 17 )
 
 [node name="Enemy Luca Voigtmann in 15 jahren" parent="." instance=ExtResource( 64 )]
 position = Vector2( 688.147, -119.041 )
@@ -820,7 +900,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy Luca Voigtmann in 15 jahren/Area 2D Enemy"]
 position = Vector2( -38.4328, 40.6711 )
-shape = SubResource( 17 )
+shape = SubResource( 18 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -832,7 +912,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy Luca Voigtmann in 15 jahren/Area2D_Player"]
 position = Vector2( -64.4376, -131.524 )
-shape = SubResource( 18 )
+shape = SubResource( 19 )
 
 [node name="Wooden_Barrel" type="Sprite" parent="."]
 position = Vector2( 928.808, -67.2656 )
@@ -862,10 +942,10 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge1"]
 position = Vector2( 188.818, 417.938 )
-shape = SubResource( 19 )
+shape = SubResource( 20 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge1"]
-"anims/Movement " = SubResource( 20 )
+"anims/Movement " = SubResource( 21 )
 
 [node name="Moving_Bridge2" type="KinematicBody2D" parent="MovingPlatforms"]
 position = Vector2( 172.227, -391.932 )
@@ -882,13 +962,13 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge2"]
 position = Vector2( 188.818, 417.938 )
-shape = SubResource( 19 )
+shape = SubResource( 20 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge2"]
-"anims/Movement " = SubResource( 21 )
+"anims/Movement " = SubResource( 22 )
 
 [node name="Moving_Bridge3" type="KinematicBody2D" parent="MovingPlatforms"]
-position = Vector2( -3456.43, -276.338 )
+position = Vector2( -3421.68, -290.428 )
 motion/sync_to_physics = true
 script = ExtResource( 70 )
 __meta__ = {
@@ -902,13 +982,13 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge3"]
 position = Vector2( 188.818, 417.938 )
-shape = SubResource( 19 )
+shape = SubResource( 20 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge3"]
 "anims/Movement " = SubResource( 23 )
 
 [node name="Moving_Bridge4" type="KinematicBody2D" parent="MovingPlatforms"]
-position = Vector2( -3843.41, -271.312 )
+position = Vector2( -3913.78, 507.692 )
 motion/sync_to_physics = true
 script = ExtResource( 70 )
 __meta__ = {
@@ -922,10 +1002,50 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge4"]
 position = Vector2( 188.818, 417.938 )
-shape = SubResource( 19 )
+shape = SubResource( 20 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge4"]
 "anims/Movement " = SubResource( 24 )
+
+[node name="Moving_Bridge5" type="KinematicBody2D" parent="MovingPlatforms"]
+position = Vector2( 2313.4, -370.742 )
+motion/sync_to_physics = true
+script = ExtResource( 70 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="MovingPlatforms/Moving_Bridge5"]
+position = Vector2( 187.462, 411.704 )
+scale = Vector2( 0.407613, 0.407612 )
+texture = ExtResource( 69 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge5"]
+position = Vector2( 188.818, 421.812 )
+shape = SubResource( 20 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge5"]
+"anims/Movement " = SubResource( 25 )
+
+[node name="Moving_Bridge6" type="KinematicBody2D" parent="MovingPlatforms"]
+position = Vector2( 2854.6, 220.417 )
+motion/sync_to_physics = true
+script = ExtResource( 70 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="MovingPlatforms/Moving_Bridge6"]
+position = Vector2( 187.462, 411.704 )
+scale = Vector2( 0.407613, 0.407612 )
+texture = ExtResource( 69 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge6"]
+position = Vector2( 184.943, 417.938 )
+shape = SubResource( 20 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge6"]
+"anims/Movement " = SubResource( 26 )
 
 [connection signal="body_entered" from="World2_TileMap/CollectableObjects/Aufklärung" to="Player Szene_2" method="_on_Aufklrung_body_entered"]
 [connection signal="body_entered" from="World2_TileMap/CollectableObjects/Aufklärung" to="World2_TileMap/CollectableObjects/Texte/Aufklärung_Text" method="_on_Aufklrung_body_entered"]
