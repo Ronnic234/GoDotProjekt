@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_009.png" type="Texture" id=1]
 [ext_resource path="res://MainInterface.tscn" type="PackedScene" id=2]
@@ -45,6 +45,8 @@
 [ext_resource path="res://Assets /World /Decor_Sword.png" type="Texture" id=43]
 [ext_resource path="res://Assets /Background /Regenwald4.png" type="Texture" id=44]
 [ext_resource path="res://Assets /Background /Regenwald 3.png" type="Texture" id=45]
+[ext_resource path="res://Assets /Buildings /building_1.png" type="Texture" id=46]
+[ext_resource path="res://Assets /Buildings /555.png" type="Texture" id=47]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -53,15 +55,15 @@ animations = [ {
 "name": "Run",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 31 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 13 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 1 ), ExtResource( 20 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 30 ), ExtResource( 28 ), ExtResource( 24 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 26 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 1.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 13 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 1 ), ExtResource( 20 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 30 ), ExtResource( 28 ), ExtResource( 24 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 12.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -86,6 +88,14 @@ texture = ExtResource( 38 )
 position = Vector2( 1414.73, -122.711 )
 texture = ExtResource( 39 )
 
+[node name="555" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( -185.182, -1114.25 )
+texture = ExtResource( 47 )
+
+[node name="building_1" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( 740.105, -1153.64 )
+texture = ExtResource( 46 )
+
 [node name="Player" type="KinematicBody2D" parent="." groups=[
 "player",
 ]]
@@ -100,7 +110,7 @@ position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 15
+frame = 11
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -195,8 +205,8 @@ tile_data = PoolIntArray( -589830, 5, 0, -655355, 5, 0, -524294, 1, 0, -589818, 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Platform 3"]
 
 [node name="7" type="Sprite" parent="Platform 3/ParallaxBackground"]
-position = Vector2( 421.453, 547.278 )
-scale = Vector2( 5.7679, 5.00854 )
+position = Vector2( 53.2832, 61.7206 )
+scale = Vector2( 6.34039, 5.90772 )
 texture = ExtResource( 37 )
 __meta__ = {
 "_edit_lock_": true
@@ -205,17 +215,17 @@ __meta__ = {
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Platform 3/ParallaxBackground"]
 
 [node name="Sprite" type="Sprite" parent="Platform 3/ParallaxBackground/ParallaxLayer"]
-position = Vector2( -2471.15, 374.266 )
-scale = Vector2( 2.82753, 4.09348 )
+position = Vector2( -2693.17, 167.05 )
+scale = Vector2( 3.0588, 4.47721 )
 texture = ExtResource( 45 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Sprite2" type="Sprite" parent="Platform 3/ParallaxBackground/ParallaxLayer"]
-position = Vector2( 2321.05, 394.085 )
+position = Vector2( 2375.32, 9.25626 )
 rotation = -0.00504719
-scale = Vector2( 3.68443, 3.79561 )
+scale = Vector2( 3.74298, 4.50774 )
 texture = ExtResource( 45 )
 __meta__ = {
 "_edit_lock_": true
@@ -265,6 +275,25 @@ texture = ExtResource( 40 )
 [node name="greenery_6" type="Sprite" parent="Weltelemente_Vordergrund"]
 position = Vector2( 1613.67, -128.356 )
 texture = ExtResource( 39 )
+
+[node name="greenery_7" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( -338.843, -917.201 )
+scale = Vector2( 0.948753, 0.730954 )
+texture = ExtResource( 40 )
+
+[node name="greenery_8" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( -9.62708, -918.623 )
+scale = Vector2( 1.06406, 0.846259 )
+texture = ExtResource( 40 )
+
+[node name="greenery_9" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( -85.7093, -909.38 )
+scale = Vector2( 0.948753, 0.740563 )
+texture = ExtResource( 40 )
+
+[node name="greenery_10" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( -409.948, -932.844 )
+texture = ExtResource( 40 )
 
 [connection signal="Enemygetroffen" from="Enemy Luca Voigtmann in 15 jahren" to="Player" method="_on_Enemy_Luca_Voigtmann_in_15_jahren_Enemygetroffen"]
 [connection signal="body_entered" from="Enemy Luca Voigtmann in 15 jahren/Area 2D Enemy" to="Enemy Luca Voigtmann in 15 jahren" method="_on_Area_2D_Enemy_body_entered"]
