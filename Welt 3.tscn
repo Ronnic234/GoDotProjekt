@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_009.png" type="Texture" id=1]
 [ext_resource path="res://MainInterface.tscn" type="PackedScene" id=2]
@@ -37,18 +37,32 @@
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_003.png" type="Texture" id=35]
 [ext_resource path="res://scripts/Enemy Luca Voigtmann in 15 jahren.gd" type="Script" id=36]
 [ext_resource path="res://Assets /Background /regenwald 6.png" type="Texture" id=37]
+[ext_resource path="res://Assets /Platform /tile27.png" type="Texture" id=38]
+[ext_resource path="res://Assets /World /Decor_Statue.png" type="Texture" id=39]
+[ext_resource path="res://Assets /World /Lion_Bas_Relief.png" type="Texture" id=40]
+[ext_resource path="res://Assets /World /Fence_02.png" type="Texture" id=41]
+[ext_resource path="res://Assets /World /Decor_Plant.png" type="Texture" id=42]
+[ext_resource path="res://Assets /World /Fence_01.png" type="Texture" id=43]
+[ext_resource path="res://Assets /World /Pillar_02.png" type="Texture" id=44]
+[ext_resource path="res://Assets /World /Little_Wreckage.png" type="Texture" id=45]
+[ext_resource path="res://Assets /World /Decor_Sword.png" type="Texture" id=46]
+[ext_resource path="res://Assets /World /Grass_02.png" type="Texture" id=47]
+[ext_resource path="res://Assets /World /Decor_Ruins_01.png" type="Texture" id=48]
+[ext_resource path="res://Assets /World /Wooden_Barrel.png" type="Texture" id=49]
+[ext_resource path="res://Assets /Platform /tile28.png" type="Texture" id=50]
+[ext_resource path="res://MovingBride.gd" type="Script" id=51]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 9 ), ExtResource( 4 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 7 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "Run",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 26 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 1.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 4 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 7 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Run",
+"speed": 12.0
 }, {
 "frames": [ ExtResource( 31 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 13 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 1 ), ExtResource( 20 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 30 ), ExtResource( 28 ), ExtResource( 24 ), ExtResource( 16 ) ],
 "loop": true,
@@ -65,28 +79,158 @@ extents = Vector2( 143.054, 134.782 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 111.637, 30.0789 )
 
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 56, 28.1348 )
+
+[sub_resource type="Animation" id=8]
+length = 8.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 8.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3.93 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 691.007, -474.608 ), Vector2( 847.612, 234.029 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 8.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 0,
+"values": [  ]
+}
+
+[sub_resource type="Animation" id=11]
+length = 8.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3.97 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2165.46, 73.5619 ), Vector2( 2449.49, -793.017 ) ]
+}
+
 [node name="World3" type="Node2D"]
+
+[node name="Decor_Statue" type="Sprite" parent="."]
+position = Vector2( 55.9865, -127.063 )
+texture = ExtResource( 39 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1175.21, 0.0502319 )
+scale = Vector2( 0.884728, 0.84805 )
+texture = ExtResource( 48 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="regenwald 6" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 344.638, -214.005 )
+scale = Vector2( 2.72726, 2.17421 )
+texture = ExtResource( 37 )
+
+[node name="Grass_02" type="Sprite" parent="ParallaxBackground/regenwald 6"]
+position = Vector2( -720.752, 206.62 )
+scale = Vector2( 0.417146, 0.435036 )
+texture = ExtResource( 47 )
+
+[node name="Lion_Bas_Relief" type="Sprite" parent="ParallaxBackground/regenwald 6"]
+position = Vector2( -283.677, 48.2167 )
+scale = Vector2( 0.696932, 0.789448 )
+texture = ExtResource( 40 )
+
+[node name="Fence_01" type="Sprite" parent="ParallaxBackground/regenwald 6"]
+position = Vector2( -806.091, 274.06 )
+scale = Vector2( 0.395695, 0.516484 )
+texture = ExtResource( 43 )
+
+[node name="Fence_02" type="Sprite" parent="ParallaxBackground/regenwald 6"]
+position = Vector2( -848.52, 274.887 )
+scale = Vector2( 0.395695, 0.516484 )
+texture = ExtResource( 41 )
+
+[node name="Wooden_Barrel" type="Sprite" parent="ParallaxBackground/regenwald 6"]
+position = Vector2( 64.7599, -293.64 )
+scale = Vector2( 0.395695, 0.516484 )
+texture = ExtResource( 49 )
+
+[node name="Grass_03" type="Sprite" parent="ParallaxBackground/regenwald 6"]
+position = Vector2( -255.682, 78.799 )
+texture = ExtResource( 47 )
+
+[node name="Little_Wreckage" type="Sprite" parent="ParallaxBackground/regenwald 6"]
+position = Vector2( -216.726, -288.753 )
+texture = ExtResource( 45 )
+
+[node name="Pillar_02" type="Sprite" parent="ParallaxBackground/regenwald 6"]
+position = Vector2( 65.2726, -197.42 )
+scale = Vector2( 0.334644, 0.405079 )
+texture = ExtResource( 44 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground"]
+
+[node name="Decor_Sword" type="Sprite" parent="."]
+position = Vector2( -1023.97, 154.573 )
+texture = ExtResource( 46 )
 
 [node name="Platform 3" type="TileMap" parent="."]
 tile_set = ExtResource( 22 )
 format = 1
-tile_data = PoolIntArray( -589830, 5, 0, -655355, 5, 0, -524294, 1, 0, -589818, 1, 0, -458758, 2, 0, -458757, 4, 0, -458756, 4, 0, -458755, 4, 0, -458754, 4, 0, -458753, 4, 0, -524288, 4, 0, -524287, 4, 0, -524286, 4, 0, -524285, 4, 0, -524284, 4, 0, -524283, 3, 0, -65538, 5, 0, -131067, 5, 0, 65534, 2, 0, 0, 4, 0, 2, 4, 0, 3, 4, 0, 5, 3, 0 )
+tile_data = PoolIntArray( -851939, 2, 0, -851937, 4, 0, -851935, 3, 0, -720908, 5, 0, -720899, 5, 0, -655372, 2, 0, -655370, 4, 0, -655368, 4, 0, -655367, 4, 0, -655366, 4, 0, -655365, 4, 0, -655364, 4, 0, -655363, 3, 0, -524283, 2, 0, -524281, 3, 0, -9, 5, 0, -65535, 5, 0, 65522, 2, 0, 65523, 3, 0, 65527, 2, 0, 65529, 4, 0, 65530, 4, 0, 65532, 4, 0, 65534, 4, 0, 65535, 4, 0, 0, 4, 0, 1, 3, 0, 65555, 3, 0, 262126, 2, 0, 262128, 3, 0, 196623, 2, 0, 196624, 4, 0, 196626, 4, 0, 196627, 4, 0, 196628, 3, 0, 327653, 2, 0, 327654, 3, 0, 458730, 2, 0, 458731, 3, 0, 524255, 2, 0, 524257, 4, 0, 524258, 3, 0 )
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="Platform 3"]
+[node name="Decor_Plant" type="Sprite" parent="."]
+position = Vector2( -1313.77, 446.775 )
+texture = ExtResource( 42 )
 
-[node name="regenwald 6" type="Sprite" parent="Platform 3/ParallaxBackground"]
-position = Vector2( 167.471, -124.482 )
-scale = Vector2( 2.5272, 1.93617 )
-texture = ExtResource( 37 )
+[node name="Decor_Plant2" type="Sprite" parent="."]
+position = Vector2( 1280.88, 267.945 )
+texture = ExtResource( 42 )
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Platform 3/ParallaxBackground"]
-
-[node name="Sprite" type="Sprite" parent="Platform 3/ParallaxBackground"]
+[node name="Decor_Plant3" type="Sprite" parent="."]
+position = Vector2( -215.515, -635.541 )
+texture = ExtResource( 42 )
 
 [node name="Player" type="KinematicBody2D" parent="." groups=[
 "player",
 ]]
-position = Vector2( -46.6455, -161.067 )
+position = Vector2( -1967.86, 380.387 )
 script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
@@ -97,7 +241,7 @@ position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 2
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -120,7 +264,7 @@ margin_top = -208.0
 margin_bottom = -208.0
 
 [node name="Enemy Luca Voigtmann in 15 jahren" parent="." instance=ExtResource( 23 )]
-position = Vector2( 247.042, -587.715 )
+position = Vector2( -372.781, -72.3834 )
 scale = Vector2( 0.440001, 0.440001 )
 script = ExtResource( 36 )
 
@@ -146,7 +290,7 @@ position = Vector2( -64.4376, -131.524 )
 shape = SubResource( 4 )
 
 [node name="Enemy_LV JR" parent="." instance=ExtResource( 23 )]
-position = Vector2( 82.4292, -589.883 )
+position = Vector2( -558.767, -777.492 )
 scale = Vector2( 0.440001, 0.440001 )
 script = ExtResource( 36 )
 
@@ -173,6 +317,86 @@ shape = SubResource( 4 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Moving Bride 7" type="KinematicBody2D" parent="."]
+position = Vector2( 245.438, 14.2562 )
+motion/sync_to_physics = true
+script = ExtResource( 51 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Moving Bride 7"]
+position = Vector2( 24, 9.53674e-07 )
+scale = Vector2( 1.75, 1.25 )
+texture = ExtResource( 50 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Bride 7"]
+position = Vector2( 24, -3.87329 )
+shape = SubResource( 7 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Moving Bride 7"]
+"anims/Movement " = SubResource( 8 )
+
+[node name="Moving Bride 8" type="KinematicBody2D" parent="."]
+position = Vector2( 721.932, -334.67 )
+motion/sync_to_physics = true
+script = ExtResource( 51 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Moving Bride 8"]
+position = Vector2( 24, 9.53674e-07 )
+scale = Vector2( 1.75, 1.25 )
+texture = ExtResource( 38 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Bride 8"]
+position = Vector2( 24, -3.87329 )
+shape = SubResource( 7 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Moving Bride 8"]
+"anims/Movement " = SubResource( 9 )
+
+[node name="Moving Bride 9" type="KinematicBody2D" parent="."]
+position = Vector2( 2001.84, 201.451 )
+motion/sync_to_physics = true
+script = ExtResource( 51 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Moving Bride 9"]
+position = Vector2( 24, 9.53674e-07 )
+scale = Vector2( 1.75, 1.25 )
+texture = ExtResource( 38 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Bride 9"]
+position = Vector2( 24, -3.87329 )
+shape = SubResource( 7 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Moving Bride 9"]
+"anims/Movement " = SubResource( 10 )
+
+[node name="Moving Bride 10" type="KinematicBody2D" parent="."]
+position = Vector2( 2409.05, -669.643 )
+motion/sync_to_physics = true
+script = ExtResource( 51 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Moving Bride 10"]
+position = Vector2( 24, 9.53674e-07 )
+scale = Vector2( 1.75, 1.25 )
+texture = ExtResource( 38 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moving Bride 10"]
+position = Vector2( 24, -3.87329 )
+shape = SubResource( 7 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Moving Bride 10"]
+"anims/Movement " = SubResource( 11 )
 
 [connection signal="Enemygetroffen" from="Enemy Luca Voigtmann in 15 jahren" to="Player" method="_on_Enemy_Luca_Voigtmann_in_15_jahren_Enemygetroffen"]
 [connection signal="body_entered" from="Enemy Luca Voigtmann in 15 jahren/Area 2D Enemy" to="Enemy Luca Voigtmann in 15 jahren" method="_on_Area_2D_Enemy_body_entered"]
