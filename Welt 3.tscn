@@ -241,7 +241,7 @@ position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 9
+frame = 17
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -379,7 +379,7 @@ shape = SubResource( 7 )
 "anims/Movement " = SubResource( 10 )
 
 [node name="Moving Bride 10" type="KinematicBody2D" parent="."]
-position = Vector2( 2409.05, -669.643 )
+position = Vector2( 2449.49, -793.017 )
 motion/sync_to_physics = true
 script = ExtResource( 51 )
 __meta__ = {
