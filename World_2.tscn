@@ -340,22 +340,22 @@ animations = [ {
 "name": "Jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 26 ), ExtResource( 5 ), ExtResource( 30 ), ExtResource( 12 ), ExtResource( 21 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 29 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 24 ), ExtResource( 11 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 33 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 28 ), ExtResource( 7 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 25 ), ExtResource( 4 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "Run",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 5 ), ExtResource( 30 ), ExtResource( 12 ), ExtResource( 21 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 29 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 24 ), ExtResource( 11 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 33 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 48, 64 )
 
 [sub_resource type="RectangleShape2D" id=17]
-extents = Vector2( 3899.5, 208 )
+extents = Vector2( 7524.81, 208 )
 
 [sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 143.054, 134.782 )
@@ -685,7 +685,7 @@ scale = Vector2( 0.835068, 0.789003 )
 texture = ExtResource( 67 )
 
 [node name="Player Szene_2" type="KinematicBody2D" parent="."]
-position = Vector2( 4311.65, 36.1346 )
+position = Vector2( 1553.38, -308.352 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -884,12 +884,12 @@ texture = ExtResource( 46 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( -514.486, 1713.26 )
+[node name="CollisionShape2D Fallzone" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -508.071, 1713.26 )
 shape = SubResource( 17 )
 
 [node name="Enemy Luca Voigtmann in 15 jahren" parent="." instance=ExtResource( 64 )]
-position = Vector2( 688.147, -119.041 )
+position = Vector2( 774.134, -112.427 )
 scale = Vector2( 0.440001, 0.440001 )
 script = ExtResource( 63 )
 
@@ -988,7 +988,7 @@ shape = SubResource( 20 )
 "anims/Movement " = SubResource( 23 )
 
 [node name="Moving_Bridge4" type="KinematicBody2D" parent="MovingPlatforms"]
-position = Vector2( -3913.78, 507.692 )
+position = Vector2( -3908.81, 507.692 )
 motion/sync_to_physics = true
 script = ExtResource( 70 )
 __meta__ = {

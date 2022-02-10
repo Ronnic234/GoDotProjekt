@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=2]
+[gd_scene load_steps=72 format=2]
 
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_009.png" type="Texture" id=1]
 [ext_resource path="res://MainInterface.tscn" type="PackedScene" id=2]
@@ -22,7 +22,7 @@
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_010.png" type="Texture" id=20]
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_001.png" type="Texture" id=21]
 [ext_resource path="res://Tileset World 3.tres" type="TileSet" id=22]
-[ext_resource path="res://Enemy Luca Voigtmann in 15 jahren.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Welt 3.gd" type="Script" id=23]
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_016.png" type="Texture" id=24]
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Running_008.png" type="Texture" id=25]
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Jump Loop_000.png" type="Texture" id=26]
@@ -35,7 +35,7 @@
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Running_005.png" type="Texture" id=33]
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_004.png" type="Texture" id=34]
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_003.png" type="Texture" id=35]
-[ext_resource path="res://scripts/Enemy Luca Voigtmann in 15 jahren.gd" type="Script" id=36]
+[ext_resource path="res://Assets /Collectable Objects/12.png" type="Texture" id=36]
 [ext_resource path="res://Assets /Background /7.png" type="Texture" id=37]
 [ext_resource path="res://222.png" type="Texture" id=38]
 [ext_resource path="res://Assets /World /greenery_5.png" type="Texture" id=39]
@@ -61,6 +61,9 @@
 [ext_resource path="res://Assets /World /Decor_Plant.png" type="Texture" id=59]
 [ext_resource path="res://Assets /World /tree_1.png" type="Texture" id=60]
 
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 63.6108, 63.217 )
+
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 26 ) ],
@@ -68,25 +71,19 @@ animations = [ {
 "name": "Jump",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 31 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 13 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 1 ), ExtResource( 20 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 30 ), ExtResource( 28 ), ExtResource( 24 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 9 ), ExtResource( 4 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 7 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "Run",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 13 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 1 ), ExtResource( 20 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 30 ), ExtResource( 28 ), ExtResource( 24 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "Idle",
 "speed": 12.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 64, 72 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 143.054, 134.782 )
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 111.637, 30.0789 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 78.556, 37.7748 )
@@ -110,7 +107,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=7]
 resource_name = "Movement "
-length = 4.0
+length = 5.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -136,15 +133,15 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
+"times": PoolRealArray( 0, 2.1 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -1399.14, -837.486 ), Vector2( -108.535, -642.579 ) ]
+"values": [ Vector2( -1411.08, -915.101 ), Vector2( -605.076, -1768.87 ) ]
 }
 
 [sub_resource type="Animation" id=9]
 resource_name = "Movement "
-length = 4.0
+length = 8.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -153,15 +150,15 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
+"times": PoolRealArray( 0, 4.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 189.54, -325.372 ), Vector2( -1244.64, 453.751 ) ]
+"values": [ Vector2( 189.54, -325.372 ), Vector2( -1501.3, 756.62 ) ]
 }
 
 [sub_resource type="Animation" id=10]
 resource_name = "Movement "
-length = 4.0
+length = 7.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -170,13 +167,34 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
+"times": PoolRealArray( 0, 3.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 794.973, -399.811 ), Vector2( 2055.47, 468.638 ) ]
+"values": [ Vector2( -2918.19, -819.161 ), Vector2( -2882.37, 989.872 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 13507.1, 184.115 )
+
+[sub_resource type="Animation" id=13]
+resource_name = "Movement "
+length = 7.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1, 3.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3649.85, 512.238 ), Vector2( 4264.8, -574.376 ) ]
 }
 
 [node name="World3" type="Node2D"]
+script = ExtResource( 23 )
 
 [node name="Weltelemente_Hintergrund" type="YSort" parent="."]
 
@@ -226,10 +244,21 @@ texture = ExtResource( 60 )
 position = Vector2( 2855.75, 768.427 )
 texture = ExtResource( 60 )
 
+[node name="Sprite" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( 4767.79, -200.111 )
+scale = Vector2( -1.4154, 1.44901 )
+texture = ExtResource( 36 )
+
+[node name="Area2D" type="Area2D" parent="Weltelemente_Hintergrund/Sprite"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Weltelemente_Hintergrund/Sprite/Area2D"]
+scale = Vector2( 1, 1 )
+shape = SubResource( 12 )
+
 [node name="Player" type="KinematicBody2D" parent="." groups=[
 "player",
 ]]
-position = Vector2( -1726.2, -425.71 )
+position = Vector2( -2183.1, -992.921 )
 script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
@@ -240,7 +269,7 @@ position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 16
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -261,61 +290,6 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = -208.0
 margin_bottom = -208.0
-
-[node name="Enemy Luca Voigtmann in 15 jahren" parent="." instance=ExtResource( 23 )]
-position = Vector2( -2090.17, -494.283 )
-scale = Vector2( 0.440001, 0.440001 )
-script = ExtResource( 36 )
-
-[node name="Area 2D Enemy" type="Area2D" parent="Enemy Luca Voigtmann in 15 jahren"]
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy Luca Voigtmann in 15 jahren/Area 2D Enemy"]
-position = Vector2( -38.4328, 40.6711 )
-shape = SubResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Area2D_Player" type="Area2D" parent="Enemy Luca Voigtmann in 15 jahren"]
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy Luca Voigtmann in 15 jahren/Area2D_Player"]
-position = Vector2( -64.4376, -131.524 )
-shape = SubResource( 4 )
-
-[node name="Enemy_LV JR" parent="." instance=ExtResource( 23 )]
-position = Vector2( 1625.95, -218.266 )
-scale = Vector2( 0.440001, 0.440001 )
-script = ExtResource( 36 )
-
-[node name="Area 2D Enemy" type="Area2D" parent="Enemy_LV JR"]
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy_LV JR/Area 2D Enemy"]
-position = Vector2( -57.1216, 39.2229 )
-shape = SubResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Area2D_Player" type="Area2D" parent="Enemy_LV JR"]
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy_LV JR/Area2D_Player"]
-position = Vector2( -64.4376, -131.524 )
-shape = SubResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="WorldTileMap" type="TileMap" parent="."]
 position = Vector2( 7.99998, 24 )
@@ -570,7 +544,7 @@ position = Vector2( 2918.92, 1109.21 )
 texture = ExtResource( 59 )
 
 [node name="Moving_Platform" type="KinematicBody2D" parent="."]
-position = Vector2( 2413.63, -626.64 )
+position = Vector2( 2724.31, -184.69 )
 motion/sync_to_physics = true
 script = ExtResource( 55 )
 __meta__ = {
@@ -590,7 +564,7 @@ shape = SubResource( 5 )
 "anims/Movement " = SubResource( 6 )
 
 [node name="Moving_Platform2" type="KinematicBody2D" parent="."]
-position = Vector2( 1171.32, -638.828 )
+position = Vector2( 887.925, -639.874 )
 motion/sync_to_physics = true
 script = ExtResource( 55 )
 __meta__ = {
@@ -610,7 +584,7 @@ shape = SubResource( 5 )
 "anims/Movement " = SubResource( 7 )
 
 [node name="Moving_Platform3" type="KinematicBody2D" parent="."]
-position = Vector2( -108.535, -642.579 )
+position = Vector2( -605.356, -1768.57 )
 motion/sync_to_physics = true
 script = ExtResource( 55 )
 __meta__ = {
@@ -630,7 +604,7 @@ shape = SubResource( 5 )
 "anims/Movement " = SubResource( 8 )
 
 [node name="Moving_Platform4" type="KinematicBody2D" parent="."]
-position = Vector2( -991.606, 316.288 )
+position = Vector2( -1475.77, 740.28 )
 motion/sync_to_physics = true
 script = ExtResource( 55 )
 __meta__ = {
@@ -650,7 +624,7 @@ shape = SubResource( 5 )
 "anims/Movement " = SubResource( 9 )
 
 [node name="Moving_Platform5" type="KinematicBody2D" parent="."]
-position = Vector2( 1569, 133.476 )
+position = Vector2( -2910.53, -432.181 )
 motion/sync_to_physics = true
 script = ExtResource( 55 )
 __meta__ = {
@@ -669,11 +643,31 @@ shape = SubResource( 5 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform5"]
 "anims/Movement " = SubResource( 10 )
 
-[connection signal="Enemygetroffen" from="Enemy Luca Voigtmann in 15 jahren" to="Player" method="_on_Enemy_Luca_Voigtmann_in_15_jahren_Enemygetroffen"]
-[connection signal="body_entered" from="Enemy Luca Voigtmann in 15 jahren/Area 2D Enemy" to="Enemy Luca Voigtmann in 15 jahren" method="_on_Area_2D_Enemy_body_entered"]
-[connection signal="tree_entered" from="Enemy Luca Voigtmann in 15 jahren/Area 2D Enemy/CollisionShape2D" to="Player" method="_on_CollisionShape2D_tree_entered"]
-[connection signal="body_entered" from="Enemy Luca Voigtmann in 15 jahren/Area2D_Player" to="Enemy Luca Voigtmann in 15 jahren" method="_on_Area2D_Player_body_entered"]
-[connection signal="Enemygetroffen" from="Enemy_LV JR" to="Player" method="_on_Enemy_LV_JR_Enemygetroffen"]
-[connection signal="body_entered" from="Enemy_LV JR/Area 2D Enemy" to="Enemy_LV JR" method="_on_Area_2D_Enemy_body_entered"]
-[connection signal="tree_entered" from="Enemy_LV JR/Area 2D Enemy/CollisionShape2D" to="Player" method="_on_CollisionShape2D_tree_entered"]
-[connection signal="body_entered" from="Enemy_LV JR/Area2D_Player" to="Enemy_LV JR" method="_on_Area2D_Player_body_entered"]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -1145.41, 2939.8 )
+shape = SubResource( 11 )
+
+[node name="Moving_Platform6" type="KinematicBody2D" parent="."]
+position = Vector2( 4195.79, -452.437 )
+motion/sync_to_physics = true
+script = ExtResource( 55 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Moving_Platform6"]
+position = Vector2( -19.3544, 523.5 )
+scale = Vector2( 0.406903, 0.409524 )
+texture = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform6"]
+position = Vector2( -20.3513, 518.237 )
+shape = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform6"]
+"anims/Movement " = SubResource( 13 )
+
+[connection signal="body_entered" from="Weltelemente_Hintergrund/Sprite/Area2D" to="Player" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

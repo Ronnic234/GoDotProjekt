@@ -74,3 +74,8 @@ func _on_Enemy_Luca_Voigtmann_in_15_jahren_Enemygetroffen():
 func _on_Enemy_LV_JR_Enemygetroffen():
 	points += 1
 	print(points)
+
+
+func _on_Area2D_body_entered(body):
+	get_tree().change_scene("res://World_1.tscn")
+	
