@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=71 format=2]
 
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_009.png" type="Texture" id=1]
 [ext_resource path="res://MainInterface.tscn" type="PackedScene" id=2]
@@ -37,7 +37,7 @@
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_003.png" type="Texture" id=35]
 [ext_resource path="res://scripts/Enemy Luca Voigtmann in 15 jahren.gd" type="Script" id=36]
 [ext_resource path="res://Assets /Background /7.png" type="Texture" id=37]
-[ext_resource path="res://Assets /Buildings /222.png" type="Texture" id=38]
+[ext_resource path="res://222.png" type="Texture" id=38]
 [ext_resource path="res://Assets /World /greenery_5.png" type="Texture" id=39]
 [ext_resource path="res://Assets /World /greenery_4.png" type="Texture" id=40]
 [ext_resource path="res://Assets /World /Decor_Potions_01.png" type="Texture" id=41]
@@ -47,14 +47,22 @@
 [ext_resource path="res://Assets /Background /Regenwald 3.png" type="Texture" id=45]
 [ext_resource path="res://Assets /Buildings /building_1.png" type="Texture" id=46]
 [ext_resource path="res://Assets /Buildings /555.png" type="Texture" id=47]
+[ext_resource path="res://Assets /World /Prop_8.png" type="Texture" id=48]
+[ext_resource path="res://Assets /World /Prop_3.png" type="Texture" id=49]
+[ext_resource path="res://Assets /Buildings /building_1 Kopie.png" type="Texture" id=50]
+[ext_resource path="res://Assets /World /Little_Wreckage.png" type="Texture" id=51]
+[ext_resource path="res://Assets /World /Bucket.png" type="Texture" id=52]
+[ext_resource path="res://Assets /Platform /8.png" type="Texture" id=53]
+[ext_resource path="res://Assets /World /Bottle.png" type="Texture" id=54]
+[ext_resource path="res://Moving_Platform.gd" type="Script" id=55]
+[ext_resource path="res://Assets /Buildings /333.png" type="Texture" id=56]
+[ext_resource path="res://Assets /Buildings /444.png" type="Texture" id=57]
+[ext_resource path="res://Assets /World /decor_7 Kopie.png" type="Texture" id=58]
+[ext_resource path="res://Assets /World /Decor_Plant.png" type="Texture" id=59]
+[ext_resource path="res://Assets /World /tree_1.png" type="Texture" id=60]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 9 ), ExtResource( 4 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 7 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "Run",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 26 ) ],
 "loop": true,
 "name": "Jump",
@@ -63,6 +71,11 @@ animations = [ {
 "frames": [ ExtResource( 31 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 13 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 1 ), ExtResource( 20 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 30 ), ExtResource( 28 ), ExtResource( 24 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "Idle",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 4 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 7 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Run",
 "speed": 12.0
 } ]
 
@@ -74,6 +87,94 @@ extents = Vector2( 143.054, 134.782 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 111.637, 30.0789 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 78.556, 37.7748 )
+
+[sub_resource type="Animation" id=6]
+resource_name = "Movement "
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2413.63, -626.64 ), Vector2( 2972.15, 167.88 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Movement "
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1171.32, -638.828 ), Vector2( 154.853, -642.579 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "Movement "
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1399.14, -837.486 ), Vector2( -108.535, -642.579 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "Movement "
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 189.54, -325.372 ), Vector2( -1244.64, 453.751 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "Movement "
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 794.973, -399.811 ), Vector2( 2055.47, 468.638 ) ]
+}
 
 [node name="World3" type="Node2D"]
 
@@ -96,10 +197,39 @@ texture = ExtResource( 47 )
 position = Vector2( 740.105, -1153.64 )
 texture = ExtResource( 46 )
 
+[node name="building_1 Kopie" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( -1833.47, -529.782 )
+texture = ExtResource( 50 )
+
+[node name="Bucket" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( -2003.49, -402.591 )
+scale = Vector2( 0.624081, 0.686733 )
+texture = ExtResource( 52 )
+
+[node name="333" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( -2336.76, 1044.79 )
+texture = ExtResource( 56 )
+
+[node name="444" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( 3202.85, 623.972 )
+texture = ExtResource( 57 )
+
+[node name="decor_7 Kopie" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( 2541.11, 912.258 )
+texture = ExtResource( 58 )
+
+[node name="tree_1" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( 2677.73, 769.351 )
+texture = ExtResource( 60 )
+
+[node name="tree_2" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( 2855.75, 768.427 )
+texture = ExtResource( 60 )
+
 [node name="Player" type="KinematicBody2D" parent="." groups=[
 "player",
 ]]
-position = Vector2( 205.881, -73.9554 )
+position = Vector2( -1726.2, -425.71 )
 script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
@@ -110,7 +240,7 @@ position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 1 )
 animation = "Idle"
-frame = 11
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -133,7 +263,7 @@ margin_top = -208.0
 margin_bottom = -208.0
 
 [node name="Enemy Luca Voigtmann in 15 jahren" parent="." instance=ExtResource( 23 )]
-position = Vector2( 259.25, -589.241 )
+position = Vector2( -2090.17, -494.283 )
 scale = Vector2( 0.440001, 0.440001 )
 script = ExtResource( 36 )
 
@@ -159,7 +289,7 @@ position = Vector2( -64.4376, -131.524 )
 shape = SubResource( 4 )
 
 [node name="Enemy_LV JR" parent="." instance=ExtResource( 23 )]
-position = Vector2( 77.8511, -586.831 )
+position = Vector2( 1625.95, -218.266 )
 scale = Vector2( 0.440001, 0.440001 )
 script = ExtResource( 36 )
 
@@ -192,7 +322,7 @@ position = Vector2( 7.99998, 24 )
 tile_set = ExtResource( 42 )
 cell_quadrant_size = 14
 format = 1
-tile_data = PoolIntArray( -851978, 0, 0, -851976, 2, 0, -851975, 2, 0, -851974, 2, 0, -851973, 2, 0, -851972, 2, 0, -851971, 2, 0, -851970, 2, 0, -851969, 2, 0, -917504, 2, 0, -917503, 2, 0, -917502, 2, 0, -917501, 2, 0, -917500, 2, 0, -917499, 2, 0, -917498, 2, 0, -917497, 2, 0, -917496, 2, 0, -917495, 2, 0, -917494, 2, 0, -917493, 2, 0, -917492, 2, 0, -917490, 9, 0, -786471, 10, 0, -786469, 8, 0, -786467, 8, 0, -786465, 9, 0, -262177, 12, 0, -131104, 12, 0, -196587, 10, 0, -196585, 8, 0, -196583, 8, 0, -196581, 8, 0, -196579, 8, 0, -196577, 9, 0, -65548, 10, 0, -65546, 8, 0, -65544, 8, 0, -65542, 9, 0, -131004, 10, 0, -131002, 8, 0, -131000, 8, 0, -130998, 9, 0, -42, 10, 0, -40, 8, 0, -38, 8, 0, -37, 8, 0, -35, 8, 0, -34, 8, 0, -32, 9, 0, 1048578, 10, 0, 1048580, 8, 0, 1048581, 8, 0, 1048583, 8, 0, 1048585, 9, 0, 1310764, 10, 0, 1310766, 8, 0, 1310768, 9, 0, 1572892, 10, 0, 1572894, 8, 0, 1572895, 8, 0, 1572896, 8, 0, 1572897, 8, 0, 1572898, 8, 0, 1572899, 8, 0, 1572900, 8, 0, 1572901, 9, 0, 1834962, 1, 0, 1834964, 2, 0, 1834965, 2, 0, 1834966, 2, 0, 1834967, 2, 0, 1834968, 2, 0, 1834970, 1, 0, 1900499, 2, 0, 1900500, 2, 0 )
+tile_data = PoolIntArray( -851978, 0, 0, -851976, 2, 0, -851975, 2, 0, -851974, 2, 0, -851973, 2, 0, -851972, 2, 0, -851971, 2, 0, -851970, 2, 0, -851969, 2, 0, -917504, 2, 0, -917503, 2, 0, -917502, 2, 0, -917501, 2, 0, -917500, 2, 0, -917499, 2, 0, -917498, 2, 0, -917497, 2, 0, -917496, 2, 0, -917495, 2, 0, -917494, 2, 0, -917493, 2, 0, -917492, 2, 0, -917490, 9, 0, -327719, 0, 0, -327717, 2, 0, -327715, 2, 0, -327713, 2, 0, -327711, 2, 0, -327709, 2, 0, -327707, 1, 0, -196587, 10, 0, -196585, 8, 0, -196583, 8, 0, -196581, 8, 0, -196579, 8, 0, -196577, 9, 0, -131004, 10, 0, -131002, 8, 0, -131000, 8, 0, -130998, 9, 0, 1048612, 0, 0, 1048614, 2, 0, 1048616, 2, 0, 1048618, 2, 0, 1048620, 2, 0, 1048622, 2, 0, 1048624, 2, 0, 1048626, 2, 0, 1048628, 1, 0, 1441750, 0, 0, 1441752, 2, 0, 1441754, 2, 0, 1441756, 2, 0, 1441758, 2, 0, 1441760, 2, 0, 1441762, 2, 0, 1441764, 1, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -200,13 +330,13 @@ __meta__ = {
 [node name="Platform 3" type="TileMap" parent="."]
 tile_set = ExtResource( 22 )
 format = 1
-tile_data = PoolIntArray( -589830, 5, 0, -655355, 5, 0, -524294, 1, 0, -589818, 1, 0, -458758, 2, 0, -458757, 4, 0, -458756, 4, 0, -458755, 4, 0, -458754, 4, 0, -458753, 4, 0, -524288, 4, 0, -524287, 4, 0, -524286, 4, 0, -524285, 4, 0, -524284, 4, 0, -524283, 3, 0, -65538, 5, 0, -131067, 5, 0, 65534, 2, 0, 0, 4, 0, 2, 4, 0, 3, 4, 0, 5, 3, 0 )
+tile_data = PoolIntArray( -196586, 1, 0, -196576, 1, 0, 1048613, 0, 0, 1048629, 0, 0, 1441751, 0, 0, 1441765, 0, 0 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Platform 3"]
 
 [node name="7" type="Sprite" parent="Platform 3/ParallaxBackground"]
-position = Vector2( 53.2832, 61.7206 )
-scale = Vector2( 6.34039, 5.90772 )
+position = Vector2( 1780.13, -1044.27 )
+scale = Vector2( 8.1978, 7.94557 )
 texture = ExtResource( 37 )
 __meta__ = {
 "_edit_lock_": true
@@ -215,33 +345,41 @@ __meta__ = {
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Platform 3/ParallaxBackground"]
 
 [node name="Sprite" type="Sprite" parent="Platform 3/ParallaxBackground/ParallaxLayer"]
-position = Vector2( -2693.17, 167.05 )
-scale = Vector2( 3.0588, 4.47721 )
+position = Vector2( -2484.76, 236.522 )
+scale = Vector2( 3.92061, 5.65846 )
 texture = ExtResource( 45 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Sprite2" type="Sprite" parent="Platform 3/ParallaxBackground/ParallaxLayer"]
-position = Vector2( 2375.32, 9.25626 )
+position = Vector2( 3638.44, -268.63 )
 rotation = -0.00504719
-scale = Vector2( 3.74298, 4.50774 )
+scale = Vector2( 4.71675, 5.20781 )
 texture = ExtResource( 45 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Sprite3" type="Sprite" parent="Platform 3/ParallaxBackground/ParallaxLayer"]
-position = Vector2( -2504.49, 1651.59 )
-scale = Vector2( 2.63944, 2.95712 )
+position = Vector2( -3470.77, 1601.07 )
+scale = Vector2( 2.85654, 3.09747 )
 texture = ExtResource( 44 )
 __meta__ = {
 "_edit_lock_": true
 }
 
 [node name="Sprite4" type="Sprite" parent="Platform 3/ParallaxBackground/ParallaxLayer"]
-position = Vector2( 2548.96, 1647.36 )
-scale = Vector2( 2.63944, 2.95712 )
+position = Vector2( 1806.19, 1599.25 )
+scale = Vector2( 2.63944, 3.10164 )
+texture = ExtResource( 44 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite5" type="Sprite" parent="Platform 3/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 6877.45, 1605.82 )
+scale = Vector2( 2.63944, 3.0602 )
 texture = ExtResource( 44 )
 __meta__ = {
 "_edit_lock_": true
@@ -294,6 +432,242 @@ texture = ExtResource( 40 )
 [node name="greenery_10" type="Sprite" parent="Weltelemente_Vordergrund"]
 position = Vector2( -409.948, -932.844 )
 texture = ExtResource( 40 )
+
+[node name="Prop_3" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( 258.772, -933.709 )
+scale = Vector2( 1.06163, 0.95087 )
+texture = ExtResource( 49 )
+
+[node name="Prop_8" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( 396.944, -932.538 )
+texture = ExtResource( 48 )
+
+[node name="Little_Wreckage" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( -2313.02, -472.208 )
+scale = Vector2( 1.83955, 1.83955 )
+texture = ExtResource( 51 )
+
+[node name="Bucket" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( -2076.47, -400.987 )
+scale = Vector2( 0.661672, 0.686733 )
+texture = ExtResource( 52 )
+
+[node name="Bottle" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( -2142.23, -398.581 )
+scale = Vector2( 0.611549, 0.649141 )
+texture = ExtResource( 54 )
+
+[node name="Bottle2" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( 2067.11, -189.096 )
+scale = Vector2( 0.589241, 0.485773 )
+texture = ExtResource( 54 )
+
+[node name="greenery_11" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( -2614.98, 1407.8 )
+scale = Vector2( 1.27399, 1.15552 )
+texture = ExtResource( 39 )
+
+[node name="greenery_12" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( -2609.47, 1312.21 )
+scale = Vector2( 1.11326, 0.983012 )
+texture = ExtResource( 40 )
+
+[node name="greenery_13" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( -1723.6, 1398.36 )
+scale = Vector2( 1.19341, 1.05184 )
+texture = ExtResource( 39 )
+
+[node name="greenery_14" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( -1718.64, 1303.38 )
+scale = Vector2( 1.16989, 1.08494 )
+texture = ExtResource( 40 )
+
+[node name="greenery_15" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( -1822.9, 1313.38 )
+texture = ExtResource( 40 )
+
+[node name="greenery_16" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( -1884.73, 1312.11 )
+texture = ExtResource( 40 )
+
+[node name="greenery_17" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( -1944.62, 1310.69 )
+texture = ExtResource( 40 )
+
+[node name="greenery_18" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( -2015.39, 1313.06 )
+texture = ExtResource( 40 )
+
+[node name="greenery_19" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( -2083.05, 1310.46 )
+texture = ExtResource( 40 )
+
+[node name="greenery_20" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( -1766.14, 1312.19 )
+texture = ExtResource( 40 )
+
+[node name="greenery_21" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( 3118.6, 993.711 )
+scale = Vector2( 0.891839, 0.918879 )
+texture = ExtResource( 40 )
+
+[node name="greenery_22" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( 3054.55, 998.112 )
+scale = Vector2( 0.93344, 0.875198 )
+texture = ExtResource( 40 )
+
+[node name="greenery_23" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( 3347.48, 996.536 )
+scale = Vector2( 0.93344, 0.893919 )
+texture = ExtResource( 40 )
+
+[node name="greenery_24" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( 3290.35, 995.341 )
+scale = Vector2( 0.933438, 0.887679 )
+texture = ExtResource( 40 )
+
+[node name="greenery_25" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( 3409.19, 999.28 )
+scale = Vector2( 0.925121, 0.900159 )
+texture = ExtResource( 40 )
+
+[node name="greenery_26" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( 2689.61, 994.549 )
+scale = Vector2( 0.910583, 0.889827 )
+texture = ExtResource( 40 )
+
+[node name="greenery_27" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( 2767.1, 997.582 )
+scale = Vector2( 0.897811, 0.865876 )
+texture = ExtResource( 40 )
+
+[node name="greenery_28" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( 2850.78, 998.195 )
+scale = Vector2( 0.891423, 0.841925 )
+texture = ExtResource( 40 )
+
+[node name="greenery_29" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( 2952.47, 997.002 )
+scale = Vector2( 0.93613, 0.889827 )
+texture = ExtResource( 40 )
+
+[node name="greenery_30" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( 2475.22, 1001.58 )
+scale = Vector2( 0.811543, 0.794411 )
+texture = ExtResource( 40 )
+
+[node name="greenery_31" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( 2625.73, 999.883 )
+scale = Vector2( 0.897206, 0.832958 )
+texture = ExtResource( 40 )
+
+[node name="Decor_Plant" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( 2800.89, 1106.26 )
+texture = ExtResource( 59 )
+
+[node name="Decor_Plant2" type="Sprite" parent="Weltelemente_Vordergrund"]
+position = Vector2( 2918.92, 1109.21 )
+texture = ExtResource( 59 )
+
+[node name="Moving_Platform" type="KinematicBody2D" parent="."]
+position = Vector2( 2413.63, -626.64 )
+motion/sync_to_physics = true
+script = ExtResource( 55 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Moving_Platform"]
+position = Vector2( -19.3544, 523.5 )
+scale = Vector2( 0.406903, 0.409524 )
+texture = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform"]
+position = Vector2( -20.3513, 518.237 )
+shape = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform"]
+"anims/Movement " = SubResource( 6 )
+
+[node name="Moving_Platform2" type="KinematicBody2D" parent="."]
+position = Vector2( 1171.32, -638.828 )
+motion/sync_to_physics = true
+script = ExtResource( 55 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Moving_Platform2"]
+position = Vector2( -19.3544, 523.5 )
+scale = Vector2( 0.406903, 0.409524 )
+texture = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform2"]
+position = Vector2( -20.3513, 518.237 )
+shape = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform2"]
+"anims/Movement " = SubResource( 7 )
+
+[node name="Moving_Platform3" type="KinematicBody2D" parent="."]
+position = Vector2( -108.535, -642.579 )
+motion/sync_to_physics = true
+script = ExtResource( 55 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Moving_Platform3"]
+position = Vector2( -19.3544, 523.5 )
+scale = Vector2( 0.406903, 0.409524 )
+texture = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform3"]
+position = Vector2( -20.3513, 518.237 )
+shape = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform3"]
+"anims/Movement " = SubResource( 8 )
+
+[node name="Moving_Platform4" type="KinematicBody2D" parent="."]
+position = Vector2( -991.606, 316.288 )
+motion/sync_to_physics = true
+script = ExtResource( 55 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Moving_Platform4"]
+position = Vector2( -19.3544, 523.5 )
+scale = Vector2( 0.406903, 0.409524 )
+texture = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform4"]
+position = Vector2( -20.3513, 518.237 )
+shape = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform4"]
+"anims/Movement " = SubResource( 9 )
+
+[node name="Moving_Platform5" type="KinematicBody2D" parent="."]
+position = Vector2( 1569, 133.476 )
+motion/sync_to_physics = true
+script = ExtResource( 55 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Moving_Platform5"]
+position = Vector2( -19.3544, 523.5 )
+scale = Vector2( 0.406903, 0.409524 )
+texture = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform5"]
+position = Vector2( -20.3513, 518.237 )
+shape = SubResource( 5 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform5"]
+"anims/Movement " = SubResource( 10 )
 
 [connection signal="Enemygetroffen" from="Enemy Luca Voigtmann in 15 jahren" to="Player" method="_on_Enemy_Luca_Voigtmann_in_15_jahren_Enemygetroffen"]
 [connection signal="body_entered" from="Enemy Luca Voigtmann in 15 jahren/Area 2D Enemy" to="Enemy Luca Voigtmann in 15 jahren" method="_on_Area_2D_Enemy_body_entered"]
