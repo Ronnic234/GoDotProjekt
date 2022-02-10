@@ -132,11 +132,6 @@ animations = [ {
 "loop": true,
 "name": "Idle",
 "speed": 12.0
-}, {
-"frames": [ ExtResource( 37 ), ExtResource( 10 ), ExtResource( 22 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 20 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 36 ), ExtResource( 42 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "Run",
-"speed": 12.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=8]
@@ -764,11 +759,7 @@ position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 7 )
 animation = "Idle"
-<<<<<<< HEAD
 frame = 10
-=======
-frame = 8
->>>>>>> 2484d0ddee43d2f2387e94a89722081246745594
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
