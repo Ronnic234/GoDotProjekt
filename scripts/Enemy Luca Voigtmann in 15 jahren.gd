@@ -13,6 +13,7 @@ var right = Vector2(1,0)
 
 var direction = Vector2.ZERO
 
+
 func _ready():
 	direction = left 
 	
@@ -45,3 +46,7 @@ func _on_Area_2D_Enemy_body_entered(body):
 		print("Enemy hat getroffen!")
 	
 
+	if is_on_wall(): 
+		move_and_collide()
+		$AnimatedSprite.flip_h = !AnimatedSprite.flip_h 
+		

@@ -7,6 +7,7 @@ const GRAVITY = 30
 const JUMP_HEIGHT = -1000
 
 
+
 # Bewegungsrichtung des Spielers 
 var motion = Vector2()
 

@@ -1047,8 +1047,8 @@ shape = SubResource( 20 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge6"]
 "anims/Movement " = SubResource( 26 )
 
-[connection signal="body_entered" from="World2_TileMap/CollectableObjects/Aufklärung" to="World2_TileMap/CollectableObjects/Texte/Aufklärung_Text" method="_on_Aufklrung_body_entered"]
 [connection signal="body_entered" from="World2_TileMap/CollectableObjects/Aufklärung" to="Player Szene_2" method="_on_Aufklrung_body_entered"]
+[connection signal="body_entered" from="World2_TileMap/CollectableObjects/Aufklärung" to="World2_TileMap/CollectableObjects/Texte/Aufklärung_Text" method="_on_Aufklrung_body_entered"]
 [connection signal="body_exited" from="World2_TileMap/CollectableObjects/Aufklärung" to="World2_TileMap/CollectableObjects/Texte/Aufklärung_Text" method="_on_Aufklrung_body_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Enemy Luca Voigtmann in 15 jahren/Area 2D Enemy" to="Enemy Luca Voigtmann in 15 jahren" method="_on_Area_2D_Enemy_body_entered"]

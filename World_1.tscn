@@ -759,7 +759,7 @@ position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 7 )
 animation = "Idle"
-frame = 14
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -1350,9 +1350,9 @@ texture = ExtResource( 64 )
 [connection signal="body_entered" from="CollectableObjects/Fragezeichen" to="Texte/Fragezeichen Text" method="_on_Fragezeichen_body_entered"]
 [connection signal="body_exited" from="CollectableObjects/Fragezeichen" to="Texte/Fragezeichen Text" method="_on_Fragezeichen_body_exited"]
 [connection signal="body_entered" from="CollectableObjects/Schatztruhe" to="." method="_on_Schatztruhe_body_entered"]
-[connection signal="body_entered" from="CollectableObjects/Schlüssel" to="Texte/Schlüssel_Text" method="_on_Schlssel_body_entered"]
-[connection signal="body_entered" from="CollectableObjects/Schlüssel" to="CollectableObjects/Schlüssel" method="_on_Schlssel_body_entered"]
 [connection signal="body_entered" from="CollectableObjects/Schlüssel" to="Player" method="_on_Schlssel_body_entered"]
+[connection signal="body_entered" from="CollectableObjects/Schlüssel" to="CollectableObjects/Schlüssel" method="_on_Schlssel_body_entered"]
+[connection signal="body_entered" from="CollectableObjects/Schlüssel" to="Texte/Schlüssel_Text" method="_on_Schlssel_body_entered"]
 [connection signal="addCoin" from="Coins" to="Player" method="_on_Coins_addCoin"]
 [connection signal="addCoin" from="Coins2" to="Player" method="_on_Coins_addCoin"]
 [connection signal="addCoin" from="Coins3" to="Player" method="_on_Coins_addCoin"]
