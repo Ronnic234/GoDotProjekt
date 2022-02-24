@@ -61,34 +61,34 @@
 [ext_resource path="res://Assets /World /Decor_Plant.png" type="Texture" id=59]
 [ext_resource path="res://Assets /World /tree_1.png" type="Texture" id=60]
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 63.6108, 63.217 )
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 26 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 4 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 7 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "Run",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 31 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 35 ), ExtResource( 34 ), ExtResource( 13 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 14 ), ExtResource( 1 ), ExtResource( 20 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 30 ), ExtResource( 28 ), ExtResource( 24 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 4 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 7 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Run",
+"speed": 12.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 64, 72 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 78.556, 37.7748 )
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 resource_name = "Movement "
 length = 4.0
 loop = true
@@ -105,7 +105,7 @@ tracks/0/keys = {
 "values": [ Vector2( 2413.63, -626.64 ), Vector2( 2972.15, 167.88 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=6]
 resource_name = "Movement "
 length = 5.0
 loop = true
@@ -122,7 +122,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1171.32, -638.828 ), Vector2( 154.853, -642.579 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=7]
 resource_name = "Movement "
 length = 4.0
 loop = true
@@ -139,7 +139,7 @@ tracks/0/keys = {
 "values": [ Vector2( -1411.08, -915.101 ), Vector2( -605.076, -1768.87 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=8]
 resource_name = "Movement "
 length = 8.0
 loop = true
@@ -156,7 +156,7 @@ tracks/0/keys = {
 "values": [ Vector2( 189.54, -325.372 ), Vector2( -1501.3, 756.62 ) ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=9]
 resource_name = "Movement "
 length = 7.0
 loop = true
@@ -173,10 +173,10 @@ tracks/0/keys = {
 "values": [ Vector2( -2918.19, -819.161 ), Vector2( -2882.37, 989.872 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 13507.1, 184.115 )
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=11]
 resource_name = "Movement "
 length = 7.0
 loop = true
@@ -252,8 +252,7 @@ texture = ExtResource( 36 )
 [node name="Area2D" type="Area2D" parent="Weltelemente_Hintergrund/Sprite"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Weltelemente_Hintergrund/Sprite/Area2D"]
-scale = Vector2( 1, 1 )
-shape = SubResource( 12 )
+shape = SubResource( 1 )
 
 [node name="Player" type="KinematicBody2D" parent="." groups=[
 "player",
@@ -267,14 +266,14 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
 position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
-frames = SubResource( 1 )
+frames = SubResource( 2 )
 animation = "Idle"
-frame = 2
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 position = Vector2( -64, 0 )
-shape = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( 240, 32 )
@@ -558,10 +557,10 @@ texture = ExtResource( 53 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform"]
 position = Vector2( -20.3513, 518.237 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform"]
-"anims/Movement " = SubResource( 6 )
+"anims/Movement " = SubResource( 5 )
 
 [node name="Moving_Platform2" type="KinematicBody2D" parent="."]
 position = Vector2( 887.925, -639.874 )
@@ -578,10 +577,10 @@ texture = ExtResource( 53 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform2"]
 position = Vector2( -20.3513, 518.237 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform2"]
-"anims/Movement " = SubResource( 7 )
+"anims/Movement " = SubResource( 6 )
 
 [node name="Moving_Platform3" type="KinematicBody2D" parent="."]
 position = Vector2( -605.356, -1768.57 )
@@ -598,10 +597,10 @@ texture = ExtResource( 53 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform3"]
 position = Vector2( -20.3513, 518.237 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform3"]
-"anims/Movement " = SubResource( 8 )
+"anims/Movement " = SubResource( 7 )
 
 [node name="Moving_Platform4" type="KinematicBody2D" parent="."]
 position = Vector2( -1475.77, 740.28 )
@@ -618,10 +617,10 @@ texture = ExtResource( 53 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform4"]
 position = Vector2( -20.3513, 518.237 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform4"]
-"anims/Movement " = SubResource( 9 )
+"anims/Movement " = SubResource( 8 )
 
 [node name="Moving_Platform5" type="KinematicBody2D" parent="."]
 position = Vector2( -2910.53, -432.181 )
@@ -638,16 +637,16 @@ texture = ExtResource( 53 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform5"]
 position = Vector2( -20.3513, 518.237 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform5"]
-"anims/Movement " = SubResource( 10 )
+"anims/Movement " = SubResource( 9 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -1145.41, 2939.8 )
-shape = SubResource( 11 )
+shape = SubResource( 10 )
 
 [node name="Moving_Platform6" type="KinematicBody2D" parent="."]
 position = Vector2( 4195.79, -452.437 )
@@ -664,10 +663,10 @@ texture = ExtResource( 53 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform6"]
 position = Vector2( -20.3513, 518.237 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform6"]
-"anims/Movement " = SubResource( 13 )
+"anims/Movement " = SubResource( 11 )
 
 [connection signal="body_entered" from="Weltelemente_Hintergrund/Sprite/Area2D" to="Player" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
