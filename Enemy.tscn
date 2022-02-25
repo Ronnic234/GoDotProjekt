@@ -1,0 +1,145 @@
+[gd_scene load_steps=73 format=2]
+
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_010.png" type="Texture" id=1]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_001.png" type="Texture" id=2]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_008.png" type="Texture" id=3]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_004.png" type="Texture" id=4]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_016.png" type="Texture" id=5]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_015.png" type="Texture" id=6]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_017.png" type="Texture" id=7]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_004.png" type="Texture" id=8]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_006.png" type="Texture" id=9]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_012.png" type="Texture" id=10]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_008.png" type="Texture" id=11]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_011.png" type="Texture" id=12]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_002.png" type="Texture" id=13]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_007.png" type="Texture" id=14]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_003.png" type="Texture" id=15]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_005.png" type="Texture" id=16]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_001.png" type="Texture" id=17]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_009.png" type="Texture" id=18]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_000.png" type="Texture" id=19]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Jump Loop_000.png" type="Texture" id=20]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_007.png" type="Texture" id=21]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_002.png" type="Texture" id=22]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_005.png" type="Texture" id=23]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_014.png" type="Texture" id=24]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_013.png" type="Texture" id=25]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_011.png" type="Texture" id=26]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_009.png" type="Texture" id=27]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_000.png" type="Texture" id=28]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_010.png" type="Texture" id=29]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Running_003.png" type="Texture" id=30]
+[ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_006.png" type="Texture" id=31]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Running_010.png" type="Texture" id=32]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Running_007.png" type="Texture" id=33]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Running_009.png" type="Texture" id=34]
+[ext_resource path="res://scripts/Enemy.gd" type="Script" id=35]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Kicking_004.png" type="Texture" id=36]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Running_008.png" type="Texture" id=37]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Kicking_003.png" type="Texture" id=38]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Kicking_005.png" type="Texture" id=39]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Running_005.png" type="Texture" id=40]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Running_002.png" type="Texture" id=41]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Running_006.png" type="Texture" id=42]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Kicking_006.png" type="Texture" id=43]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Kicking_008.png" type="Texture" id=44]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Running_000.png" type="Texture" id=45]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Kicking_011.png" type="Texture" id=46]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Running_001.png" type="Texture" id=47]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Running_003.png" type="Texture" id=48]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Kicking_007.png" type="Texture" id=49]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Running_011.png" type="Texture" id=50]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Kicking_010.png" type="Texture" id=51]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Kicking_009.png" type="Texture" id=52]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Running_004.png" type="Texture" id=53]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Kicking_000.png" type="Texture" id=54]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Slashing_004.png" type="Texture" id=55]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Kicking_002.png" type="Texture" id=56]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Kicking_001.png" type="Texture" id=57]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Slashing_003.png" type="Texture" id=58]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Slashing_010.png" type="Texture" id=59]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Slashing_011.png" type="Texture" id=60]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Slashing_005.png" type="Texture" id=61]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Slashing_006.png" type="Texture" id=62]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Slashing_007.png" type="Texture" id=63]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Slashing_008.png" type="Texture" id=64]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Slashing_009.png" type="Texture" id=65]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Slashing_000.png" type="Texture" id=66]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Slashing_001.png" type="Texture" id=67]
+[ext_resource path="res://Assets /Character/Golem/SChwarzer G/0_Golem_Slashing_002.png" type="Texture" id=68]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 28 ), ExtResource( 17 ), ExtResource( 13 ), ExtResource( 30 ), ExtResource( 4 ), ExtResource( 16 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 11 ), ExtResource( 18 ), ExtResource( 1 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "Run",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 66 ), ExtResource( 67 ), ExtResource( 54 ), ExtResource( 57 ), ExtResource( 56 ), ExtResource( 38 ), ExtResource( 36 ), ExtResource( 39 ), ExtResource( 43 ), ExtResource( 49 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 51 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 47 ), ExtResource( 41 ), ExtResource( 48 ), ExtResource( 53 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 33 ), ExtResource( 37 ), ExtResource( 34 ), ExtResource( 32 ), ExtResource( 50 ), ExtResource( 68 ), ExtResource( 58 ), ExtResource( 55 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 59 ), ExtResource( 60 ) ],
+"loop": true,
+"name": "Jigga ist Sauer ",
+"speed": 20.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 1.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 2 ), ExtResource( 22 ), ExtResource( 15 ), ExtResource( 8 ), ExtResource( 23 ), ExtResource( 31 ), ExtResource( 21 ), ExtResource( 3 ), ExtResource( 27 ), ExtResource( 29 ), ExtResource( 26 ), ExtResource( 10 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 12.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 41.7922, 54.7097 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 67.8704, 76.4586 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 85.4098, 16.123 )
+
+[node name="Enemy" type="KinematicBody2D"]
+position = Vector2( 393.805, -294.769 )
+script = ExtResource( 35 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -64, -8 )
+scale = Vector2( 0.302222, 0.263333 )
+frames = SubResource( 1 )
+animation = "Jigga ist Sauer "
+frame = 35
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -67.2315, 0 )
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Area2Denemy" type="Area2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2Denemy"]
+position = Vector2( -62.4404, 2.80634 )
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( -63.8435, -67.3513 )
+shape = SubResource( 4 )
+
+[connection signal="body_entered" from="Area2Denemy" to="." method="_on_Area2Denemy_body_entered"]
+[connection signal="body_entered" from="Player" to="." method="_on_Player_body_entered"]
