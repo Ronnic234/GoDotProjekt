@@ -8,7 +8,8 @@ var right = Vector2(1,0)
 
 var direction = Vector2.ZERO
 
-signal dmgdelt
+signal enemygetroffen
+
 
 func _ready():
 	direction = left 
@@ -43,5 +44,6 @@ func _on_Player_body_entered(body):
 func _on_Area2Denemy_body_entered(body):
 	if(body.is_in_group("Player")): 
 		print("enemy hat getroffen ")
-		emit_signal("dmgdelt")
+		emit_signal("enemygetroffen")
+		
 		
