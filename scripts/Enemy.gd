@@ -8,6 +8,8 @@ var right = Vector2(1,0)
 
 var direction = Vector2.ZERO
 
+signal dmgdelt
+
 func _ready():
 	direction = left 
 	
@@ -23,13 +25,13 @@ func _physics_process(delta):
 			direction = right
 		elif direction == right:
 			direction = left
-			
-			
-			
 
+
+	if direction == right:
+		$AnimatedSprite.flip_h = false
+	elif direction == left:
+		$AnimatedSprite.flip_h = true
 	
-
-
 
 func _on_Player_body_entered(body):
 	if(body.is_in_group("Player")): 
@@ -41,3 +43,5 @@ func _on_Player_body_entered(body):
 func _on_Area2Denemy_body_entered(body):
 	if(body.is_in_group("Player")): 
 		print("enemy hat getroffen ")
+		emit_signal("dmgdelt")
+		

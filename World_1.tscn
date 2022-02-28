@@ -296,7 +296,7 @@ position = Vector2( 8, 24 )
 tile_set = ExtResource( 1 )
 cell_quadrant_size = 14
 format = 1
-tile_data = PoolIntArray( -786471, 10, 0, -786469, 8, 0, -786467, 8, 0, -786465, 9, 0, -655349, 10, 0, -655348, 8, 0, -393198, 8, 0, -393197, 9, 0, -262177, 12, 0, -327654, 6, 0, -327648, 6, 0, -262118, 10, 0, -262117, 8, 0, -262116, 8, 0, -262115, 8, 0, -262114, 8, 0, -262113, 9, 0, -131104, 12, 0, -65548, 10, 0, -65546, 8, 0, -65544, 8, 0, -65542, 9, 0, -131004, 10, 0, -131002, 8, 0, -131000, 8, 0, -130998, 9, 0, -42, 10, 0, -40, 8, 0, -38, 8, 0, -37, 8, 0, -35, 8, 0, -34, 8, 0, -32, 9, 0, 2, 10, 0, 4, 8, 0, 6, 9, 0, 1048578, 10, 0, 1048580, 8, 0, 1048581, 8, 0, 1048583, 8, 0, 1048585, 9, 0, 1310764, 10, 0, 1310766, 8, 0, 1310768, 9, 0, 1572892, 10, 0, 1572894, 8, 0, 1572895, 8, 0, 1572896, 8, 0, 1572897, 8, 0, 1572898, 8, 0, 1572899, 8, 0, 1572900, 8, 0, 1572901, 9, 0 )
+tile_data = PoolIntArray( -786471, 10, 0, -786469, 8, 0, -786467, 8, 0, -786465, 9, 0, -655349, 10, 0, -655348, 8, 0, -393198, 8, 0, -393197, 9, 0, -262177, 12, 0, -327654, 6, 0, -327648, 6, 0, -262118, 10, 0, -262117, 8, 0, -262116, 8, 0, -262115, 8, 0, -262114, 8, 0, -262113, 9, 0, -131104, 12, 0, -65548, 10, 0, -65546, 8, 0, -65544, 8, 0, -65542, 9, 0, -131004, 10, 0, -131002, 8, 0, -131000, 8, 0, -130998, 9, 0, -42, 10, 0, -40, 8, 0, -38, 8, 0, -37, 8, 0, -35, 8, 0, -34, 8, 0, -32, 9, 0, 2, 10, 0, 4, 8, 0, 6, 9, 0, 196627, 12, 0, 196645, 11, 0, 327699, 8, 0, 327700, 8, 0, 327701, 8, 0, 327702, 8, 0, 327703, 8, 0, 327704, 8, 0, 327705, 8, 0, 327706, 8, 0, 327707, 8, 0, 327708, 8, 0, 327709, 8, 0, 327710, 8, 0, 327711, 8, 0, 327712, 8, 0, 327713, 8, 0, 327714, 8, 0, 327715, 8, 0, 327716, 8, 0, 327717, 8, 0, 1048578, 10, 0, 1048580, 8, 0, 1048581, 8, 0, 1048583, 8, 0, 1048585, 9, 0, 1310764, 10, 0, 1310766, 8, 0, 1310768, 9, 0, 1572892, 10, 0, 1572894, 8, 0, 1572895, 8, 0, 1572896, 8, 0, 1572897, 8, 0, 1572898, 8, 0, 1572899, 8, 0, 1572900, 8, 0, 1572901, 9, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -748,8 +748,10 @@ scale = Vector2( 2, 2 )
 position = Vector2( -2176, -888 )
 scale = Vector2( 2, 2 )
 
-[node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 1374.04, -628.413 )
+[node name="Player" type="KinematicBody2D" parent="." groups=[
+"Player",
+]]
+position = Vector2( 1390.89, -512.702 )
 script = ExtResource( 32 )
 __meta__ = {
 "_edit_group_": true
@@ -760,7 +762,7 @@ position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 7 )
 animation = "Idle"
-frame = 10
+frame = 16
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -1350,14 +1352,14 @@ scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 64 )
 
 [node name="Enemy" parent="." instance=ExtResource( 89 )]
-position = Vector2( 1869.84, -311.156 )
+position = Vector2( 2192.35, 282.555 )
 
 [connection signal="body_entered" from="CollectableObjects/Fragezeichen" to="Texte/Fragezeichen Text" method="_on_Fragezeichen_body_entered"]
 [connection signal="body_exited" from="CollectableObjects/Fragezeichen" to="Texte/Fragezeichen Text" method="_on_Fragezeichen_body_exited"]
 [connection signal="body_entered" from="CollectableObjects/Schatztruhe" to="." method="_on_Schatztruhe_body_entered"]
+[connection signal="body_entered" from="CollectableObjects/Schlüssel" to="Player" method="_on_Schlssel_body_entered"]
 [connection signal="body_entered" from="CollectableObjects/Schlüssel" to="CollectableObjects/Schlüssel" method="_on_Schlssel_body_entered"]
 [connection signal="body_entered" from="CollectableObjects/Schlüssel" to="Texte/Schlüssel_Text" method="_on_Schlssel_body_entered"]
-[connection signal="body_entered" from="CollectableObjects/Schlüssel" to="Player" method="_on_Schlssel_body_entered"]
 [connection signal="addCoin" from="Coins" to="Player" method="_on_Coins_addCoin"]
 [connection signal="addCoin" from="Coins2" to="Player" method="_on_Coins_addCoin"]
 [connection signal="addCoin" from="Coins3" to="Player" method="_on_Coins_addCoin"]
@@ -1365,3 +1367,4 @@ position = Vector2( 1869.84, -311.156 )
 [connection signal="addCoin" from="Coins5" to="Player" method="_on_Coins_addCoin"]
 [connection signal="addCoin" from="Coins6" to="Player" method="_on_Coins_addCoin"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="dmgdelt" from="Enemy" to="Player" method="_on_Enemy_dmgdelt"]

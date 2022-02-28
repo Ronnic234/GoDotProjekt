@@ -15,7 +15,7 @@ var motion = Vector2()
 # Boolean = false, true 
 var hasKey = false
 
-
+var HP = 1
 
 # Funktion, die immer aufgerufen wird 
 func _physics_process(delta):
@@ -79,3 +79,9 @@ func _on_Enemy_LV_JR_Enemygetroffen():
 func _on_Area2D_body_entered(body):
 	get_tree().change_scene("res://World_1.tscn")
 	
+
+
+func _on_Enemy_dmgdelt():
+	HP -= 1 
+	print("haark hat einen großen")
+	get_tree().change_scene("res://World1.tscn")
