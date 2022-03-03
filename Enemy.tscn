@@ -76,15 +76,15 @@ animations = [ {
 "name": "Run",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 66 ), ExtResource( 67 ), ExtResource( 54 ), ExtResource( 57 ), ExtResource( 56 ), ExtResource( 38 ), ExtResource( 36 ), ExtResource( 39 ), ExtResource( 43 ), ExtResource( 49 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 51 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 47 ), ExtResource( 41 ), ExtResource( 48 ), ExtResource( 53 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 33 ), ExtResource( 37 ), ExtResource( 34 ), ExtResource( 32 ), ExtResource( 50 ), ExtResource( 68 ), ExtResource( 58 ), ExtResource( 55 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 59 ), ExtResource( 60 ) ],
-"loop": true,
-"name": "Jigga ist Sauer ",
-"speed": 20.0
-}, {
 "frames": [ ExtResource( 20 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 1.0
+}, {
+"frames": [ ExtResource( 66 ), ExtResource( 67 ), ExtResource( 54 ), ExtResource( 57 ), ExtResource( 56 ), ExtResource( 38 ), ExtResource( 36 ), ExtResource( 39 ), ExtResource( 43 ), ExtResource( 49 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 51 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 47 ), ExtResource( 41 ), ExtResource( 48 ), ExtResource( 53 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 33 ), ExtResource( 37 ), ExtResource( 34 ), ExtResource( 32 ), ExtResource( 50 ), ExtResource( 68 ), ExtResource( 58 ), ExtResource( 55 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 59 ), ExtResource( 60 ) ],
+"loop": true,
+"name": "Jigga ist Sauer ",
+"speed": 20.0
 }, {
 "frames": [ ExtResource( 19 ), ExtResource( 2 ), ExtResource( 22 ), ExtResource( 15 ), ExtResource( 8 ), ExtResource( 23 ), ExtResource( 31 ), ExtResource( 21 ), ExtResource( 3 ), ExtResource( 27 ), ExtResource( 29 ), ExtResource( 26 ), ExtResource( 10 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 7 ) ],
 "loop": true,
@@ -99,7 +99,7 @@ extents = Vector2( 41.7922, 54.7097 )
 extents = Vector2( 67.8704, 76.4586 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 85.4098, 16.123 )
+extents = Vector2( 34.1948, 24.5425 )
 
 [node name="Enemy" type="KinematicBody2D"]
 position = Vector2( 393.805, -294.769 )
@@ -110,7 +110,7 @@ position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 1 )
 animation = "Jigga ist Sauer "
-frame = 35
+frame = 20
 playing = true
 __meta__ = {
 "_edit_lock_": true
@@ -124,21 +124,17 @@ __meta__ = {
 }
 
 [node name="Area2Denemy" type="Area2D" parent="."]
-__meta__ = {
-"_edit_lock_": true
-}
+position = Vector2( 246.955, -195.74 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2Denemy"]
-position = Vector2( -62.4404, 2.80634 )
+position = Vector2( -312.202, 195.74 )
 shape = SubResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="Player" type="Area2D" parent="."]
+position = Vector2( -1.4032, -7.01575 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2( -63.8435, -67.3513 )
+position = Vector2( -68.7546, -49.8119 )
 shape = SubResource( 4 )
 
 [connection signal="body_entered" from="Area2Denemy" to="." method="_on_Area2Denemy_body_entered"]
