@@ -119,15 +119,15 @@ font_data = ExtResource( 74 )
 
 [sub_resource type="SpriteFrames" id=7]
 animations = [ {
-"frames": [ ExtResource( 37 ), ExtResource( 10 ), ExtResource( 22 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 20 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 36 ), ExtResource( 42 ), ExtResource( 13 ) ],
-"loop": true,
-"name": "Run",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 44 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 1.0
+}, {
+"frames": [ ExtResource( 37 ), ExtResource( 10 ), ExtResource( 22 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 20 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 36 ), ExtResource( 42 ), ExtResource( 13 ) ],
+"loop": true,
+"name": "Run",
+"speed": 12.0
 }, {
 "frames": [ ExtResource( 43 ), ExtResource( 4 ), ExtResource( 14 ), ExtResource( 40 ), ExtResource( 35 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 38 ), ExtResource( 21 ), ExtResource( 39 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 41 ), ExtResource( 7 ) ],
 "loop": true,
@@ -296,7 +296,7 @@ position = Vector2( 8, 24 )
 tile_set = ExtResource( 1 )
 cell_quadrant_size = 14
 format = 1
-tile_data = PoolIntArray( -786471, 10, 0, -786469, 8, 0, -786467, 8, 0, -786465, 9, 0, -655349, 10, 0, -655348, 8, 0, -393198, 8, 0, -393197, 9, 0, -262177, 12, 0, -327654, 6, 0, -327648, 6, 0, -262118, 10, 0, -262117, 8, 0, -262116, 8, 0, -262115, 8, 0, -262114, 8, 0, -262113, 9, 0, -131104, 12, 0, -65548, 10, 0, -65546, 8, 0, -65544, 8, 0, -65542, 9, 0, -131004, 10, 0, -131002, 8, 0, -131000, 8, 0, -130998, 9, 0, -42, 10, 0, -40, 8, 0, -38, 8, 0, -37, 8, 0, -35, 8, 0, -34, 8, 0, -32, 9, 0, 2, 10, 0, 4, 8, 0, 6, 9, 0, 196631, 7, 0, 196651, 7, 0, 327702, 8, 0, 327703, 8, 0, 327704, 8, 0, 327705, 8, 0, 327706, 8, 0, 327707, 8, 0, 327708, 8, 0, 327709, 8, 0, 327710, 8, 0, 327711, 8, 0, 327712, 8, 0, 327713, 8, 0, 327714, 8, 0, 327715, 8, 0, 327716, 8, 0, 327717, 8, 0, 327718, 8, 0, 327719, 8, 0, 327720, 8, 0, 327721, 8, 0, 327722, 8, 0, 327723, 8, 0, 327724, 8, 0, 1048578, 10, 0, 1048580, 8, 0, 1048581, 8, 0, 1048583, 8, 0, 1048585, 9, 0, 1310764, 10, 0, 1310766, 8, 0, 1310768, 9, 0, 1572892, 10, 0, 1572894, 8, 0, 1572895, 8, 0, 1572896, 8, 0, 1572897, 8, 0, 1572898, 8, 0, 1572899, 8, 0, 1572900, 8, 0, 1572901, 9, 0 )
+tile_data = PoolIntArray( -786471, 10, 0, -786469, 8, 0, -786467, 8, 0, -786465, 9, 0, -655349, 10, 0, -655348, 8, 0, -589796, 3, 0, -524260, 3, 0, -458724, 3, 0, -393198, 8, 0, -393197, 9, 0, -393195, 3, 0, -393194, 3, 0, -393193, 3, 0, -393192, 3, 0, -393191, 3, 0, -393190, 3, 0, -393189, 3, 0, -393188, 3, 0, -262177, 12, 0, -327654, 6, 0, -327653, 3, 0, -327648, 6, 0, -262118, 3, 0, -262117, 3, 0, -262116, 8, 0, -262115, 8, 0, -262114, 8, 0, -262113, 9, 0, -131104, 12, 0, -131084, 13, 0, -131078, 13, 0, -196588, 3, 0, -196582, 3, 0, -65548, 10, 0, -65546, 8, 0, -65544, 8, 0, -65542, 9, 0, -131052, 3, 0, -131048, 3, 0, -131047, 3, 0, -131004, 10, 0, -131002, 8, 0, -131000, 8, 0, -130998, 9, 0, -42, 10, 0, -40, 8, 0, -38, 8, 0, -37, 8, 0, -35, 8, 0, -34, 8, 0, -32, 9, 0, -65516, 3, 0, -65515, 3, 0, -65514, 3, 0, -65513, 3, 0, -65512, 3, 0, 2, 10, 0, 4, 8, 0, 6, 9, 0, 983042, 13, 0, 983049, 13, 0, 1048578, 10, 0, 1048580, 8, 0, 1048581, 8, 0, 1048583, 8, 0, 1048585, 9, 0, 1310764, 10, 0, 1310766, 8, 0, 1310768, 9, 0, 1507356, 13, 0, 1507365, 13, 0, 1572892, 10, 0, 1572894, 8, 0, 1572895, 8, 0, 1572896, 8, 0, 1572897, 8, 0, 1572898, 8, 0, 1572899, 8, 0, 1572900, 8, 0, 1572901, 9, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -751,7 +751,7 @@ scale = Vector2( 2, 2 )
 [node name="Player" type="KinematicBody2D" parent="." groups=[
 "Player",
 ]]
-position = Vector2( 1390.89, -512.702 )
+position = Vector2( 285.267, -452.105 )
 script = ExtResource( 32 )
 __meta__ = {
 "_edit_group_": true
@@ -762,7 +762,7 @@ position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 7 )
 animation = "Idle"
-frame = 4
+frame = 15
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -1352,7 +1352,16 @@ scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 64 )
 
 [node name="Enemy" parent="." instance=ExtResource( 89 )]
-position = Vector2( 2192.35, 282.555 )
+position = Vector2( -506.534, -163.989 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 89 )]
+position = Vector2( 472.894, 987.408 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 89 )]
+position = Vector2( 2007.44, -284.112 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 89 )]
+position = Vector2( 2075.03, 1472.79 )
 
 [connection signal="body_entered" from="CollectableObjects/Fragezeichen" to="Texte/Fragezeichen Text" method="_on_Fragezeichen_body_entered"]
 [connection signal="body_exited" from="CollectableObjects/Fragezeichen" to="Texte/Fragezeichen Text" method="_on_Fragezeichen_body_exited"]

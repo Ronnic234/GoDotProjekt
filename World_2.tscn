@@ -335,15 +335,15 @@ font_data = ExtResource( 40 )
 
 [sub_resource type="SpriteFrames" id=15]
 animations = [ {
-"frames": [ ExtResource( 10 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 28 ), ExtResource( 7 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 25 ), ExtResource( 4 ), ExtResource( 17 ) ],
-"loop": true,
-"name": "Run",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 27 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 28 ), ExtResource( 7 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 25 ), ExtResource( 4 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "Run",
+"speed": 12.0
 }, {
 "frames": [ ExtResource( 26 ), ExtResource( 5 ), ExtResource( 30 ), ExtResource( 12 ), ExtResource( 21 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 29 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 24 ), ExtResource( 11 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 33 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 15 ) ],
 "loop": true,
@@ -357,10 +357,10 @@ extents = Vector2( 48, 64 )
 [sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 7524.81, 208 )
 
-[sub_resource type="RectangleShape2D" id=20]
+[sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 82.1339, 50.0563 )
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=19]
 length = 4.0
 loop = true
 tracks/0/type = "value"
@@ -376,7 +376,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1295.69, 292.114 ), Vector2( 1988.21, -362.768 ) ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=20]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -392,7 +392,7 @@ tracks/0/keys = {
 "values": [ Vector2( 172.227, -391.932 ), Vector2( 212.998, 160.741 ) ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=21]
 resource_name = "Movement "
 length = 4.0
 loop = true
@@ -409,7 +409,7 @@ tracks/0/keys = {
 "values": [ Vector2( -2617.11, 351.891 ), Vector2( -3456.43, -276.338 ) ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=22]
 resource_name = "Movement "
 length = 4.0
 loop = true
@@ -426,7 +426,7 @@ tracks/0/keys = {
 "values": [ Vector2( -3913.78, 507.692 ), Vector2( -3843.41, -271.312 ) ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=23]
 resource_name = "Movement "
 length = 3.0
 loop = true
@@ -443,7 +443,7 @@ tracks/0/keys = {
 "values": [ Vector2( 2313.4, -370.742 ), Vector2( 2349.32, 221.994 ) ]
 }
 
-[sub_resource type="Animation" id=26]
+[sub_resource type="Animation" id=24]
 resource_name = "Movement "
 length = 3.0
 loop = true
@@ -460,7 +460,7 @@ tracks/0/keys = {
 "values": [ Vector2( 2854.6, 220.417 ), Vector2( 2854.6, -368.51 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=27]
+[sub_resource type="RectangleShape2D" id=25]
 extents = Vector2( 95.8208, 71.3324 )
 
 [node name="World_2" type="Node2D"]
@@ -492,26 +492,25 @@ shape = SubResource( 13 )
 [node name="Texte" type="YSort" parent="World2_TileMap/CollectableObjects"]
 
 [node name="Aufklärung_Text" type="ColorRect" parent="World2_TileMap/CollectableObjects/Texte"]
-margin_left = -3887.59
-margin_top = -338.167
-margin_right = -3375.59
-margin_bottom = -72.1671
+margin_left = -3907.88
+margin_top = -380.0
+margin_right = -3384.88
+margin_bottom = -82.9998
 color = Color( 0.666667, 0.054902, 0.701961, 1 )
 script = ExtResource( 39 )
 __meta__ = {
-"_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="World2_TileMap/CollectableObjects/Texte/Aufklärung_Text"]
 anchor_top = 0.0122034
 anchor_bottom = 0.0122034
-margin_left = 12.2016
-margin_top = 7.5078
-margin_right = 477.202
-margin_bottom = 297.508
+margin_left = 12.0
+margin_top = 3.69837
+margin_right = 509.0
+margin_bottom = 314.698
 custom_fonts/font = SubResource( 14 )
-text = "Die heiligen Sterne wurden von bösen Piraten gestohlen! Begib Dich mit dem Eisgolem in das Abenteuer, seine Sterne wiederzuholen und die Piraten zu bekämpfen. "
+text = "Die heiligen Sterne wurden von bösen Golems gestohlen! Begib Dich mit dem Eisgolem in das Abenteuer, seine Sterne wiederzuholen und die Golems  zu bekämpfen. (Um einen Golem zu töten  muss man ihm auf den Kopf springen)"
 autowrap = true
 clip_text = true
 __meta__ = {
@@ -689,7 +688,7 @@ scale = Vector2( 0.835068, 0.789003 )
 texture = ExtResource( 67 )
 
 [node name="Player Szene_2" type="KinematicBody2D" parent="."]
-position = Vector2( 3960.13, -431.067 )
+position = Vector2( -4388.16, -505.109 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -920,10 +919,10 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge1"]
 position = Vector2( 188.818, 417.938 )
-shape = SubResource( 20 )
+shape = SubResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge1"]
-"anims/Movement " = SubResource( 21 )
+"anims/Movement " = SubResource( 19 )
 
 [node name="Moving_Bridge2" type="KinematicBody2D" parent="MovingPlatforms"]
 position = Vector2( 172.227, -391.932 )
@@ -940,10 +939,10 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge2"]
 position = Vector2( 188.818, 417.938 )
-shape = SubResource( 20 )
+shape = SubResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge2"]
-"anims/Movement " = SubResource( 22 )
+"anims/Movement " = SubResource( 20 )
 
 [node name="Moving_Bridge3" type="KinematicBody2D" parent="MovingPlatforms"]
 position = Vector2( -3421.68, -290.428 )
@@ -960,10 +959,10 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge3"]
 position = Vector2( 188.818, 417.938 )
-shape = SubResource( 20 )
+shape = SubResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge3"]
-"anims/Movement " = SubResource( 23 )
+"anims/Movement " = SubResource( 21 )
 
 [node name="Moving_Bridge4" type="KinematicBody2D" parent="MovingPlatforms"]
 position = Vector2( -3908.81, 507.692 )
@@ -980,10 +979,10 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge4"]
 position = Vector2( 188.818, 417.938 )
-shape = SubResource( 20 )
+shape = SubResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge4"]
-"anims/Movement " = SubResource( 24 )
+"anims/Movement " = SubResource( 22 )
 
 [node name="Moving_Bridge5" type="KinematicBody2D" parent="MovingPlatforms"]
 position = Vector2( 2313.4, -370.742 )
@@ -1000,10 +999,10 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge5"]
 position = Vector2( 188.818, 421.812 )
-shape = SubResource( 20 )
+shape = SubResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge5"]
-"anims/Movement " = SubResource( 25 )
+"anims/Movement " = SubResource( 23 )
 
 [node name="Moving_Bridge6" type="KinematicBody2D" parent="MovingPlatforms"]
 position = Vector2( 2854.6, 220.417 )
@@ -1020,10 +1019,10 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge6"]
 position = Vector2( 184.943, 417.938 )
-shape = SubResource( 20 )
+shape = SubResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge6"]
-"anims/Movement " = SubResource( 26 )
+"anims/Movement " = SubResource( 24 )
 
 [node name="Area2D2" type="Area2D" parent="."]
 position = Vector2( -8.5343, 25.6028 )
@@ -1035,7 +1034,7 @@ texture = ExtResource( 82 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
 position = Vector2( 4351.39, -91.2839 )
-shape = SubResource( 27 )
+shape = SubResource( 25 )
 
 [node name="marker_statue2" type="Sprite" parent="."]
 position = Vector2( 72.7654, 227.086 )
