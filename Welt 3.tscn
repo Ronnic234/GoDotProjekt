@@ -194,7 +194,9 @@ tracks/0/keys = {
 "values": [ Vector2( 3649.85, 512.238 ), Vector2( 4264.8, -574.376 ) ]
 }
 
-[node name="World3" type="Node2D"]
+[node name="World3" type="Node2D" groups=[
+"Enemy",
+]]
 script = ExtResource( 23 )
 
 [node name="Weltelemente_Hintergrund" type="YSort" parent="."]
@@ -269,7 +271,7 @@ position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 16
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -566,7 +568,7 @@ shape = SubResource( 4 )
 "anims/Movement " = SubResource( 5 )
 
 [node name="Moving_Platform2" type="KinematicBody2D" parent="."]
-position = Vector2( 887.925, -639.874 )
+position = Vector2( 230.147, -642.301 )
 motion/sync_to_physics = true
 script = ExtResource( 55 )
 __meta__ = {
