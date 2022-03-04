@@ -391,7 +391,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=21]
 resource_name = "Movement "
-length = 4.0
+length = 6.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -400,7 +400,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
+"times": PoolRealArray( 0, 3.2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( -2617.11, 351.891 ), Vector2( -3456.43, -276.338 ) ]
@@ -442,7 +442,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=24]
 resource_name = "Movement "
-length = 3.0
+length = 6.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -451,7 +451,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1.7 ),
+"times": PoolRealArray( 0, 2.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 2854.6, 220.417 ), Vector2( 2854.6, -368.51 ) ]
@@ -953,7 +953,7 @@ shape = SubResource( 18 )
 "anims/Movement " = SubResource( 20 )
 
 [node name="Moving_Bridge3" type="KinematicBody2D" parent="MovingPlatforms"]
-position = Vector2( -3421.68, -290.428 )
+position = Vector2( -3436.35, -261.308 )
 motion/sync_to_physics = true
 script = ExtResource( 70 )
 __meta__ = {
@@ -973,7 +973,7 @@ shape = SubResource( 18 )
 "anims/Movement " = SubResource( 21 )
 
 [node name="Moving_Bridge4" type="KinematicBody2D" parent="MovingPlatforms"]
-position = Vector2( -3908.81, 508.537 )
+position = Vector2( -3908.81, 505.777 )
 motion/sync_to_physics = true
 script = ExtResource( 70 )
 __meta__ = {
@@ -1013,7 +1013,7 @@ shape = SubResource( 18 )
 "anims/Movement " = SubResource( 23 )
 
 [node name="Moving_Bridge6" type="KinematicBody2D" parent="MovingPlatforms"]
-position = Vector2( 2854.6, 220.417 )
+position = Vector2( 2854.6, -313.873 )
 motion/sync_to_physics = true
 script = ExtResource( 70 )
 __meta__ = {
@@ -1032,7 +1032,9 @@ shape = SubResource( 18 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge6"]
 "anims/Movement " = SubResource( 24 )
 
-[node name="Moving_Bridge7" type="KinematicBody2D" parent="MovingPlatforms"]
+[node name="Moving_Bridge7" type="KinematicBody2D" parent="MovingPlatforms" groups=[
+"Player",
+]]
 position = Vector2( -1457.79, 246.969 )
 motion/sync_to_physics = true
 script = ExtResource( 70 )

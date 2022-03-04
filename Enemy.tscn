@@ -110,7 +110,7 @@ position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 1 )
 animation = "Jigga ist Sauer "
-frame = 11
+frame = 30
 playing = true
 __meta__ = {
 "_edit_lock_": true
