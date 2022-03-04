@@ -34,7 +34,7 @@
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_006.png" type="Texture" id=32]
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_014.png" type="Texture" id=33]
 
-[sub_resource type="SpriteFrames" id=12]
+[sub_resource type="SpriteFrames" id=20]
 animations = [ {
 "frames": [ ExtResource( 29 ) ],
 "loop": true,
@@ -52,7 +52,7 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 64, 72 )
 
 [node name="Player" type="KinematicBody2D" groups=[
@@ -67,14 +67,14 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
-frames = SubResource( 12 )
+frames = SubResource( 20 )
 animation = "Idle"
-frame = 13
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -73.7714, 9.77142 )
-shape = SubResource( 13 )
+shape = SubResource( 21 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 240, 32 )
