@@ -350,7 +350,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=15]
-extents = Vector2( 48, 64 )
+extents = Vector2( 48, 60.9286 )
 
 [sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 7524.81, 208 )
@@ -721,7 +721,7 @@ scale = Vector2( 0.835068, 0.789003 )
 texture = ExtResource( 67 )
 
 [node name="Player Szene_2" type="KinematicBody2D" parent="."]
-position = Vector2( 4017.29, -246.118 )
+position = Vector2( -4388.16, -505.109 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
