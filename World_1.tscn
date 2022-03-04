@@ -557,10 +557,9 @@ script = ExtResource( 81 )
 [node name="CollectableObjects" type="YSort" parent="."]
 
 [node name="Fragezeichen" type="Area2D" parent="CollectableObjects"]
-position = Vector2( 352, -176 )
+position = Vector2( 352, -136.724 )
 __meta__ = {
-"_edit_group_": true,
-"_edit_lock_": true
+"_edit_group_": true
 }
 
 [node name="Bonus" type="Sprite" parent="CollectableObjects/Fragezeichen"]

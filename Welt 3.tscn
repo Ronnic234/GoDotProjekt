@@ -290,6 +290,11 @@ position = Vector2( 1957.02, -339.832 )
 scale = Vector2( 0.561631, 0.604486 )
 texture = ExtResource( 38 )
 
+[node name="decor_7 Kopie2" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( 10619.7, -740.469 )
+scale = Vector2( 1.69072, 1.15576 )
+texture = ExtResource( 58 )
+
 [node name="445" type="Sprite" parent="Weltelemente_Hintergrund"]
 position = Vector2( 7423.27, -1050.75 )
 texture = ExtResource( 57 )
@@ -340,7 +345,7 @@ position = Vector2( 2855.75, 768.427 )
 texture = ExtResource( 60 )
 
 [node name="Sprite" type="Sprite" parent="Weltelemente_Hintergrund"]
-position = Vector2( 7701.63, -709.153 )
+position = Vector2( 7694.04, -780.663 )
 scale = Vector2( -1.68609, 1.65032 )
 texture = ExtResource( 36 )
 __meta__ = {
@@ -377,6 +382,14 @@ texture = ExtResource( 62 )
 position = Vector2( 7210.78, 1237.14 )
 texture = ExtResource( 63 )
 
+[node name="Decor_Plant" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( 4697.29, -29.4783 )
+texture = ExtResource( 59 )
+
+[node name="building_2" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( 4596.73, -375.571 )
+texture = ExtResource( 46 )
+
 [node name="555" type="Sprite" parent="."]
 position = Vector2( 6874.19, 1185.37 )
 texture = ExtResource( 47 )
@@ -407,6 +420,14 @@ tile_data = PoolIntArray( -196586, 1, 0, -196576, 1, 0, 1048613, 0, 0, 1048629, 
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Platform 3"]
 
+[node name="8" type="Sprite" parent="Platform 3/ParallaxBackground"]
+position = Vector2( 14403.7, -1046 )
+scale = Vector2( 6.7624, 7.97709 )
+texture = ExtResource( 37 )
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="7" type="Sprite" parent="Platform 3/ParallaxBackground"]
 position = Vector2( 1780.13, -1044.27 )
 scale = Vector2( 8.1978, 7.94557 )
@@ -416,21 +437,22 @@ __meta__ = {
 }
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Platform 3/ParallaxBackground"]
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Regenwald 3" type="Sprite" parent="Platform 3/ParallaxBackground/ParallaxLayer"]
-position = Vector2( 10168, -462.335 )
-scale = Vector2( 4.86344, 5.32568 )
+position = Vector2( 11306, -466.771 )
+scale = Vector2( 6.06083, 5.32568 )
 texture = ExtResource( 45 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Bottle" type="Sprite" parent="Platform 3/ParallaxBackground/ParallaxLayer/Regenwald 3"]
 position = Vector2( -245.732, 149.695 )
 scale = Vector2( 0.105847, 0.137606 )
 texture = ExtResource( 54 )
-
-[node name="decor_7 Kopie" type="Sprite" parent="Platform 3/ParallaxBackground/ParallaxLayer/Regenwald 3"]
-position = Vector2( 92.3511, -55.1572 )
-scale = Vector2( 0.278958, 0.217017 )
-texture = ExtResource( 58 )
 
 [node name="Sprite" type="Sprite" parent="Platform 3/ParallaxBackground/ParallaxLayer"]
 position = Vector2( -2484.76, 236.522 )
@@ -789,7 +811,7 @@ position = Vector2( -146.706, -937.493 )
 [node name="Player" type="KinematicBody2D" parent="." groups=[
 "Player",
 ]]
-position = Vector2( 4698.97, -476.983 )
+position = Vector2( 7468.68, -1394.9 )
 script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
@@ -800,7 +822,7 @@ position = Vector2( -64.7334, -10.2002 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 10 )
 animation = "Idle"
-frame = 8
+frame = 10
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -906,4 +928,37 @@ shape = SubResource( 2 )
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform10"]
 "anims/Movement " = SubResource( 15 )
 
+[node name="Decor_Plant4" type="Sprite" parent="."]
+position = Vector2( 9783.69, -110.644 )
+texture = ExtResource( 59 )
+
+[node name="Decor_Plant5" type="Sprite" parent="."]
+position = Vector2( 10102.3, -238.526 )
+texture = ExtResource( 59 )
+
+[node name="Decor_Plant6" type="Sprite" parent="."]
+position = Vector2( 8550.38, 697.829 )
+texture = ExtResource( 59 )
+
+[node name="Decor_Plant7" type="Sprite" parent="."]
+position = Vector2( 9020.73, 515.76 )
+texture = ExtResource( 59 )
+
+[node name="Decor_Plant8" type="Sprite" parent="."]
+position = Vector2( 9228.81, 320.686 )
+texture = ExtResource( 59 )
+
+[node name="Decor_Plant9" type="Sprite" parent="."]
+position = Vector2( 10442.6, -381.58 )
+texture = ExtResource( 59 )
+
+[node name="Decor_Plant10" type="Sprite" parent="."]
+position = Vector2( 10635.9, -568.852 )
+texture = ExtResource( 59 )
+
+[node name="Decor_Plant11" type="Sprite" parent="."]
+position = Vector2( 10642.4, -865.798 )
+texture = ExtResource( 59 )
+
+[connection signal="body_entered" from="Weltelemente_Hintergrund/Sprite/Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
