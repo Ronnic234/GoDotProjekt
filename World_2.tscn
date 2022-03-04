@@ -1,4 +1,4 @@
-[gd_scene load_steps=107 format=2]
+[gd_scene load_steps=108 format=2]
 
 [ext_resource path="res://Assets /Background /background_glacial_mountains.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Player Szene_2.gd" type="Script" id=2]
@@ -63,6 +63,7 @@
 [ext_resource path="res://Assets /World /Rock_06.png" type="Texture" id=61]
 [ext_resource path="res://Assets /World /Bucket.png" type="Texture" id=62]
 [ext_resource path="res://Assets /World /marker_statue2.png" type="Texture" id=63]
+[ext_resource path="res://Assets /World /Wide_Door_02.png" type="Texture" id=64]
 [ext_resource path="res://Assets /World /torch3_3.png" type="Texture" id=65]
 [ext_resource path="res://Assets /World /Bottle.png" type="Texture" id=66]
 [ext_resource path="res://Assets /World /building_1.png" type="Texture" id=67]
@@ -326,15 +327,17 @@ points = PoolVector2Array( 416, 256, 0, 256, 0, 0, 416, 0 )
 
 [sub_resource type="GDScript" id=12]
 
-[sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 56, 56 )
-
-[sub_resource type="DynamicFont" id=14]
+[sub_resource type="DynamicFont" id=13]
 size = 30
 font_data = ExtResource( 40 )
 
-[sub_resource type="SpriteFrames" id=15]
+[sub_resource type="SpriteFrames" id=14]
 animations = [ {
+"frames": [ ExtResource( 27 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 10 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 28 ), ExtResource( 7 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 25 ), ExtResource( 4 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "Run",
@@ -344,23 +347,18 @@ animations = [ {
 "loop": true,
 "name": "Idle",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 27 ) ],
-"loop": true,
-"name": "Jump",
-"speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=16]
+[sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 48, 64 )
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 7524.81, 208 )
 
-[sub_resource type="RectangleShape2D" id=18]
+[sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 82.1339, 50.0563 )
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=18]
 length = 4.0
 loop = true
 tracks/0/type = "value"
@@ -376,7 +374,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1295.69, 292.114 ), Vector2( 1988.21, -362.768 ) ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=19]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -390,6 +388,23 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 172.227, -391.932 ), Vector2( 212.998, 160.741 ) ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "Movement "
+length = 6.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -2617.11, 351.891 ), Vector2( -3456.43, -276.338 ) ]
 }
 
 [sub_resource type="Animation" id=21]
@@ -406,27 +421,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 2 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( -2617.11, 351.891 ), Vector2( -3456.43, -276.338 ) ]
-}
-
-[sub_resource type="Animation" id=22]
-resource_name = "Movement "
-length = 4.0
-loop = true
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
 "values": [ Vector2( -3913.78, 507.692 ), Vector2( -3843.41, -271.312 ) ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=22]
 resource_name = "Movement "
 length = 3.0
 loop = true
@@ -443,9 +441,9 @@ tracks/0/keys = {
 "values": [ Vector2( 2313.4, -370.742 ), Vector2( 2349.32, 221.994 ) ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=23]
 resource_name = "Movement "
-length = 3.0
+length = 6.0
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -454,10 +452,27 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1.7 ),
+"times": PoolRealArray( 0, 2.9 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Vector2( 2854.6, 220.417 ), Vector2( 2854.6, -368.51 ) ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "Movement "
+length = 5.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1487.21, -226.228 ), Vector2( -1448.72, 392.844 ) ]
 }
 
 [sub_resource type="RectangleShape2D" id=25]
@@ -469,25 +484,19 @@ script = ExtResource( 51 )
 [node name="World2_TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 11 )
 format = 1
-tile_data = PoolIntArray( -131064, 8, 0, -131047, 7, 0, -65528, 4, 0, -65527, 5, 0, -65526, 5, 0, -65525, 5, 0, -65522, 5, 0, -65519, 5, 0, -65517, 5, 0, -65515, 5, 0, -65514, 5, 0, -65511, 6, 0, 65490, 4, 0, 65491, 5, 0, 65494, 6, 0, 53, 4, 0, 54, 5, 0, 57, 5, 0, 60, 5, 0, 63, 5, 0, 66, 5, 0, 69, 6, 0, 130999, 4, 0, 131000, 5, 0, 131003, 5, 0, 131006, 5, 0, 131009, 6, 0, 327661, 4, 0, 327662, 5, 0, 327665, 5, 0, 327668, 5, 0, 327671, 5, 0, 327674, 5, 0, 327677, 5, 0, 262144, 6, 0, 524297, 4, 0, 524298, 5, 0, 524301, 5, 0, 524304, 6, 0, 786397, 4, 0, 786398, 5, 0, 786401, 5, 0, 786403, 5, 0, 786406, 5, 0, 786409, 6, 0 )
+tile_data = PoolIntArray( -131064, 8, 0, -131047, 7, 0, -42, 7, 0, -65528, 4, 0, -65527, 5, 0, -65526, 5, 0, -65525, 5, 0, -65522, 5, 0, -65519, 5, 0, -65517, 5, 0, -65515, 5, 0, -65514, 5, 0, -65511, 6, 0, 65490, 4, 0, 65491, 5, 0, 65494, 6, 0, 53, 4, 0, 54, 5, 0, 57, 5, 0, 60, 5, 0, 63, 5, 0, 66, 5, 0, 69, 6, 0, 130999, 4, 0, 131000, 5, 0, 131003, 5, 0, 131006, 5, 0, 131009, 6, 0, 327661, 4, 0, 327662, 5, 0, 327665, 5, 0, 327668, 5, 0, 327671, 5, 0, 327674, 5, 0, 327677, 5, 0, 262144, 6, 0, 524297, 4, 0, 524298, 5, 0, 524301, 5, 0, 524304, 6, 0, 786397, 4, 0, 786398, 5, 0, 786401, 5, 0, 786403, 5, 0, 786406, 5, 0, 786409, 6, 0 )
 
 [node name="CollectableObjects" type="YSort" parent="World2_TileMap"]
 position = Vector2( 0, -16 )
 scale = Vector2( 1.25532, 1.31453 )
 
 [node name="Aufklärung" type="Area2D" parent="World2_TileMap/CollectableObjects"]
-position = Vector2( -3662.05, -7.30748 )
+position = Vector2( -3664.47, -18.0935 )
 script = SubResource( 12 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="Bonus" type="Sprite" parent="World2_TileMap/CollectableObjects/Aufklärung"]
+position = Vector2( 100.846, -57.0118 )
 texture = ExtResource( 41 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="World2_TileMap/CollectableObjects/Aufklärung"]
-position = Vector2( -1.0791, 0 )
-shape = SubResource( 13 )
 
 [node name="Texte" type="YSort" parent="World2_TileMap/CollectableObjects"]
 
@@ -509,13 +518,37 @@ margin_left = 12.0
 margin_top = 3.69837
 margin_right = 509.0
 margin_bottom = 314.698
-custom_fonts/font = SubResource( 14 )
+custom_fonts/font = SubResource( 13 )
 text = "Die heiligen Sterne wurden von bösen Golems gestohlen! Begib Dich mit dem Eisgolem in das Abenteuer, seine Sterne wiederzuholen und die Golems  zu bekämpfen. (Um einen Golem zu töten  muss man ihm auf den Kopf springen)"
 autowrap = true
 clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Wide_Door_02" type="Sprite" parent="World2_TileMap"]
+position = Vector2( -2825.53, -100.483 )
+texture = ExtResource( 64 )
+
+[node name="clouds_2" type="Sprite" parent="World2_TileMap"]
+position = Vector2( -2131.16, 89.2849 )
+texture = ExtResource( 55 )
+
+[node name="clouds_3" type="Sprite" parent="World2_TileMap"]
+position = Vector2( -3612.98, -63.6614 )
+texture = ExtResource( 55 )
+
+[node name="clouds_4" type="Sprite" parent="World2_TileMap"]
+position = Vector2( -202.588, -0.0575562 )
+texture = ExtResource( 55 )
+
+[node name="clouds_5" type="Sprite" parent="World2_TileMap"]
+position = Vector2( 1338.28, -62.8433 )
+texture = ExtResource( 55 )
+
+[node name="clouds_6" type="Sprite" parent="World2_TileMap"]
+position = Vector2( 1460.71, 362.006 )
+texture = ExtResource( 55 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -570,7 +603,7 @@ texture = ExtResource( 53 )
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="clouds_1" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2( -3270.46, 144.384 )
+position = Vector2( -3383.32, 134.352 )
 texture = ExtResource( 56 )
 
 [node name="clouds_3" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
@@ -688,7 +721,7 @@ scale = Vector2( 0.835068, 0.789003 )
 texture = ExtResource( 67 )
 
 [node name="Player Szene_2" type="KinematicBody2D" parent="."]
-position = Vector2( -519.66, 184.709 )
+position = Vector2( 4017.29, -246.118 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -697,7 +730,7 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player Szene_2"]
 position = Vector2( -144, -32 )
 scale = Vector2( 0.245556, 0.245556 )
-frames = SubResource( 15 )
+frames = SubResource( 14 )
 animation = "Jump"
 __meta__ = {
 "_edit_group_": true
@@ -705,7 +738,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player Szene_2"]
 position = Vector2( -151.43, -36.285 )
-shape = SubResource( 16 )
+shape = SubResource( 15 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -889,7 +922,7 @@ texture = ExtResource( 46 )
 
 [node name="CollisionShape2D Fallzone" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -508.071, 1713.26 )
-shape = SubResource( 17 )
+shape = SubResource( 16 )
 
 [node name="Wooden_Barrel" type="Sprite" parent="."]
 position = Vector2( 928.808, -67.2656 )
@@ -919,10 +952,10 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge1"]
 position = Vector2( 188.818, 417.938 )
-shape = SubResource( 18 )
+shape = SubResource( 17 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge1"]
-"anims/Movement " = SubResource( 19 )
+"anims/Movement " = SubResource( 18 )
 
 [node name="Moving_Bridge2" type="KinematicBody2D" parent="MovingPlatforms"]
 position = Vector2( 172.227, -391.932 )
@@ -939,13 +972,13 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge2"]
 position = Vector2( 188.818, 417.938 )
-shape = SubResource( 18 )
+shape = SubResource( 17 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge2"]
-"anims/Movement " = SubResource( 20 )
+"anims/Movement " = SubResource( 19 )
 
 [node name="Moving_Bridge3" type="KinematicBody2D" parent="MovingPlatforms"]
-position = Vector2( -3427.2, -290.428 )
+position = Vector2( -2763.41, 242.389 )
 motion/sync_to_physics = true
 script = ExtResource( 70 )
 __meta__ = {
@@ -959,13 +992,13 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge3"]
 position = Vector2( 188.818, 417.938 )
-shape = SubResource( 18 )
+shape = SubResource( 17 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge3"]
-"anims/Movement " = SubResource( 21 )
+"anims/Movement " = SubResource( 20 )
 
 [node name="Moving_Bridge4" type="KinematicBody2D" parent="MovingPlatforms"]
-position = Vector2( -3908.81, 507.692 )
+position = Vector2( -3908.81, 505.777 )
 motion/sync_to_physics = true
 script = ExtResource( 70 )
 __meta__ = {
@@ -979,13 +1012,13 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge4"]
 position = Vector2( 188.818, 417.938 )
-shape = SubResource( 18 )
+shape = SubResource( 17 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge4"]
-"anims/Movement " = SubResource( 22 )
+"anims/Movement " = SubResource( 21 )
 
 [node name="Moving_Bridge5" type="KinematicBody2D" parent="MovingPlatforms"]
-position = Vector2( 2313.4, -370.742 )
+position = Vector2( 2301.82, -405.48 )
 motion/sync_to_physics = true
 script = ExtResource( 70 )
 __meta__ = {
@@ -999,13 +1032,13 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge5"]
 position = Vector2( 188.818, 421.812 )
-shape = SubResource( 18 )
+shape = SubResource( 17 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge5"]
-"anims/Movement " = SubResource( 23 )
+"anims/Movement " = SubResource( 22 )
 
 [node name="Moving_Bridge6" type="KinematicBody2D" parent="MovingPlatforms"]
-position = Vector2( 2854.6, 220.417 )
+position = Vector2( 2854.6, -67.543 )
 motion/sync_to_physics = true
 script = ExtResource( 70 )
 __meta__ = {
@@ -1019,9 +1052,31 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge6"]
 position = Vector2( 184.943, 417.938 )
-shape = SubResource( 18 )
+shape = SubResource( 17 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge6"]
+"anims/Movement " = SubResource( 23 )
+
+[node name="Moving_Bridge7" type="KinematicBody2D" parent="MovingPlatforms" groups=[
+"Player",
+]]
+position = Vector2( -1457.79, 246.969 )
+motion/sync_to_physics = true
+script = ExtResource( 70 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="MovingPlatforms/Moving_Bridge7"]
+position = Vector2( 187.462, 411.704 )
+scale = Vector2( 0.407613, 0.407612 )
+texture = ExtResource( 69 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge7"]
+position = Vector2( 184.943, 417.938 )
+shape = SubResource( 17 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge7"]
 "anims/Movement " = SubResource( 24 )
 
 [node name="Area2D2" type="Area2D" parent="."]
@@ -1041,8 +1096,8 @@ position = Vector2( 72.7654, 227.086 )
 scale = Vector2( 1.69245, 1.89348 )
 texture = ExtResource( 63 )
 
-[connection signal="body_entered" from="World2_TileMap/CollectableObjects/Aufklärung" to="Player Szene_2" method="_on_Aufklrung_body_entered"]
 [connection signal="body_entered" from="World2_TileMap/CollectableObjects/Aufklärung" to="World2_TileMap/CollectableObjects/Texte/Aufklärung_Text" method="_on_Aufklrung_body_entered"]
+[connection signal="body_entered" from="World2_TileMap/CollectableObjects/Aufklärung" to="Player Szene_2" method="_on_Aufklrung_body_entered"]
 [connection signal="body_exited" from="World2_TileMap/CollectableObjects/Aufklärung" to="World2_TileMap/CollectableObjects/Texte/Aufklärung_Text" method="_on_Aufklrung_body_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]

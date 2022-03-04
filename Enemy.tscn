@@ -71,20 +71,20 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 28 ), ExtResource( 17 ), ExtResource( 13 ), ExtResource( 30 ), ExtResource( 4 ), ExtResource( 16 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 11 ), ExtResource( 18 ), ExtResource( 1 ), ExtResource( 12 ) ],
+"frames": [ ExtResource( 66 ), ExtResource( 67 ), ExtResource( 54 ), ExtResource( 57 ), ExtResource( 56 ), ExtResource( 38 ), ExtResource( 36 ), ExtResource( 39 ), ExtResource( 43 ), ExtResource( 49 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 51 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 47 ), ExtResource( 41 ), ExtResource( 48 ), ExtResource( 53 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 33 ), ExtResource( 37 ), ExtResource( 34 ), ExtResource( 32 ), ExtResource( 50 ), ExtResource( 68 ), ExtResource( 58 ), ExtResource( 55 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 59 ), ExtResource( 60 ) ],
 "loop": true,
-"name": "Run",
-"speed": 12.0
+"name": "Jigga ist Sauer ",
+"speed": 20.0
 }, {
 "frames": [ ExtResource( 20 ) ],
 "loop": true,
 "name": "Jump",
 "speed": 1.0
 }, {
-"frames": [ ExtResource( 66 ), ExtResource( 67 ), ExtResource( 54 ), ExtResource( 57 ), ExtResource( 56 ), ExtResource( 38 ), ExtResource( 36 ), ExtResource( 39 ), ExtResource( 43 ), ExtResource( 49 ), ExtResource( 44 ), ExtResource( 52 ), ExtResource( 51 ), ExtResource( 46 ), ExtResource( 45 ), ExtResource( 47 ), ExtResource( 41 ), ExtResource( 48 ), ExtResource( 53 ), ExtResource( 40 ), ExtResource( 42 ), ExtResource( 33 ), ExtResource( 37 ), ExtResource( 34 ), ExtResource( 32 ), ExtResource( 50 ), ExtResource( 68 ), ExtResource( 58 ), ExtResource( 55 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 65 ), ExtResource( 59 ), ExtResource( 60 ) ],
+"frames": [ ExtResource( 28 ), ExtResource( 17 ), ExtResource( 13 ), ExtResource( 30 ), ExtResource( 4 ), ExtResource( 16 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 11 ), ExtResource( 18 ), ExtResource( 1 ), ExtResource( 12 ) ],
 "loop": true,
-"name": "Jigga ist Sauer ",
-"speed": 20.0
+"name": "Run",
+"speed": 12.0
 }, {
 "frames": [ ExtResource( 19 ), ExtResource( 2 ), ExtResource( 22 ), ExtResource( 15 ), ExtResource( 8 ), ExtResource( 23 ), ExtResource( 31 ), ExtResource( 21 ), ExtResource( 3 ), ExtResource( 27 ), ExtResource( 29 ), ExtResource( 26 ), ExtResource( 10 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 7 ) ],
 "loop": true,
@@ -110,7 +110,7 @@ position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 1 )
 animation = "Jigga ist Sauer "
-frame = 20
+frame = 30
 playing = true
 __meta__ = {
 "_edit_lock_": true
