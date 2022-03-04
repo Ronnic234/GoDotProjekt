@@ -4,7 +4,7 @@ extends KinematicBody2D
 const SPEED = 500
 const UP = Vector2(0, -1)
 const GRAVITY = 30
-const JUMP_HEIGHT = -100 
+const JUMP_HEIGHT = -1000
 
 
 # Bewegungsrichtung des Spielers 

@@ -811,7 +811,7 @@ position = Vector2( -146.706, -937.493 )
 [node name="Player" type="KinematicBody2D" parent="." groups=[
 "Player",
 ]]
-position = Vector2( -2284.57, -1124.68 )
+position = Vector2( -2093.07, -817.768 )
 script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
@@ -822,7 +822,7 @@ position = Vector2( -64.7334, -10.2002 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 10 )
 animation = "Idle"
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -843,10 +843,10 @@ margin_top = -208.0
 margin_bottom = -208.0
 
 [node name="Enemy2" parent="." instance=ExtResource( 61 )]
-position = Vector2( 1604.28, -247.008 )
+position = Vector2( 1708.34, -232.655 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 61 )]
-position = Vector2( 2608.43, 955.794 )
+position = Vector2( 2608.43, 984.285 )
 
 [node name="Moving_Platform7" type="KinematicBody2D" parent="."]
 position = Vector2( 5391.83, -678.007 )
