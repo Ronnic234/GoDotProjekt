@@ -119,11 +119,6 @@ font_data = ExtResource( 74 )
 
 [sub_resource type="SpriteFrames" id=7]
 animations = [ {
-"frames": [ ExtResource( 44 ) ],
-"loop": true,
-"name": "Jump",
-"speed": 1.0
-}, {
 "frames": [ ExtResource( 37 ), ExtResource( 10 ), ExtResource( 22 ), ExtResource( 2 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 20 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 36 ), ExtResource( 42 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "Run",
@@ -133,6 +128,11 @@ animations = [ {
 "loop": true,
 "name": "Idle",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 44 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 1.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=8]
@@ -762,7 +762,7 @@ position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 7 )
 animation = "Idle"
-frame = 15
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -1358,10 +1358,10 @@ position = Vector2( -506.534, -163.989 )
 position = Vector2( 472.894, 987.408 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 89 )]
-position = Vector2( 2007.44, -284.112 )
+position = Vector2( 2008.63, -297.228 )
 
 [node name="Enemy4" parent="." instance=ExtResource( 89 )]
-position = Vector2( 2075.03, 1472.79 )
+position = Vector2( 2073.68, 1486.33 )
 
 [connection signal="body_entered" from="CollectableObjects/Fragezeichen" to="Texte/Fragezeichen Text" method="_on_Fragezeichen_body_entered"]
 [connection signal="body_exited" from="CollectableObjects/Fragezeichen" to="Texte/Fragezeichen Text" method="_on_Fragezeichen_body_exited"]

@@ -67,11 +67,6 @@ extents = Vector2( 63.6108, 63.217 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 26 ) ],
-"loop": true,
-"name": "Jump",
-"speed": 1.0
-}, {
 "frames": [ ExtResource( 9 ), ExtResource( 4 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 25 ), ExtResource( 19 ), ExtResource( 7 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "Run",
@@ -81,6 +76,11 @@ animations = [ {
 "loop": true,
 "name": "Idle",
 "speed": 12.0
+}, {
+"frames": [ ExtResource( 26 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 1.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=3]
@@ -269,7 +269,7 @@ position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 16
+frame = 10
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]

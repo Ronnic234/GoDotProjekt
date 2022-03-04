@@ -335,11 +335,6 @@ font_data = ExtResource( 40 )
 
 [sub_resource type="SpriteFrames" id=15]
 animations = [ {
-"frames": [ ExtResource( 27 ) ],
-"loop": true,
-"name": "Jump",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ), ExtResource( 23 ), ExtResource( 20 ), ExtResource( 28 ), ExtResource( 7 ), ExtResource( 22 ), ExtResource( 18 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 25 ), ExtResource( 4 ), ExtResource( 17 ) ],
 "loop": true,
 "name": "Run",
@@ -348,6 +343,11 @@ animations = [ {
 "frames": [ ExtResource( 26 ), ExtResource( 5 ), ExtResource( 30 ), ExtResource( 12 ), ExtResource( 21 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 29 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 24 ), ExtResource( 11 ), ExtResource( 19 ), ExtResource( 3 ), ExtResource( 33 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ) ],
+"loop": true,
+"name": "Jump",
 "speed": 5.0
 } ]
 
@@ -688,7 +688,7 @@ scale = Vector2( 0.835068, 0.789003 )
 texture = ExtResource( 67 )
 
 [node name="Player Szene_2" type="KinematicBody2D" parent="."]
-position = Vector2( -4388.16, -505.109 )
+position = Vector2( -519.66, 184.709 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -945,7 +945,7 @@ shape = SubResource( 18 )
 "anims/Movement " = SubResource( 20 )
 
 [node name="Moving_Bridge3" type="KinematicBody2D" parent="MovingPlatforms"]
-position = Vector2( -3421.68, -290.428 )
+position = Vector2( -3427.2, -290.428 )
 motion/sync_to_physics = true
 script = ExtResource( 70 )
 __meta__ = {
@@ -1041,8 +1041,8 @@ position = Vector2( 72.7654, 227.086 )
 scale = Vector2( 1.69245, 1.89348 )
 texture = ExtResource( 63 )
 
-[connection signal="body_entered" from="World2_TileMap/CollectableObjects/Aufklärung" to="World2_TileMap/CollectableObjects/Texte/Aufklärung_Text" method="_on_Aufklrung_body_entered"]
 [connection signal="body_entered" from="World2_TileMap/CollectableObjects/Aufklärung" to="Player Szene_2" method="_on_Aufklrung_body_entered"]
+[connection signal="body_entered" from="World2_TileMap/CollectableObjects/Aufklärung" to="World2_TileMap/CollectableObjects/Texte/Aufklärung_Text" method="_on_Aufklrung_body_entered"]
 [connection signal="body_exited" from="World2_TileMap/CollectableObjects/Aufklärung" to="World2_TileMap/CollectableObjects/Texte/Aufklärung_Text" method="_on_Aufklrung_body_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]
