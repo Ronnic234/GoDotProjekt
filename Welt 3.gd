@@ -7,7 +7,6 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-	get_tree().change_scene("res://World_1.tscn")
-	
+	get_tree().change_scene("res://Welt 3.tscn")
 	
 #joooo 

@@ -327,11 +327,11 @@ points = PoolVector2Array( 416, 256, 0, 256, 0, 0, 416, 0 )
 
 [sub_resource type="GDScript" id=12]
 
-[sub_resource type="DynamicFont" id=13]
+[sub_resource type="DynamicFont" id=14]
 size = 30
 font_data = ExtResource( 40 )
 
-[sub_resource type="SpriteFrames" id=14]
+[sub_resource type="SpriteFrames" id=15]
 animations = [ {
 "frames": [ ExtResource( 27 ) ],
 "loop": true,
@@ -349,16 +349,16 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=15]
+[sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 48, 64 )
 
-[sub_resource type="RectangleShape2D" id=16]
+[sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 7524.81, 208 )
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 82.1339, 50.0563 )
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=19]
 length = 4.0
 loop = true
 tracks/0/type = "value"
@@ -374,7 +374,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1295.69, 292.114 ), Vector2( 1988.21, -362.768 ) ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=20]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -390,7 +390,7 @@ tracks/0/keys = {
 "values": [ Vector2( 172.227, -391.932 ), Vector2( 212.998, 160.741 ) ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=21]
 resource_name = "Movement "
 length = 6.0
 loop = true
@@ -407,7 +407,7 @@ tracks/0/keys = {
 "values": [ Vector2( -2617.11, 351.891 ), Vector2( -3456.43, -276.338 ) ]
 }
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=22]
 resource_name = "Movement "
 length = 4.0
 loop = true
@@ -424,7 +424,7 @@ tracks/0/keys = {
 "values": [ Vector2( -3913.78, 507.692 ), Vector2( -3843.41, -271.312 ) ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=23]
 resource_name = "Movement "
 length = 3.0
 loop = true
@@ -441,7 +441,7 @@ tracks/0/keys = {
 "values": [ Vector2( 2313.4, -370.742 ), Vector2( 2349.32, 221.994 ) ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=24]
 resource_name = "Movement "
 length = 6.0
 loop = true
@@ -458,7 +458,7 @@ tracks/0/keys = {
 "values": [ Vector2( 2854.6, 220.417 ), Vector2( 2854.6, -368.51 ) ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=26]
 resource_name = "Movement "
 length = 5.0
 loop = true
@@ -518,7 +518,7 @@ margin_left = 12.0
 margin_top = 3.69837
 margin_right = 509.0
 margin_bottom = 314.698
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 14 )
 text = "Die heiligen Sterne wurden von bösen Golems gestohlen! Begib Dich mit dem Eisgolem in das Abenteuer, seine Sterne wiederzuholen und die Golems  zu bekämpfen. (Um einen Golem zu töten  muss man ihm auf den Kopf springen)"
 autowrap = true
 clip_text = true
@@ -721,7 +721,7 @@ scale = Vector2( 0.835068, 0.789003 )
 texture = ExtResource( 67 )
 
 [node name="Player Szene_2" type="KinematicBody2D" parent="."]
-position = Vector2( 4017.29, -246.118 )
+position = Vector2( -4388.16, -505.109 )
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
@@ -730,7 +730,7 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player Szene_2"]
 position = Vector2( -144, -32 )
 scale = Vector2( 0.245556, 0.245556 )
-frames = SubResource( 14 )
+frames = SubResource( 15 )
 animation = "Jump"
 __meta__ = {
 "_edit_group_": true
@@ -738,7 +738,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player Szene_2"]
 position = Vector2( -151.43, -36.285 )
-shape = SubResource( 15 )
+shape = SubResource( 16 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -922,7 +922,7 @@ texture = ExtResource( 46 )
 
 [node name="CollisionShape2D Fallzone" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -508.071, 1713.26 )
-shape = SubResource( 16 )
+shape = SubResource( 17 )
 
 [node name="Wooden_Barrel" type="Sprite" parent="."]
 position = Vector2( 928.808, -67.2656 )
@@ -952,10 +952,10 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge1"]
 position = Vector2( 188.818, 417.938 )
-shape = SubResource( 17 )
+shape = SubResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge1"]
-"anims/Movement " = SubResource( 18 )
+"anims/Movement " = SubResource( 19 )
 
 [node name="Moving_Bridge2" type="KinematicBody2D" parent="MovingPlatforms"]
 position = Vector2( 172.227, -391.932 )
@@ -972,10 +972,10 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge2"]
 position = Vector2( 188.818, 417.938 )
-shape = SubResource( 17 )
+shape = SubResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge2"]
-"anims/Movement " = SubResource( 19 )
+"anims/Movement " = SubResource( 20 )
 
 [node name="Moving_Bridge3" type="KinematicBody2D" parent="MovingPlatforms"]
 position = Vector2( -2763.41, 242.389 )
@@ -992,10 +992,10 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge3"]
 position = Vector2( 188.818, 417.938 )
-shape = SubResource( 17 )
+shape = SubResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge3"]
-"anims/Movement " = SubResource( 20 )
+"anims/Movement " = SubResource( 21 )
 
 [node name="Moving_Bridge4" type="KinematicBody2D" parent="MovingPlatforms"]
 position = Vector2( -3908.81, 505.777 )
@@ -1012,10 +1012,10 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge4"]
 position = Vector2( 188.818, 417.938 )
-shape = SubResource( 17 )
+shape = SubResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge4"]
-"anims/Movement " = SubResource( 21 )
+"anims/Movement " = SubResource( 22 )
 
 [node name="Moving_Bridge5" type="KinematicBody2D" parent="MovingPlatforms"]
 position = Vector2( 2301.82, -405.48 )
@@ -1032,10 +1032,10 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge5"]
 position = Vector2( 188.818, 421.812 )
-shape = SubResource( 17 )
+shape = SubResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge5"]
-"anims/Movement " = SubResource( 22 )
+"anims/Movement " = SubResource( 23 )
 
 [node name="Moving_Bridge6" type="KinematicBody2D" parent="MovingPlatforms"]
 position = Vector2( 2854.6, -67.543 )
@@ -1052,10 +1052,10 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge6"]
 position = Vector2( 184.943, 417.938 )
-shape = SubResource( 17 )
+shape = SubResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge6"]
-"anims/Movement " = SubResource( 23 )
+"anims/Movement " = SubResource( 24 )
 
 [node name="Moving_Bridge7" type="KinematicBody2D" parent="MovingPlatforms" groups=[
 "Player",
@@ -1074,10 +1074,10 @@ texture = ExtResource( 69 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving_Bridge7"]
 position = Vector2( 184.943, 417.938 )
-shape = SubResource( 17 )
+shape = SubResource( 18 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving_Bridge7"]
-"anims/Movement " = SubResource( 24 )
+"anims/Movement " = SubResource( 26 )
 
 [node name="Area2D2" type="Area2D" parent="."]
 position = Vector2( -8.5343, 25.6028 )
