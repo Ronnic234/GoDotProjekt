@@ -47,6 +47,6 @@ func _on_Area_2D_Enemy_body_entered(body):
 	
 
 	if is_on_wall(): 
-		move_and_collide()
+		move_and_collide() 
 		$AnimatedSprite.flip_h = !AnimatedSprite.flip_h 
 		
