@@ -85,13 +85,13 @@ func _ready():
 size = 35
 font_data = ExtResource( 74 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 5520, 432 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 56, 16 )
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=9]
 length = 8.0
 loop = true
 tracks/0/type = "value"
@@ -107,7 +107,7 @@ tracks/0/keys = {
 "values": [ Vector2( -736, 800 ), Vector2( 0, 808 ) ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=10]
 length = 8.0
 loop = true
 tracks/0/type = "value"
@@ -123,7 +123,7 @@ tracks/0/keys = {
 "values": [ Vector2( 4432, 1248 ), Vector2( 5328, -88 ) ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=11]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -139,7 +139,7 @@ tracks/0/keys = {
 "values": [ Vector2( 2216, -304 ), Vector2( 3912, -168 ) ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=12]
 length = 8.0
 loop = true
 tracks/0/type = "value"
@@ -155,7 +155,7 @@ tracks/0/keys = {
 "values": [ Vector2( -1096, -80 ), Vector2( -1840, -864 ) ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=13]
 length = 8.0
 loop = true
 tracks/0/type = "value"
@@ -171,7 +171,7 @@ tracks/0/keys = {
 "values": [ Vector2( -2664, -544 ), Vector2( -2920, -48 ) ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=14]
 length = 8.0
 loop = true
 tracks/0/type = "value"
@@ -187,7 +187,7 @@ tracks/0/keys = {
 "values": [ Vector2( -1824, 152 ), Vector2( -952, 864 ) ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=15]
 length = 8.0
 loop = true
 tracks/0/type = "value"
@@ -203,7 +203,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1576, 1432 ), Vector2( 776, 1080 ) ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=16]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -219,7 +219,7 @@ tracks/0/keys = {
 "values": [ Vector2( 3632, 1432 ), Vector2( 3576, 872 ) ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=17]
 length = 6.0
 loop = true
 tracks/0/type = "value"
@@ -825,7 +825,7 @@ texture = ExtResource( 65 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 1256, 2896 )
-shape = SubResource( 9 )
+shape = SubResource( 7 )
 
 [node name="MovingPlatforms" type="YSort" parent="."]
 
@@ -841,10 +841,10 @@ texture = ExtResource( 33 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/MovingBride1"]
 position = Vector2( 24, 0 )
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/MovingBride1"]
-"anims/Movement " = SubResource( 11 )
+"anims/Movement " = SubResource( 9 )
 
 [node name="lava_drop1_1" type="Sprite" parent="MovingPlatforms/MovingBride1"]
 position = Vector2( 24, 48 )
@@ -903,10 +903,10 @@ texture = ExtResource( 33 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving Bride 3"]
 position = Vector2( 24, 0 )
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving Bride 3"]
-"anims/Movement " = SubResource( 12 )
+"anims/Movement " = SubResource( 10 )
 
 [node name="Decor_Chest" type="Sprite" parent="MovingPlatforms/Moving Bride 3"]
 position = Vector2( 40, -77 )
@@ -965,10 +965,10 @@ texture = ExtResource( 33 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving Bride 8"]
 position = Vector2( 24, 0 )
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving Bride 8"]
-"anims/Movement " = SubResource( 13 )
+"anims/Movement " = SubResource( 11 )
 
 [node name="Chair" type="Sprite" parent="MovingPlatforms/Moving Bride 8"]
 position = Vector2( 28.0001, -64 )
@@ -997,10 +997,10 @@ texture = ExtResource( 33 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving Bride 4"]
 position = Vector2( 24, -8 )
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving Bride 4"]
-"anims/Movement " = SubResource( 14 )
+"anims/Movement " = SubResource( 12 )
 
 [node name="lava_drop1_1" type="Sprite" parent="MovingPlatforms/Moving Bride 4"]
 position = Vector2( 24, 48 )
@@ -1049,10 +1049,10 @@ texture = ExtResource( 33 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving Bride 5"]
 position = Vector2( 24, 0 )
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving Bride 5"]
-"anims/Movement " = SubResource( 15 )
+"anims/Movement " = SubResource( 13 )
 
 [node name="lava_drop1_1" type="Sprite" parent="MovingPlatforms/Moving Bride 5"]
 position = Vector2( 23.3099, 55.094 )
@@ -1104,10 +1104,10 @@ texture = ExtResource( 33 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving Bride 6"]
 position = Vector2( 24, 0 )
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving Bride 6"]
-"anims/Movement " = SubResource( 16 )
+"anims/Movement " = SubResource( 14 )
 
 [node name="lava_drop1_1" type="Sprite" parent="MovingPlatforms/Moving Bride 6"]
 position = Vector2( 24, 50 )
@@ -1156,10 +1156,10 @@ texture = ExtResource( 33 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving Bride 7"]
 position = Vector2( 24, 0 )
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving Bride 7"]
-"anims/Movement " = SubResource( 17 )
+"anims/Movement " = SubResource( 15 )
 
 [node name="Rock_06" type="Sprite" parent="MovingPlatforms/Moving Bride 7"]
 position = Vector2( 64, -32 )
@@ -1196,10 +1196,10 @@ texture = ExtResource( 33 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving Bride 9"]
 position = Vector2( 24, 0 )
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving Bride 9"]
-"anims/Movement " = SubResource( 18 )
+"anims/Movement " = SubResource( 16 )
 
 [node name="mushrum3" type="Sprite" parent="MovingPlatforms/Moving Bride 9"]
 position = Vector2( -16, -40 )
@@ -1223,10 +1223,10 @@ texture = ExtResource( 33 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MovingPlatforms/Moving Bride 10"]
 position = Vector2( 24, 0 )
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Moving Bride 10"]
-"anims/Movement " = SubResource( 19 )
+"anims/Movement " = SubResource( 17 )
 
 [node name="lava_drop1_1" type="Sprite" parent="MovingPlatforms/Moving Bride 10"]
 position = Vector2( 25.9996, 50.0001 )

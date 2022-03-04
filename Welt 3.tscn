@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=2]
+[gd_scene load_steps=83 format=2]
 
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Idle_009.png" type="Texture" id=1]
 [ext_resource path="res://MainInterface.tscn" type="PackedScene" id=2]
@@ -61,14 +61,20 @@
 [ext_resource path="res://Assets /World /Decor_Plant.png" type="Texture" id=59]
 [ext_resource path="res://Assets /World /tree_1.png" type="Texture" id=60]
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=61]
+[ext_resource path="res://Assets /World /Chair.png" type="Texture" id=62]
+[ext_resource path="res://Assets /World /Decor_Statue.png" type="Texture" id=63]
+[ext_resource path="res://Assets /World /Decor_Cart.png" type="Texture" id=64]
+[ext_resource path="res://Assets /Basket.png" type="Texture" id=65]
+[ext_resource path="res://Assets /World /Decor_Chest.png" type="Texture" id=66]
+[ext_resource path="res://Assets /World /decor_7.png" type="Texture" id=67]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 63.6108, 63.217 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 78.556, 37.7748 )
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=3]
 resource_name = "Movement "
 length = 4.0
 loop = true
@@ -85,7 +91,7 @@ tracks/0/keys = {
 "values": [ Vector2( 2413.63, -626.64 ), Vector2( 2972.15, 167.88 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=4]
 resource_name = "Movement "
 length = 5.0
 loop = true
@@ -102,7 +108,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1171.32, -638.828 ), Vector2( 154.853, -642.579 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=5]
 resource_name = "Movement "
 length = 4.0
 loop = true
@@ -119,7 +125,7 @@ tracks/0/keys = {
 "values": [ Vector2( -1411.08, -915.101 ), Vector2( -605.076, -1768.87 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=6]
 resource_name = "Movement "
 length = 8.0
 loop = true
@@ -136,7 +142,7 @@ tracks/0/keys = {
 "values": [ Vector2( 189.54, -325.372 ), Vector2( -1501.3, 756.62 ) ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=7]
 resource_name = "Movement "
 length = 7.0
 loop = true
@@ -153,10 +159,10 @@ tracks/0/keys = {
 "values": [ Vector2( -2918.19, -819.161 ), Vector2( -2882.37, 989.872 ) ]
 }
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 13507.1, 184.115 )
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=9]
 resource_name = "Movement "
 length = 7.0
 loop = true
@@ -173,7 +179,7 @@ tracks/0/keys = {
 "values": [ Vector2( 3649.85, 512.238 ), Vector2( 4264.8, -574.376 ) ]
 }
 
-[sub_resource type="SpriteFrames" id=12]
+[sub_resource type="SpriteFrames" id=10]
 animations = [ {
 "frames": [ ExtResource( 26 ) ],
 "loop": true,
@@ -191,11 +197,91 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=13]
-extents = Vector2( 64, 72 )
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 64, 63.9254 )
+
+[sub_resource type="Animation" id=12]
+resource_name = "Movement "
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.2, 2.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 5091.27, -598.842 ), Vector2( 6595.85, -995.135 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "Movement "
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 5.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 10952.1, -1237.78 ), Vector2( 10426.8, -2151 ), Vector2( 9081.43, -1575.75 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "Movement "
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 8823.36, -1559.89 ), Vector2( 7898.44, -1463.37 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "Movement "
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 7601.97, 885.554 ), Vector2( 8340.72, 269.927 ) ]
+}
 
 [node name="World3" type="Node2D"]
 script = ExtResource( 23 )
+
+[node name="Decor_Plant" type="Sprite" parent="."]
+position = Vector2( 7331.62, -607.623 )
+texture = ExtResource( 59 )
+
+[node name="Decor_Plant2" type="Sprite" parent="."]
+position = Vector2( 7424.84, -608.833 )
+texture = ExtResource( 59 )
+
+[node name="Decor_Plant3" type="Sprite" parent="."]
+position = Vector2( 7516.84, -611.253 )
+texture = ExtResource( 59 )
 
 [node name="Weltelemente_Hintergrund" type="YSort" parent="."]
 
@@ -203,6 +289,10 @@ script = ExtResource( 23 )
 position = Vector2( 1957.02, -339.832 )
 scale = Vector2( 0.561631, 0.604486 )
 texture = ExtResource( 38 )
+
+[node name="445" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( 7423.27, -1050.75 )
+texture = ExtResource( 57 )
 
 [node name="greenery_5" type="Sprite" parent="Weltelemente_Hintergrund"]
 position = Vector2( 1414.73, -122.711 )
@@ -219,6 +309,10 @@ texture = ExtResource( 46 )
 [node name="building_1 Kopie" type="Sprite" parent="Weltelemente_Hintergrund"]
 position = Vector2( -1833.47, -529.782 )
 texture = ExtResource( 50 )
+
+[node name="Bucket" type="Sprite" parent="Weltelemente_Hintergrund/building_1 Kopie"]
+position = Vector2( 11012.7, 752.015 )
+texture = ExtResource( 52 )
 
 [node name="Bucket" type="Sprite" parent="Weltelemente_Hintergrund"]
 position = Vector2( -2003.49, -402.591 )
@@ -246,21 +340,62 @@ position = Vector2( 2855.75, 768.427 )
 texture = ExtResource( 60 )
 
 [node name="Sprite" type="Sprite" parent="Weltelemente_Hintergrund"]
-position = Vector2( 4767.79, -200.111 )
-scale = Vector2( -1.4154, 1.44901 )
+position = Vector2( 7701.63, -709.153 )
+scale = Vector2( -1.68609, 1.65032 )
 texture = ExtResource( 36 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Area2D" type="Area2D" parent="Weltelemente_Hintergrund/Sprite"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Weltelemente_Hintergrund/Sprite/Area2D"]
+position = Vector2( 5.47681, -5.35017 )
 shape = SubResource( 1 )
+
+[node name="Decor_Potions_01" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( 8906.81, 409.149 )
+texture = ExtResource( 41 )
+
+[node name="decor_7" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( 9415.33, 45.2345 )
+texture = ExtResource( 67 )
+
+[node name="Decor_Chest" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( 9470.56, -2.32598 )
+texture = ExtResource( 66 )
+
+[node name="Decor_Cart" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( 9807.57, -289.553 )
+texture = ExtResource( 64 )
+
+[node name="Chair" type="Sprite" parent="Weltelemente_Hintergrund/Decor_Cart"]
+position = Vector2( 574.462, -195.237 )
+texture = ExtResource( 62 )
+
+[node name="Decor_Statue" type="Sprite" parent="Weltelemente_Hintergrund"]
+position = Vector2( 7210.78, 1237.14 )
+texture = ExtResource( 63 )
+
+[node name="555" type="Sprite" parent="."]
+position = Vector2( 6874.19, 1185.37 )
+texture = ExtResource( 47 )
+
+[node name="Basket" type="Sprite" parent="."]
+position = Vector2( 8579.74, 605.614 )
+texture = ExtResource( 65 )
+
+[node name="Regenwald4" type="Sprite" parent="."]
+position = Vector2( 12545.7, 1709.48 )
+scale = Vector2( 3.37978, 2.95183 )
+texture = ExtResource( 44 )
 
 [node name="WorldTileMap" type="TileMap" parent="."]
 position = Vector2( 7.99998, 24 )
 tile_set = ExtResource( 42 )
 cell_quadrant_size = 14
 format = 1
-tile_data = PoolIntArray( -1048562, 14, 0, -917514, 14, 0, -851978, 0, 0, -851976, 2, 0, -851975, 2, 0, -851974, 2, 0, -851973, 2, 0, -851972, 2, 0, -851971, 2, 0, -851970, 2, 0, -851969, 2, 0, -917504, 2, 0, -917503, 2, 0, -917502, 2, 0, -917501, 2, 0, -917500, 2, 0, -917499, 2, 0, -917498, 2, 0, -917497, 2, 0, -917496, 2, 0, -917495, 2, 0, -917494, 2, 0, -917493, 2, 0, -917492, 2, 0, -917490, 9, 0, -327719, 0, 0, -327717, 2, 0, -327715, 2, 0, -327713, 2, 0, -327711, 2, 0, -327709, 2, 0, -327707, 1, 0, -262123, 14, 0, -262113, 14, 0, -196587, 10, 0, -196585, 8, 0, -196583, 8, 0, -196581, 8, 0, -196579, 8, 0, -196577, 9, 0, -131004, 10, 0, -131002, 8, 0, -131000, 8, 0, -130998, 9, 0, 852020, 14, 0, 983076, 14, 0, 1048612, 0, 0, 1048614, 2, 0, 1048616, 2, 0, 1048618, 2, 0, 1048620, 2, 0, 1048622, 2, 0, 1048624, 2, 0, 1048626, 2, 0, 1048628, 1, 0, 1441750, 0, 0, 1441752, 2, 0, 1441754, 2, 0, 1441756, 2, 0, 1441758, 2, 0, 1441760, 2, 0, 1441762, 2, 0, 1441764, 1, 0 )
+tile_data = PoolIntArray( -1048562, 14, 0, -917514, 14, 0, -851978, 0, 0, -851976, 2, 0, -851975, 2, 0, -851974, 2, 0, -851973, 2, 0, -851972, 2, 0, -851971, 2, 0, -851970, 2, 0, -851969, 2, 0, -917504, 2, 0, -917503, 2, 0, -917502, 2, 0, -917501, 2, 0, -917500, 2, 0, -917499, 2, 0, -917498, 2, 0, -917497, 2, 0, -917496, 2, 0, -917495, 2, 0, -917494, 2, 0, -917493, 2, 0, -917492, 2, 0, -917490, 9, 0, -720783, 0, 0, -720781, 2, 0, -720780, 2, 0, -720779, 2, 0, -720778, 2, 0, -720776, 1, 0, -655197, 0, 0, -655196, 2, 0, -655194, 1, 0, -458593, 11, 0, -458591, 8, 0, -458589, -1610612724, 0, -327719, 0, 0, -327717, 2, 0, -327715, 2, 0, -327713, 2, 0, -327711, 2, 0, -327709, 2, 0, -327707, 1, 0, -327525, 11, 0, -327523, 2, 0, -327521, 8, 0, -327519, -1610612724, 0, -262123, 14, 0, -262113, 14, 0, -196587, 10, 0, -196585, 8, 0, -196583, 8, 0, -196581, 8, 0, -196579, 8, 0, -196577, 9, 0, -196457, 0, 0, -196455, 2, 0, -196453, 2, 0, -196451, 8, 0, -196449, -1610612724, 0, -131004, 10, 0, -131002, 8, 0, -131000, 8, 0, -130998, 9, 0, 65682, 0, 0, 65684, 1, 0, 262286, 0, 0, 262288, 1, 0, 458890, 0, 0, 458892, 1, 0, 655492, 0, 0, 655494, 9, 0, 852020, 14, 0, 983076, 14, 0, 1048612, 0, 0, 1048614, 2, 0, 1048616, 2, 0, 1048618, 2, 0, 1048620, 2, 0, 1048622, 2, 0, 1048624, 2, 0, 1048626, 2, 0, 1048628, 1, 0, 1441750, 0, 0, 1441752, 2, 0, 1441754, 2, 0, 1441756, 2, 0, 1441758, 2, 0, 1441760, 2, 0, 1441762, 2, 0, 1441764, 1, 0, 1376360, 0, 0, 1376361, 2, 0, 1376362, 2, 0, 1376363, 2, 0, 1376364, 2, 0, 1376365, 2, 0, 1376366, 2, 0, 1376367, 2, 0, 1376368, 2, 0, 1376369, 2, 0, 1376370, 1, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -281,6 +416,21 @@ __meta__ = {
 }
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Platform 3/ParallaxBackground"]
+
+[node name="Regenwald 3" type="Sprite" parent="Platform 3/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 10168, -462.335 )
+scale = Vector2( 4.86344, 5.32568 )
+texture = ExtResource( 45 )
+
+[node name="Bottle" type="Sprite" parent="Platform 3/ParallaxBackground/ParallaxLayer/Regenwald 3"]
+position = Vector2( -245.732, 149.695 )
+scale = Vector2( 0.105847, 0.137606 )
+texture = ExtResource( 54 )
+
+[node name="decor_7 Kopie" type="Sprite" parent="Platform 3/ParallaxBackground/ParallaxLayer/Regenwald 3"]
+position = Vector2( 92.3511, -55.1572 )
+scale = Vector2( 0.278958, 0.217017 )
+texture = ExtResource( 58 )
 
 [node name="Sprite" type="Sprite" parent="Platform 3/ParallaxBackground/ParallaxLayer"]
 position = Vector2( -2484.76, 236.522 )
@@ -522,10 +672,10 @@ texture = ExtResource( 53 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform"]
 position = Vector2( -20.3513, 518.237 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform"]
-"anims/Movement " = SubResource( 5 )
+"anims/Movement " = SubResource( 3 )
 
 [node name="Moving_Platform2" type="KinematicBody2D" parent="."]
 position = Vector2( 230.147, -642.301 )
@@ -542,10 +692,10 @@ texture = ExtResource( 53 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform2"]
 position = Vector2( -20.3513, 518.237 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform2"]
-"anims/Movement " = SubResource( 6 )
+"anims/Movement " = SubResource( 4 )
 
 [node name="Moving_Platform3" type="KinematicBody2D" parent="."]
 position = Vector2( -605.356, -1768.57 )
@@ -562,10 +712,10 @@ texture = ExtResource( 53 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform3"]
 position = Vector2( -20.3513, 518.237 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform3"]
-"anims/Movement " = SubResource( 7 )
+"anims/Movement " = SubResource( 5 )
 
 [node name="Moving_Platform4" type="KinematicBody2D" parent="."]
 position = Vector2( -1475.77, 740.28 )
@@ -582,10 +732,10 @@ texture = ExtResource( 53 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform4"]
 position = Vector2( -20.3513, 518.237 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform4"]
-"anims/Movement " = SubResource( 8 )
+"anims/Movement " = SubResource( 6 )
 
 [node name="Moving_Platform5" type="KinematicBody2D" parent="."]
 position = Vector2( -2910.53, -432.181 )
@@ -602,19 +752,19 @@ texture = ExtResource( 53 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform5"]
 position = Vector2( -20.3513, 518.237 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform5"]
-"anims/Movement " = SubResource( 9 )
+"anims/Movement " = SubResource( 7 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( -1145.41, 2939.8 )
-shape = SubResource( 10 )
+shape = SubResource( 8 )
 
 [node name="Moving_Platform6" type="KinematicBody2D" parent="."]
-position = Vector2( 4195.79, -452.437 )
+position = Vector2( 4195.79, -447.309 )
 motion/sync_to_physics = true
 script = ExtResource( 55 )
 __meta__ = {
@@ -628,10 +778,10 @@ texture = ExtResource( 53 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform6"]
 position = Vector2( -20.3513, 518.237 )
-shape = SubResource( 4 )
+shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform6"]
-"anims/Movement " = SubResource( 11 )
+"anims/Movement " = SubResource( 9 )
 
 [node name="Enemy" parent="." instance=ExtResource( 61 )]
 position = Vector2( -146.706, -937.493 )
@@ -639,23 +789,23 @@ position = Vector2( -146.706, -937.493 )
 [node name="Player" type="KinematicBody2D" parent="." groups=[
 "Player",
 ]]
-position = Vector2( 1843.29, -468.729 )
+position = Vector2( 4698.97, -476.983 )
 script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
-position = Vector2( -64, -8 )
+position = Vector2( -64.7334, -10.2002 )
 scale = Vector2( 0.302222, 0.263333 )
-frames = SubResource( 12 )
+frames = SubResource( 10 )
 animation = "Idle"
-frame = 1
+frame = 8
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2( -73.7714, 9.77142 )
-shape = SubResource( 13 )
+position = Vector2( -71.5712, -1.96222 )
+shape = SubResource( 11 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( 240, 32 )
@@ -670,26 +820,90 @@ smoothing_enabled = true
 margin_top = -208.0
 margin_bottom = -208.0
 
-[node name="444" type="Sprite" parent="Player"]
-position = Vector2( 4264.8, 889.191 )
-texture = ExtResource( 57 )
-
-[node name="Decor_Plant" type="Sprite" parent="Player"]
-position = Vector2( 4166.89, 1294.76 )
-texture = ExtResource( 59 )
-
-[node name="Decor_Plant2" type="Sprite" parent="Player"]
-position = Vector2( 4260.11, 1293.55 )
-texture = ExtResource( 59 )
-
-[node name="Decor_Plant3" type="Sprite" parent="Player"]
-position = Vector2( 4352.11, 1291.13 )
-texture = ExtResource( 59 )
-
 [node name="Enemy2" parent="." instance=ExtResource( 61 )]
 position = Vector2( 1604.28, -247.008 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 61 )]
 position = Vector2( 2608.43, 955.794 )
+
+[node name="Moving_Platform7" type="KinematicBody2D" parent="."]
+position = Vector2( 5391.83, -678.007 )
+motion/sync_to_physics = true
+script = ExtResource( 55 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Moving_Platform7"]
+position = Vector2( -19.3544, 523.5 )
+scale = Vector2( 0.406903, 0.409524 )
+texture = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform7"]
+position = Vector2( -20.3513, 518.237 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform7"]
+"anims/Movement " = SubResource( 12 )
+
+[node name="Moving_Platform8" type="KinematicBody2D" parent="."]
+position = Vector2( 9085.18, -1570.25 )
+motion/sync_to_physics = true
+script = ExtResource( 55 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Moving_Platform8"]
+position = Vector2( -19.3544, 523.5 )
+scale = Vector2( 0.406903, 0.409524 )
+texture = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform8"]
+position = Vector2( -20.3513, 518.237 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform8"]
+"anims/Movement " = SubResource( 13 )
+
+[node name="Moving_Platform9" type="KinematicBody2D" parent="."]
+position = Vector2( 8823.36, -1559.89 )
+motion/sync_to_physics = true
+script = ExtResource( 55 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Moving_Platform9"]
+position = Vector2( -19.3544, 523.5 )
+scale = Vector2( 0.406903, 0.409524 )
+texture = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform9"]
+position = Vector2( -20.3513, 518.237 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform9"]
+"anims/Movement " = SubResource( 14 )
+
+[node name="Moving_Platform10" type="KinematicBody2D" parent="."]
+position = Vector2( 8340.72, 269.927 )
+motion/sync_to_physics = true
+script = ExtResource( 55 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Moving_Platform10"]
+position = Vector2( -19.3544, 523.5 )
+scale = Vector2( 0.406903, 0.409524 )
+texture = ExtResource( 53 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Moving_Platform10"]
+position = Vector2( -20.3513, 518.237 )
+shape = SubResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Moving_Platform10"]
+"anims/Movement " = SubResource( 15 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
