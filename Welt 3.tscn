@@ -811,7 +811,7 @@ position = Vector2( -146.706, -937.493 )
 [node name="Player" type="KinematicBody2D" parent="." groups=[
 "Player",
 ]]
-position = Vector2( 7468.68, -1394.9 )
+position = Vector2( -2284.57, -1124.68 )
 script = ExtResource( 12 )
 __meta__ = {
 "_edit_group_": true
@@ -822,7 +822,7 @@ position = Vector2( -64.7334, -10.2002 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 10 )
 animation = "Idle"
-frame = 10
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
@@ -957,7 +957,7 @@ position = Vector2( 10635.9, -568.852 )
 texture = ExtResource( 59 )
 
 [node name="Decor_Plant11" type="Sprite" parent="."]
-position = Vector2( 10642.4, -865.798 )
+position = Vector2( 10650.8, -848.609 )
 texture = ExtResource( 59 )
 
 [connection signal="body_entered" from="Weltelemente_Hintergrund/Sprite/Area2D" to="." method="_on_Area2D_body_entered"]

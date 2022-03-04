@@ -1,35 +1,9 @@
-[gd_scene load_steps=4 format=2]
-
-[ext_resource path="res://Assets /Font/Unique.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Assets /Collectable Objects/000_0019_star1.png" type="Texture" id=2]
-
-[sub_resource type="DynamicFont" id=1]
-size = 70
-outline_color = Color( 0.968627, 0.968627, 0.968627, 1 )
-font_data = ExtResource( 1 )
+[gd_scene format=2]
 
 [node name="MainInterface" type="Control"]
 anchor_top = 0.00209493
 anchor_right = 1.0
 anchor_bottom = 1.00209
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 1124.07, -447.697 )
-scale = Vector2( 1.5, 1.25 )
-texture = ExtResource( 2 )
-
-[node name="Label" type="Label" parent="."]
-margin_left = 1041.16
-margin_top = -499.771
-margin_right = 1095.16
-margin_bottom = -417.771
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0.94902, 0.0705882, 0.0705882, 1 )
-text = "0"
-align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
