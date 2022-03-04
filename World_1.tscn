@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=2]
+[gd_scene load_steps=109 format=2]
 
 [ext_resource path="res://Tileset_Collision.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets /Character/Golem/0_Golem_Running_003.png" type="Texture" id=2]
@@ -88,6 +88,7 @@
 [ext_resource path="res://Assets /World /Sign_04.png" type="Texture" id=86]
 [ext_resource path="res://Assets /World /torch3_2.png" type="Texture" id=87]
 [ext_resource path="res://Assets /World /Decor_Chest.png" type="Texture" id=88]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=89]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 56, 56 )
@@ -295,7 +296,7 @@ position = Vector2( 8, 24 )
 tile_set = ExtResource( 1 )
 cell_quadrant_size = 14
 format = 1
-tile_data = PoolIntArray( -786471, 10, 0, -786469, 8, 0, -786467, 8, 0, -786465, 9, 0, -655349, 10, 0, -655348, 8, 0, -393198, 8, 0, -393197, 9, 0, -262177, 12, 0, -262118, 10, 0, -262117, 8, 0, -262116, 8, 0, -262115, 8, 0, -262114, 8, 0, -262113, 9, 0, -131104, 12, 0, -65548, 10, 0, -65546, 8, 0, -65544, 8, 0, -65542, 9, 0, -131004, 10, 0, -131002, 8, 0, -131000, 8, 0, -130998, 9, 0, -42, 10, 0, -40, 8, 0, -38, 8, 0, -37, 8, 0, -35, 8, 0, -34, 8, 0, -32, 9, 0, 2, 10, 0, 4, 8, 0, 6, 9, 0, 1048578, 10, 0, 1048580, 8, 0, 1048581, 8, 0, 1048583, 8, 0, 1048585, 9, 0, 1310764, 10, 0, 1310766, 8, 0, 1310768, 9, 0, 1572892, 10, 0, 1572894, 8, 0, 1572895, 8, 0, 1572896, 8, 0, 1572897, 8, 0, 1572898, 8, 0, 1572899, 8, 0, 1572900, 8, 0, 1572901, 9, 0 )
+tile_data = PoolIntArray( -786471, 10, 0, -786469, 8, 0, -786467, 8, 0, -786465, 9, 0, -655349, 10, 0, -655348, 8, 0, -589796, 3, 0, -524260, 3, 0, -458724, 3, 0, -393198, 8, 0, -393197, 9, 0, -393195, 3, 0, -393194, 3, 0, -393193, 3, 0, -393192, 3, 0, -393191, 3, 0, -393190, 3, 0, -393189, 3, 0, -393188, 3, 0, -262177, 12, 0, -327654, 6, 0, -327653, 3, 0, -327648, 6, 0, -262118, 3, 0, -262117, 3, 0, -262116, 8, 0, -262115, 8, 0, -262114, 8, 0, -262113, 9, 0, -131104, 12, 0, -131084, 13, 0, -131078, 13, 0, -196588, 3, 0, -196582, 3, 0, -65548, 10, 0, -65546, 8, 0, -65544, 8, 0, -65542, 9, 0, -131052, 3, 0, -131048, 3, 0, -131047, 3, 0, -131004, 10, 0, -131002, 8, 0, -131000, 8, 0, -130998, 9, 0, -42, 10, 0, -40, 8, 0, -38, 8, 0, -37, 8, 0, -35, 8, 0, -34, 8, 0, -32, 9, 0, -65516, 3, 0, -65515, 3, 0, -65514, 3, 0, -65513, 3, 0, -65512, 3, 0, 2, 10, 0, 4, 8, 0, 6, 9, 0, 983042, 13, 0, 983049, 13, 0, 1048578, 10, 0, 1048580, 8, 0, 1048581, 8, 0, 1048583, 8, 0, 1048585, 9, 0, 1310764, 10, 0, 1310766, 8, 0, 1310768, 9, 0, 1507356, 13, 0, 1507365, 13, 0, 1572892, 10, 0, 1572894, 8, 0, 1572895, 8, 0, 1572896, 8, 0, 1572897, 8, 0, 1572898, 8, 0, 1572899, 8, 0, 1572900, 8, 0, 1572901, 9, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -700,10 +701,10 @@ __meta__ = {
 }
 
 [node name="Spiel_vorbei" type="ColorRect" parent="Texte"]
-margin_left = -2640.0
-margin_top = -504.0
-margin_right = -2256.0
-margin_bottom = -400.0
+margin_left = -2633.96
+margin_top = -506.417
+margin_right = -2249.96
+margin_bottom = -402.417
 color = Color( 0.635294, 0.639216, 0.164706, 1 )
 script = SubResource( 5 )
 __meta__ = {
@@ -747,8 +748,10 @@ scale = Vector2( 2, 2 )
 position = Vector2( -2176, -888 )
 scale = Vector2( 2, 2 )
 
-[node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 264, -304 )
+[node name="Player" type="KinematicBody2D" parent="." groups=[
+"Player",
+]]
+position = Vector2( 285.267, -452.105 )
 script = ExtResource( 32 )
 __meta__ = {
 "_edit_group_": true
@@ -759,11 +762,11 @@ position = Vector2( -64, -8 )
 scale = Vector2( 0.302222, 0.263333 )
 frames = SubResource( 7 )
 animation = "Idle"
-frame = 7
+frame = 15
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2( -64, 0 )
+position = Vector2( -73.7714, 9.77142 )
 shape = SubResource( 8 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -776,6 +779,7 @@ limit_smoothed = true
 smoothing_enabled = true
 
 [node name="MainInterface" parent="Player/Camera2D" instance=ExtResource( 79 )]
+anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = -208.0
@@ -1347,12 +1351,24 @@ position = Vector2( 64, -8 )
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 64 )
 
+[node name="Enemy" parent="." instance=ExtResource( 89 )]
+position = Vector2( -506.534, -163.989 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 89 )]
+position = Vector2( 472.894, 987.408 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 89 )]
+position = Vector2( 2007.44, -284.112 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 89 )]
+position = Vector2( 2075.03, 1472.79 )
+
 [connection signal="body_entered" from="CollectableObjects/Fragezeichen" to="Texte/Fragezeichen Text" method="_on_Fragezeichen_body_entered"]
 [connection signal="body_exited" from="CollectableObjects/Fragezeichen" to="Texte/Fragezeichen Text" method="_on_Fragezeichen_body_exited"]
 [connection signal="body_entered" from="CollectableObjects/Schatztruhe" to="." method="_on_Schatztruhe_body_entered"]
-[connection signal="body_entered" from="CollectableObjects/Schlüssel" to="CollectableObjects/Schlüssel" method="_on_Schlssel_body_entered"]
-[connection signal="body_entered" from="CollectableObjects/Schlüssel" to="Player" method="_on_Schlssel_body_entered"]
 [connection signal="body_entered" from="CollectableObjects/Schlüssel" to="Texte/Schlüssel_Text" method="_on_Schlssel_body_entered"]
+[connection signal="body_entered" from="CollectableObjects/Schlüssel" to="Player" method="_on_Schlssel_body_entered"]
+[connection signal="body_entered" from="CollectableObjects/Schlüssel" to="CollectableObjects/Schlüssel" method="_on_Schlssel_body_entered"]
 [connection signal="addCoin" from="Coins" to="Player" method="_on_Coins_addCoin"]
 [connection signal="addCoin" from="Coins2" to="Player" method="_on_Coins_addCoin"]
 [connection signal="addCoin" from="Coins3" to="Player" method="_on_Coins_addCoin"]
